@@ -145,8 +145,8 @@ namespace DevPath.Services
 
                     checkButton.Click += (sender, e) =>
                     {
-                        var userAnswer = answerBox.Text.Trim();
-                        var expectedAnswer = block.ExpectedAnswer.Trim();
+                        var userAnswer = answerBox.Text.Replace("\r\n", "\n").Trim();
+                        var expectedAnswer = block.ExpectedAnswer.Replace("\r\n", "\n").Trim();
 
                         if (userAnswer == expectedAnswer)
                         {

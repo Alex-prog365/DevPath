@@ -1,0 +1,35 @@
+{
+    "Blocks": [
+        {
+            "Type": "Title",
+            "Content": "Changing a variable value"
+        },
+        {
+            "Type": "Text",
+            "Content": "The value of a variable can be changed.\n\nThis is one of the main reasons\nwhy they are called variables.\n\nYou can put a new value\ninto the same variable."
+        },
+        {
+            "Type": "Code",
+            "Content": "int score = 10;\nscore = 20;"
+        },
+        {
+            "Type": "Text",
+            "Content": "First the variable `score` gets the value 10.\n\nThen a new value 20 is assigned to it.\n\nThe old value is replaced by the new one.\n\nNow the variable stores the number 20."
+        },
+        {
+            "Type": "Task",
+            "Content": "Retype this code and check it.",
+            "Code": "int score = 10;\nscore = 20;",
+            "ExpectedAnswer": "int score = 10;\nscore = 20;"
+        },
+        {
+            "Type": "Task",
+            "Content": "Try to change the value of a variable.\n\nCreate a variable `age`\nand first store the number 18 in it.\n\nThen change the value to 21.\n\nType the code yourself using the example above.",
+            "ExpectedAnswer": "int age = 18;\nage = 21;"
+        },
+        {
+            "Type": "Tip",
+            "Content": "When a new value is assigned to a variable, the old value disappears."
+        }
+    ]
+}
