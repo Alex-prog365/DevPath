@@ -1,0 +1,70 @@
+﻿{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "What is a variable"
+        },
+
+        {
+            "type": "Text",
+            "content": "A variable is a place in the computer’s memory where a value is stored."
+        },
+        {
+            "type": "Text",
+            "content": "You can imagine it as a box with a name."
+        },
+
+        {
+            "type": "Text",
+            "content": "The box has a name, and inside it there is some data."
+        },
+        {
+            "type": "Text",
+            "content": "For example, the box might contain a number, a word, or another type of value."
+        },
+
+        {
+            "type": "Code",
+            "content": "int age = 25;"
+        },
+
+        {
+            "type": "Text",
+            "content": "Here age is the name of the variable."
+        },
+        {
+            "type": "Text",
+            "content": "The number 25 is the value stored inside it."
+        },
+        {
+            "type": "Text",
+            "content": "The word int shows that the variable stores a whole number."
+        },
+
+        {
+            "type": "Text",
+            "content": "The most important idea to understand right now is this:"
+        },
+        {
+            "type": "Text",
+            "content": "A variable stores data."
+        },
+
+        {
+            "type": "Task",
+            "content": "Retype this code and check it.",
+            "expectedAnswer": "int age = 25;"
+        },
+
+        {
+            "type": "Task",
+            "content": "Try to create a similar variable. Name it score and store the number 100 inside it.",
+            "expectedAnswer": "int score = 100;"
+        },
+
+        {
+            "type": "Tip",
+            "content": "A variable is not the number or the word itself. A variable is a named place where the value is stored."
+        }
+    ]
+}

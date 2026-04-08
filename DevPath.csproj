@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AvalonEdit" Version="6.3.1.120" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.25" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.25" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.25">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Content\**\*.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Content\csharp_basic\00_introduction\" />
+	  <Folder Include="Content\csharp_basic\02_input_output\" />
+	  <Folder Include="Content\csharp_basic\03_conditions\" />
+	  <Folder Include="Content\csharp_basic\04_operators\" />
+	  <Folder Include="Content\csharp_basic\05_loops\" />
+	  <Folder Include="Content\csharp_basic\06_methods\" />
+	  <Folder Include="Content\csharp_basic\07_arrays_lists\" />
+	  <Folder Include="Content\csharp_basic\08_classes\" />
+	  <Folder Include="Content\csharp_basic\09_final_project\" />
+	</ItemGroup>
+
+</Project>

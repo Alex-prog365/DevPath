@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DevPath.Models
+{
+    public class Lesson
+    {
+        public int Id { get; set; }
+        
+        public string? Title { get; set; }
+        
+        public string? Description { get; set; }
+
+        public int Progress { get; set; }
+
+        public int CourseId { get; set; }
+
+        public Course? Course { get; set; }
+
+        public List<Topic> Sections { get; set; } = new List<Topic>();
+
+        public string? StatusText { get; set; }
+
+        public string? Status { get; set; }
+
+        public string DisplayText 
+        {
+            get 
+            {
+                return $"{Title} ({Status})";
+            }
+        }
+    }
+}

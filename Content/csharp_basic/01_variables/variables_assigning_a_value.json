@@ -1,0 +1,35 @@
+{
+    "Blocks": [
+        {
+            "Type": "Title",
+            "Content": "Assigning a value"
+        },
+        {
+            "Type": "Text",
+            "Content": "A variable can be created first,\nand the value can be added later.\n\nThis is called assigning a value.\n\nFirst you create the variable,\nthen you put data into it."
+        },
+        {
+            "Type": "Code",
+            "Content": "int age;\nage = 25;"
+        },
+        {
+            "Type": "Text",
+            "Content": "In the first line the variable age is created.\nIt does not have a value yet.\n\nIn the second line the value 25 is assigned to it.\n\nNow the variable stores a number."
+        },
+        {
+            "Type": "Task",
+            "Content": "Retype this code and check it.",
+            "Code": "int age;\nage = 25;",
+            "ExpectedAnswer": "int age;\nage = 25;"
+        },
+        {
+            "Type": "Task",
+            "Content": "Try to create a variable and assign a value to it in two steps.\n\nName it score.\nFirst create the variable,\nthen assign the value 50.\n\nType the code yourself using the example above.",
+            "ExpectedAnswer": "int score;\nscore = 50;"
+        },
+        {
+            "Type": "Tip",
+            "Content": "The symbol = means put a value into a variable, not equal like in mathematics."
+        }
+    ]
+}

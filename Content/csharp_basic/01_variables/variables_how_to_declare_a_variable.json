@@ -1,0 +1,54 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "How to declare a variable"
+        },
+        {
+            "type": "Text",
+            "content": "Before you can use a variable, you need to create it.\nThis is called declaring a variable."
+        },
+        {
+            "type": "Text",
+            "content": "When you declare a variable, you tell the program two things:"
+        },
+        {
+            "type": "Text",
+            "content": "• the name of the variable\n• what kind of value will be stored inside it"
+        },
+        {
+            "type": "Text",
+            "content": "Think of it like preparing a box and writing a label on it."
+        },
+        {
+            "type": "Code",
+            "content": "string name = \"Alex\";"
+        },
+        {
+            "type": "Text",
+            "content": "Here name is the name of the variable."
+        },
+        {
+            "type": "Text",
+            "content": "The word string tells the program that this variable will store text."
+        },
+        {
+            "type": "Text",
+            "content": "The text \"Alex\" is the value stored inside the variable."
+        },
+        {
+            "type": "Task",
+            "content": "Retype this code and check it.",
+            "expectedAnswer": "string name = \"Alex\";"
+        },
+        {
+            "type": "Task",
+            "content": "Try to create a similar variable.\nName it city and store the text \"Helsinki\" inside it.",
+            "expectedAnswer": "string city = \"Helsinki\";"
+        },
+        {
+            "type": "Tip",
+            "content": "Text in C# must be written inside quotation marks. Without quotation marks the program will not understand that it is text."
+        }
+    ]
+}
