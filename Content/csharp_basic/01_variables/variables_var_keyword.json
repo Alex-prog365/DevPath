@@ -1,0 +1,39 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "var keyword"
+        },
+        {
+            "type": "Text",
+            "content": "Sometimes you do not need to write the type of a variable.\n\nInstead you can use the keyword `var`.\n\nIn this case the program automatically determines what type of data is stored in the variable.\n\nIt does this based on the value you assign to the variable."
+        },
+        {
+            "type": "Code",
+            "content": "var city = \"Helsinki\";\nvar visitors = 120;\nvar price = 9.99;"
+        },
+        {
+            "type": "Text",
+            "content": "Here the keyword `var` is used.\n\nBut the data type still exists. The program simply determines it automatically.\n\nFor example:\n\n\"Helsinki\" → the program understands this is `string`\n\n120 → the program understands this is `int`\n\n9.99 → the program understands this is `double`."
+        },
+        {
+            "type": "Text",
+            "content": "You can imagine this like automatic sorting.\n\nFor example, at a post office there is a machine that automatically sorts letters into different boxes.\n\nYou place the letter on the belt, and the machine decides where it should go.\n\nThe keyword `var` works in a similar way — the program automatically determines the data type."
+        },
+        {
+            "type": "Task",
+            "content": "Retype this code and check it.",
+            "code": "var city = \"Helsinki\";\nvar visitors = 120;\nvar price = 9.99;",
+            "expectedAnswer": "var city = \"Helsinki\";\nvar visitors = 120;\nvar price = 9.99;"
+        },
+        {
+            "type": "Task",
+            "content": "Create three variables using `var`.\n\nCreate a variable `store` with the value \"Market\".\n\nCreate a variable `customers` with the value 45.\n\nCreate a variable `temperature` with the value 18.5.\n\nType the code yourself using the example above.",
+            "expectedAnswer": "var store = \"Market\";\nvar customers = 45;\nvar temperature = 18.5;"
+        },
+        {
+            "type": "Tip",
+            "content": "When `var` is used, the value must be assigned immediately.\n\nThat means the variable must already contain something:\n\na number\na decimal number\ntext\nor another value\n\nThe program uses that value to understand what data type the variable should have."
+        }
+    ]
+}

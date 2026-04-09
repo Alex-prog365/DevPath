@@ -1,0 +1,39 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "Common data types"
+        },
+        {
+            "type": "Text",
+            "content": "Variables can store different kinds of data.\n\nIn the previous examples you already used variables to store text and whole numbers.\n\nBut sometimes a program needs to store numbers with decimals, or values that can only be true or false.\n\nIn programming these differences are called data types."
+        },
+        {
+            "type": "Code",
+            "content": "string name = \"Alex\";\nint age = 25;\ndouble temperature = 22.5;\nbool isStudent = true;"
+        },
+        {
+            "type": "Text",
+            "content": "Here are some common data types.\n\n`string` is used to store text. For example a name or a city.\n\n`int` is used to store whole numbers. For example age or quantity.\n\n`double` is used for numbers with decimals. For example temperature or price.\n\n`bool` is used for logical values. It can only be `true` or `false`."
+        },
+        {
+            "type": "Text",
+            "content": "You can imagine this like refrigerators in a store.\n\nEach refrigerator is designed for a specific type of product.\n\nOne refrigerator stores fish, another stores meat, and another stores desserts.\n\nIn programming it works the same way: each data type is designed to store a specific kind of information."
+        },
+        {
+            "type": "Task",
+            "content": "Retype this code and check it.",
+            "code": "string name = \"Alex\";\nint age = 25;\ndouble temperature = 22.5;\nbool isStudent = true;",
+            "expectedAnswer": "string name = \"Alex\";\nint age = 25;\ndouble temperature = 22.5;\nbool isStudent = true;"
+        },
+        {
+            "type": "Task",
+            "content": "Create three new variables.\n\nCreate a variable `price` and assign the value `19.99`.\n\nCreate a variable `isOpen` and assign the value `true`.\n\nCreate a variable `city` and assign the value `\"Espoo\"`.\n\nType the code yourself using the example above.",
+            "expectedAnswer": "double price = 19.99;\nbool isOpen = true;\nstring city = \"Espoo\";"
+        },
+        {
+            "type": "Tip",
+            "content": "A data type tells the program what kind of value is stored inside a variable."
+        }
+    ]
+}

@@ -5,6 +5,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.Highlighting;
+using DevPath.Services;
 
 namespace DevPath.Services
 {
@@ -145,16 +146,18 @@ namespace DevPath.Services
 
                     checkButton.Click += (sender, e) =>
                     {
-                        var userAnswer = answerBox.Text.Replace("\r\n", "\n").Trim();
-                        var expectedAnswer = block.ExpectedAnswer.Replace("\r\n", "\n").Trim();
+                        var userAnswer = answerBox.Text;
+                        var expectedAnswer = block.ExpectedAnswer;
 
-                        if (userAnswer == expectedAnswer)
+                        if (CodeValidator.Validate(userAnswer, expectedAnswer))
                         {
                             resultText.Text = "Correct";
+                            resultText.Foreground = Brushes.DarkGreen;
                         }
                         else
                         {
                             resultText.Text = "Try again";
+                            resultText.Foreground = Brushes.DarkRed;
                         }
                     };
 
