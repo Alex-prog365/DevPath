@@ -1,0 +1,40 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "Naming rules for variables"
+        },
+        {
+            "type": "Text",
+            "content": "A variable name must follow a few simple rules.\n\nA variable name can contain letters and numbers, but it cannot start with a number.\n\nA variable name should not contain spaces because in code the name is written as one word.\n\nMost special characters are also not used, so variable names are usually built from letters and numbers.\n\nIf a variable name consists of several words, the words are written without spaces.\n\nIn programming the style called `camelCase` is commonly used.\n\nThis means the first word starts with a lowercase letter and each following word starts with a capital letter.\n\nThis style makes variable names easier to read and understand."
+        },
+        {
+            "type": "Code",
+            "content": "int studentAge = 20;\ndouble totalPrice = 19.99;\nstring storeName = \"Market\";"
+        },
+        {
+            "type": "Text",
+            "content": "It is important to remember that code is not written only for computers. Code is constantly read by people.\n\nProgrammers often return to their code weeks or months later. If variable names are unclear, it becomes difficult to remember what data they store and why they are used.\n\nPrograms are also often created in teams where different developers read each other's code."
+        },
+        {
+            "type": "Task",
+            "content": "Retype this code and check it.",
+            "code": "int studentAge = 20;\ndouble totalPrice = 19.99;\nstring storeName = \"Market\";",
+            "expectedAnswer": "int studentAge = 20;\ndouble totalPrice = 19.99;\nstring storeName = \"Market\";"
+        },
+        {
+            "type": "Task",
+            "content": "Create two variables.\n\n1. Create a variable of type `string` that stores the city \"New York\".\n\nWhich variable name is correct?\n\nCityName\ncity name\ncityName\n\nWrite the correct line of code.",
+            "expectedAnswer": "string cityName = \"New York\";"
+        },
+        {
+            "type": "Task",
+            "content": "2. Create a variable of type `int` that stores the number `120` (number of visitors).\n\nWhich variable name is correct?\n\nVisitorsCount\nvisitorsCount\nvisitors count\n\nWrite the correct line of code.",
+            "expectedAnswer": "int visitorsCount = 120;"
+        },
+        {
+            "type": "Tip",
+            "content": "Naming is a very important part of writing code. Clear variable names make programs easier to understand."
+        }
+    ]
+}

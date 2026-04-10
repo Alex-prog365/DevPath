@@ -18,9 +18,7 @@ namespace DevPath.Services
 
         private static string Normalize(string code)
         {
-            return code
-                .Replace("\r\n", "\n")
-                .Trim();
+            return code .Replace("\r\n", "\n").Trim();
         }
     }
 }
