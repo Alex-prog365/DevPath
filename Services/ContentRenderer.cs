@@ -146,19 +146,25 @@ namespace DevPath.Services
 
                     checkButton.Click += (sender, e) =>
                     {
-                        var userAnswer = answerBox.Text;
-                        var expectedAnswer = block.ExpectedAnswer;
+                        var context = new CodeAnalysisContext
+                        {
+                            UserCode = answerBox.Text,
+                            ExpectedCode = block.ExpectedAnswer,
+                            TaskType = block.Type,
+                            TopicTitle = "",
+                            RequiredFacts = new List<string> 
+                            {
+                                "HasVariableDeclaration"
+                            }
+                        };
 
-                        if (CodeValidator.Validate(userAnswer, expectedAnswer))
-                        {
-                            resultText.Text = "Correct";
-                            resultText.Foreground = Brushes.DarkGreen;
-                        }
-                        else
-                        {
-                            resultText.Text = "Try again";
-                            resultText.Foreground = Brushes.DarkRed;
-                        }
+                        var result = CodeValidator.Validate(context);
+
+                        resultText.Text = result.Message;
+
+                        resultText.Foreground = result.IsPassed
+                            ? Brushes.DarkGreen
+                            : Brushes.DarkRed;
                     };
 
                     taskPanel.Children.Add(taskHeader);

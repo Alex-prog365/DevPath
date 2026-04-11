@@ -1,0 +1,41 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "Simple practice with variables"
+        },
+        {
+            "type": "Text",
+            "content": "Now try to apply the knowledge from this lesson.\n\nIn the tasks below you need to choose the correct code and write it yourself.\n\nBe careful: some options contain small syntax mistakes. Even one missing detail can cause an error in the program."
+        },
+        {
+            "type": "Task",
+            "content": "Create a variable `city` and store the text \"Helsinki\".\n\nChoose the correct option:\n\nA)\nstring city \"Helsinki\";\n\nB)\ncity string = \"Helsinki\";\n\nC)\nstring city = \"Helsinki\";\n\nD)\nstring city = Helsinki;\n\nWrite the correct code.",
+            "expectedAnswer": "string city = \"Helsinki\";"
+        },
+        {
+            "type": "Task",
+            "content": "Create a variable `price` and store the decimal number `19.99`.\n\nChoose the correct option:\n\nA)\nprice double = 19.99;\n\nB)\ndouble price = 19.99;\n\nC)\ndouble price = \"19.99\";\n\nD)\ndouble = price 19.99;\n\nWrite the correct code.",
+            "expectedAnswer": "double price = 19.99;"
+        },
+        {
+            "type": "Task",
+            "content": "Create a variable `temperature` using `var` and store the number `22.5`.\n\nChoose the correct option:\n\nA)\nvar temperature 22.5;\n\nB)\ntemperature var = 22.5;\n\nC)\nvar = temperature 22.5;\n\nD)\nvar temperature = 22.5;\n\nWrite the correct code.",
+            "expectedAnswer": "var temperature = 22.5;"
+        },
+        {
+            "type": "Task",
+            "content": "Create a constant named `monthsInYear` with the value `12`.\n\nChoose the correct option:\n\nA)\nconst monthsInYear = 12;\n\nB)\nconst int monthsInYear = 12;\n\nC)\nint const monthsInYear = 12;\n\nD)\nconst int monthsInYear 12;\n\nWrite the correct code.",
+            "expectedAnswer": "const int monthsInYear = 12;"
+        },
+        {
+            "type": "Task",
+            "content": "Create a variable with the correct name `totalPrice` and store the number `50`.\n\nChoose the correct option:\n\nA)\nint total price = 50;\n\nB)\nint totalPrice 50;\n\nC)\nint TotalPrice = 50;\n\nD)\nint totalPrice = 50;\n\nWrite the correct code.",
+            "expectedAnswer": "int totalPrice = 50;"
+        },
+        {
+            "type": "Tip",
+            "content": "In this lesson you learned the basics of variables.\n\nNow you can:\n\ncreate variables\nassign values\nchange variable values\nuse different data types\nuse `var`\ncreate constants\ngive variables clear names\n\nThese are basic skills used in almost every program."
+        }
+    ]
+}
