@@ -1,15 +1,16 @@
-﻿using System;
+﻿using DevPath.Models;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Linq;
+using System.Linq;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Linq;
-using DevPath.Models;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using System.Linq;
-using System.Linq;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace DevPath.Analysis
 {
@@ -29,24 +30,68 @@ namespace DevPath.Analysis
 
             foreach (var diagnostic in diagnostics)
             {
-                facts.Diagnostics.Add(diagnostic.ToString());
+                facts.Diagnostics.Add(diagnostic.GetMessage(CultureInfo.InvariantCulture));
             }
 
             facts.HasIfStatement = root.DescendantNodes().OfType<IfStatementSyntax>().Any();
             facts.HasForLoop = root.DescendantNodes().OfType<ForStatementSyntax>().Any();
             facts.HasWhileLoop = root.DescendantNodes().OfType<WhileStatementSyntax>().Any();
 
+            
+
             var variableDeclarations = root.DescendantNodes().OfType<VariableDeclarationSyntax>().ToList();
             facts.HasVariableDeclaration = variableDeclarations.Any();
 
             foreach (var declaration in variableDeclarations)
             {
+                var typeName = declaration.Type.ToString();
+
+                if (typeName == "var")
+                {
+                    facts.UsesVarKeyword = true;
+                }
+
                 foreach (var variable in declaration.Variables)
                 {
-                    facts.VariableNames.Add(variable.Identifier.Text);
+                    var variableName = variable.Identifier.Text;
+
+                    facts.VariableNames.Add(variableName);
+
+                    if (!facts.VariableTypes.ContainsKey(variableName))
+                    {
+                        facts.VariableTypes.Add(variableName, typeName);
+                    }
+
+                    var valueText = variable.Initializer?.Value?.ToString() ?? "";
+
+                    if (!facts.VariableValues.ContainsKey(variableName))
+                    {
+                        facts.VariableValues.Add(variableName, valueText);
+                    }
+                }
+            }
+                       
+            var assignments = root.DescendantNodes().OfType<AssignmentExpressionSyntax>().ToList();
+
+            foreach (var assignment in assignments)
+            {
+                if (assignment.Left is IdentifierNameSyntax identifier)
+                {
+                    var variableName = identifier.Identifier.Text;
+                    var valueText = assignment.Right.ToString();
+
+                    if (facts.VariableValues.ContainsKey(variableName))
+                    {
+                        facts.VariableValues[variableName] = valueText;
+                    }
+                    else
+                    {
+                        facts.VariableValues.Add(variableName, valueText);
+                    }
                 }
             }
 
+            
             var methodDeclarations = root.DescendantNodes().OfType<MethodDeclarationSyntax>().ToList();
 
             foreach (var method in methodDeclarations)

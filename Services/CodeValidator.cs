@@ -5,8 +5,10 @@ using DevPath.Models;
 using DevPath.Analysis;
 using System.Collections.Generic;
 using System.Linq;
-
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq;
+using DevPath.Rules;
 
 namespace DevPath.Services
 {
@@ -28,37 +30,21 @@ namespace DevPath.Services
                 };
             }
 
-            var ruleResults = new List<RuleResult>();
+            var ruleResults = RuleEngine.Evaluate(context, facts);
+            var failedRules = ruleResults.Where(r => !r.Passed).ToList();
 
-            foreach (var requiredFact in context.RequiredFacts)
+            if (failedRules.Any())
             {
-                var passed = CheckRequiredFact(requiredFact, facts);
+                var messages = failedRules.Select(r => r.Message).ToList();
 
-                ruleResults.Add(new RuleResult
-                {
-                    RuleName = requiredFact,
-                    Passed = passed,
-                    Message = passed
-                        ? $"{requiredFact}: OK"
-                        : $"{requiredFact}: missing"
-                });
-            }
-
-            var hasFailedRules = ruleResults.Any(r => !r.Passed);
-
-            if (hasFailedRules)
-            {
                 return new EvaluationResult
                 {
                     IsPassed = false,
-                    Message = "Required code structure is missing",
+                    Message = messages.First(),
                     ErrorCode = "RULE_FAILED",
                     Facts = facts,
                     RuleResults = ruleResults,
-                    Details = ruleResults
-                        .Where(r => !r.Passed)
-                        .Select(r => r.Message)
-                        .ToList()
+                    Details = messages
                 };
             }
 
@@ -84,20 +70,6 @@ namespace DevPath.Services
                 ErrorCode = "MISMATCH",
                 Facts = facts,
                 RuleResults = ruleResults
-            };
-        }
-
-        private static bool CheckRequiredFact(string factName, CodeFacts facts)
-        {
-            return factName switch
-            {
-                "HasIfStatement" => facts.HasIfStatement,
-                "HasForLoop" => facts.HasForLoop,
-                "HasWhileLoop" => facts.HasWhileLoop,
-                "HasVariableDeclaration" => facts.HasVariableDeclaration,
-                "HasConsoleReadLine" => facts.HasConsoleReadLine,
-                "HasConsoleWriteLine" => facts.HasConsoleWriteLine,
-                _ => true
             };
         }
 

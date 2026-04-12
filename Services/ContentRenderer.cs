@@ -152,15 +152,16 @@ namespace DevPath.Services
                             ExpectedCode = block.ExpectedAnswer,
                             TaskType = block.Type,
                             TopicTitle = "",
-                            RequiredFacts = new List<string> 
-                            {
-                                "HasVariableDeclaration"
-                            }
+                            RequiredFacts = block.RequiredFacts ?? new List<string>(),
+                            RequiredVariableName = block.RequiredVariableName ?? "",
+                            RequiredVariableType = block.RequiredVariableType ?? "",
+                            RequiredVariableValue = block.RequiredVariableValue ?? ""
                         };
 
                         var result = CodeValidator.Validate(context);
 
-                        resultText.Text = result.Message;
+                        resultText.Text = result.Details != null && result.Details.Any()
+                             ? string.Join("\n", result.Details) : result.Message; 
 
                         resultText.Foreground = result.IsPassed
                             ? Brushes.DarkGreen

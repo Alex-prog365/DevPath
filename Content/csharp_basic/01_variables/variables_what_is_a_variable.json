@@ -53,13 +53,19 @@
         {
             "type": "Task",
             "content": "Retype this code and check it.",
-            "expectedAnswer": "int age = 25;"
+            "expectedAnswer": "int age = 25;",
+            "requiredVariableName": "age",
+            "requiredVariableType": "int",
+            "requiredVariableValue": "25"
         },
 
         {
             "type": "Task",
             "content": "Try to create a similar variable. Name it score and store the number 100 inside it.",
-            "expectedAnswer": "int score = 100;"
+            "expectedAnswer": "int score = 100;",
+            "requiredVariableName": "score",
+            "requiredVariableType": "int",
+            "requiredVariableValue": "100"
         },
 
         {

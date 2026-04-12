@@ -39,12 +39,18 @@
         {
             "type": "Task",
             "content": "Retype this code and check it.",
-            "expectedAnswer": "string name = \"Alex\";"
+            "expectedAnswer": "string name = \"Alex\";",
+            "requiredVariableName": "name",
+            "requiredVariableType": "string",
+            "requiredVariableValue": "\"Alex\""
         },
         {
             "type": "Task",
-            "content": "Try to create a similar variable.\nName it city and store the text \"Helsinki\" inside it.",
-            "expectedAnswer": "string city = \"Helsinki\";"
+            "content": "Try to create a similar variable.\nName it `city` and store the text \"Helsinki\" inside it.",
+            "expectedAnswer": "string city = \"Helsinki\";",
+            "requiredVariableName": "city",
+            "requiredVariableType": "string",
+            "requiredVariableValue": "\"Helsinki\""
         },
         {
             "type": "Tip",

@@ -28,8 +28,27 @@
         },
         {
             "type": "Task",
-            "content": "Create three new variables.\n\nCreate a variable `price` and assign the value `19.99`.\n\nCreate a variable `isOpen` and assign the value `true`.\n\nCreate a variable `city` and assign the value `\"Espoo\"`.\n\nType the code yourself using the example above.",
-            "expectedAnswer": "double price = 19.99;\nbool isOpen = true;\nstring city = \"Espoo\";"
+            "content": "Create a variable `price` and assign the value `19.99`.",
+            "expectedAnswer": "double price = 19.99;",
+            "requiredVariableName": "price",
+            "requiredVariableType": "double",
+            "requiredVariableValue": "19.99"
+        },
+        {
+            "type": "Task",
+            "content": "Create a variable `isOpen` and assign the value `true`.",
+            "expectedAnswer": "bool isOpen = true;",
+            "requiredVariableName": "isOpen",
+            "requiredVariableType": "bool",
+            "requiredVariableValue": "true"
+        },
+        {
+            "type": "Task",
+            "content": "Create a variable `city` and assign the value `\"Espoo\"`.",
+            "expectedAnswer": "string city = \"Espoo\";",
+            "requiredVariableName": "city",
+            "requiredVariableType": "string",
+            "requiredVariableValue": "\"Espoo\""
         },
         {
             "type": "Tip",
