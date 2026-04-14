@@ -24,17 +24,23 @@
         },
         {
             "type": "Task",
-            "content": "Create two variables.\n\n1. Create a variable of type `string` that stores the city \"New York\".\n\nWhich variable name is correct?\n\nCityName\ncity name\ncityName\n\nWrite the correct line of code.",
-            "expectedAnswer": "string cityName = \"New York\";"
+            "content": "Create a variable of type `string` that stores the city \"New York\".\n\nWhich variable name is correct?\n\nCityName\ncity name\ncityName\n\nWrite the correct line of code.",
+            "expectedAnswer": "string cityName = \"New York\";",
+            "requiredVariableName": "cityName",
+            "requiredVariableType": "string",
+            "requiredVariableValue": "\"New York\""
         },
         {
             "type": "Task",
-            "content": "2. Create a variable of type `int` that stores the number `120` (number of visitors).\n\nWhich variable name is correct?\n\nVisitorsCount\nvisitorsCount\nvisitors count\n\nWrite the correct line of code.",
-            "expectedAnswer": "int visitorsCount = 120;"
+            "content": "Create a variable of type `int` that stores the number `120` (number of visitors).\n\nWhich variable name is correct?\n\nVisitorsCount\nvisitorsCount\nvisitors count\n\nWrite the correct line of code.",
+            "expectedAnswer": "int visitorsCount = 120;",
+            "requiredVariableName": "visitorsCount",
+            "requiredVariableType": "int",
+            "requiredVariableValue": "120"
         },
         {
             "type": "Tip",
-            "content": "Naming is a very important part of writing code. Clear variable names make programs easier to understand."
+            "content": "Good variable names help other developers understand your code."
         }
     ]
 }

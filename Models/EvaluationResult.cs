@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-
+using DevPath.Simulation;
 using System.Collections.Generic;
 
 namespace DevPath.Models
@@ -22,5 +22,7 @@ namespace DevPath.Models
         public CodeFacts Facts { get; set; } = new();
 
         public List<RuleResult> RuleResults { get; set; } = new();
+
+        public ConsoleSimulationResult ConsoleSimulation { get; set; } = new();
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
 using DevPath.Models;
+using DevPath.Validation;
 
 namespace DevPath.Rules
 {
@@ -15,8 +16,11 @@ namespace DevPath.Rules
         public static List<RuleResult> Evaluate(CodeAnalysisContext context, CodeFacts facts)
         {
             var ruleResults = new List<RuleResult>();
+            var profile = ValidationProfileRegistry.Get(context.ValidationProfile);
 
-            foreach (var requiredFact in context.RequiredFacts)
+            var requiredFacts = profile.RequiredFacts;
+
+            foreach (var requiredFact in requiredFacts)
             {
                 var passed = CheckRequiredFact(requiredFact, facts);
 
@@ -30,7 +34,8 @@ namespace DevPath.Rules
 
             var hasRequiredVariable = true;
 
-            if (!string.IsNullOrWhiteSpace(context.RequiredVariableName))
+            if (profile.CheckVariableName &&
+                !string.IsNullOrWhiteSpace(context.RequiredVariableName))
             {
                 hasRequiredVariable = facts.VariableNames.Contains(context.RequiredVariableName);
 
@@ -44,7 +49,8 @@ namespace DevPath.Rules
                 });
             }
 
-            if (hasRequiredVariable &&
+            if (profile.CheckVariableType &&
+                hasRequiredVariable &&
                 !string.IsNullOrWhiteSpace(context.RequiredVariableName) &&
                 !string.IsNullOrWhiteSpace(context.RequiredVariableType))
             {
@@ -62,7 +68,8 @@ namespace DevPath.Rules
                 });
             }
 
-            if (hasRequiredVariable &&
+            if (profile.CheckVariableValue &&
+                hasRequiredVariable &&
                 !string.IsNullOrWhiteSpace(context.RequiredVariableName) &&
                 !string.IsNullOrWhiteSpace(context.RequiredVariableValue))
             {

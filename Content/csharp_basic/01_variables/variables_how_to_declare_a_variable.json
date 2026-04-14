@@ -42,7 +42,8 @@
             "expectedAnswer": "string name = \"Alex\";",
             "requiredVariableName": "name",
             "requiredVariableType": "string",
-            "requiredVariableValue": "\"Alex\""
+            "requiredVariableValue": "\"Alex\"",
+            "validationProfile": "variable_basic"
         },
         {
             "type": "Task",
@@ -50,7 +51,8 @@
             "expectedAnswer": "string city = \"Helsinki\";",
             "requiredVariableName": "city",
             "requiredVariableType": "string",
-            "requiredVariableValue": "\"Helsinki\""
+            "requiredVariableValue": "\"Helsinki\"",
+            "validationProfile": "variable_basic"
         },
         {
             "type": "Tip",

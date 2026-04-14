@@ -14,22 +14,31 @@
         },
         {
             "type": "Text",
-            "content": "Here the keyword `const` is used.\n\nIt tells the program that the value of this variable cannot be changed.\n\nFor example, the number of days in a week is always `7`.\n\nThis value should stay the same in the program.\n\nYou can think of it like a sign on a shop door.\n\nIf the sign says \"Open 9:00 – 21:00\", this information is fixed.\n\nIt is not something that should change inside the program."
+            "content": "Here the keyword `const` is used.\n\nIt tells the program that the value of this variable cannot be changed.\n\nFor example, the number of days in a week is always `7`.\n\nThis value should stay the same in the program."
         },
         {
             "type": "Task",
             "content": "Retype this code and check it.",
             "code": "const int daysInWeek = 7;",
-            "expectedAnswer": "const int daysInWeek = 7;"
+            "expectedAnswer": "const int daysInWeek = 7;",
+            "validationProfile": "variable_const"
         },
         {
             "type": "Task",
             "content": "Create your own constant.\n\nName it `monthsInYear` and assign the value `12`.\n\nType the code yourself using the example above.",
-            "expectedAnswer": "const int monthsInYear = 12;"
+            "expectedAnswer": "const int monthsInYear = 12;",
+            "requiredVariableName": "monthsInYear",
+            "requiredVariableType": "int",
+            "requiredVariableValue": "12",
+            "validationProfile": "variable_const"
         },
         {
             "type": "Tip",
-            "content": "A constant is assigned a value once and its value cannot be changed later."
+            "content": "The code example below is wrong.\n\nWhen you use `const`, the value cannot be changed later.\n\nIf you try to change it, the program will show an error."
+        },
+        {
+            "type": "Code",
+            "content": "const int daysInWeek = 7;\ndaysInWeek = 8;"
         }
     ]
 }

@@ -24,7 +24,8 @@
             "type": "Task",
             "content": "Retype this code and check it.",
             "code": "string name = \"Alex\";\nint age = 25;\ndouble temperature = 22.5;\nbool isStudent = true;",
-            "expectedAnswer": "string name = \"Alex\";\nint age = 25;\ndouble temperature = 22.5;\nbool isStudent = true;"
+            "expectedAnswer": "string name = \"Alex\";\nint age = 25;\ndouble temperature = 22.5;\nbool isStudent = true;",
+            "validationProfile": "variable_basic"
         },
         {
             "type": "Task",
@@ -32,7 +33,8 @@
             "expectedAnswer": "double price = 19.99;",
             "requiredVariableName": "price",
             "requiredVariableType": "double",
-            "requiredVariableValue": "19.99"
+            "requiredVariableValue": "19.99",
+            "validationProfile": "variable_basic"
         },
         {
             "type": "Task",
@@ -40,7 +42,8 @@
             "expectedAnswer": "bool isOpen = true;",
             "requiredVariableName": "isOpen",
             "requiredVariableType": "bool",
-            "requiredVariableValue": "true"
+            "requiredVariableValue": "true",
+            "validationProfile": "variable_basic"
         },
         {
             "type": "Task",
@@ -48,7 +51,8 @@
             "expectedAnswer": "string city = \"Espoo\";",
             "requiredVariableName": "city",
             "requiredVariableType": "string",
-            "requiredVariableValue": "\"Espoo\""
+            "requiredVariableValue": "\"Espoo\"",
+            "validationProfile": "variable_basic"
         },
         {
             "type": "Tip",

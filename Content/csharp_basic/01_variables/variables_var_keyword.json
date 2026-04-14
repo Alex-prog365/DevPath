@@ -24,16 +24,39 @@
             "type": "Task",
             "content": "Retype this code and check it.",
             "code": "var city = \"Helsinki\";\nvar visitors = 120;\nvar price = 9.99;",
-            "expectedAnswer": "var city = \"Helsinki\";\nvar visitors = 120;\nvar price = 9.99;"
+            "expectedAnswer": "var city = \"Helsinki\";\nvar visitors = 120;\nvar price = 9.99;",
+            "validationProfile": "variable_var"
         },
         {
             "type": "Task",
-            "content": "Create three variables using `var`.\n\nCreate a variable `store` with the value \"Market\".\n\nCreate a variable `customers` with the value 45.\n\nCreate a variable `temperature` with the value 18.5.\n\nType the code yourself using the example above.",
-            "expectedAnswer": "var store = \"Market\";\nvar customers = 45;\nvar temperature = 18.5;"
+            "content": "Create a variable `store` and assign the value \"Market\".",
+            "expectedAnswer": "var store = \"Market\";",
+            "requiredVariableName": "store",
+            "requiredVariableType": "var",
+            "requiredVariableValue": "\"Market\"",
+            "validationProfile": "variable_var"
+        },
+        {
+            "type": "Task",
+            "content": "Create a variable `customers` and assign the value 45.",
+            "expectedAnswer": "var customers = 45;",
+            "requiredVariableName": "customers",
+            "requiredVariableType": "var",
+            "requiredVariableValue": "45",
+            "validationProfile": "variable_var"
+        },
+        {
+            "type": "Task",
+            "content": "Create a variable `temperature` and assign the value 18.5.",
+            "expectedAnswer": "var temperature = 18.5;",
+            "requiredVariableName": "temperature",
+            "requiredVariableType": "var",
+            "requiredVariableValue": "18.5",
+            "validationProfile": "variable_var"
         },
         {
             "type": "Tip",
             "content": "When `var` is used, the value must be assigned immediately.\n\nThat means the variable must already contain something:\n\na number\na decimal number\ntext\nor another value\n\nThe program uses that value to understand what data type the variable should have."
-        }
+        } 
     ]
 }

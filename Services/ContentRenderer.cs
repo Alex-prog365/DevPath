@@ -6,6 +6,7 @@ using System.Windows.Media.Imaging;
 using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.Highlighting;
 using DevPath.Services;
+using System.Linq;
 
 namespace DevPath.Services
 {
@@ -144,6 +145,22 @@ namespace DevPath.Services
                         Margin = new Thickness(0, 12, 0, 0)
                     };
 
+                    var outputText = new TextBlock
+                    {
+                        FontSize = 16,
+                        Margin = new Thickness(0, 10, 0, 0),
+                        TextWrapping = TextWrapping.Wrap,
+                        Foreground = Brushes.DarkSlateBlue
+                    };
+
+                    var inputText = new TextBlock
+                    {
+                        FontSize = 16,
+                        Margin = new Thickness(0, 6, 0, 0),
+                        TextWrapping = TextWrapping.Wrap,
+                        Foreground = Brushes.DarkGoldenrod
+                    };
+
                     checkButton.Click += (sender, e) =>
                     {
                         var context = new CodeAnalysisContext
@@ -152,10 +169,11 @@ namespace DevPath.Services
                             ExpectedCode = block.ExpectedAnswer,
                             TaskType = block.Type,
                             TopicTitle = "",
-                            RequiredFacts = block.RequiredFacts ?? new List<string>(),
                             RequiredVariableName = block.RequiredVariableName ?? "",
                             RequiredVariableType = block.RequiredVariableType ?? "",
-                            RequiredVariableValue = block.RequiredVariableValue ?? ""
+                            RequiredVariableValue = block.RequiredVariableValue ?? "",
+                            ValidationProfile = block.ValidationProfile ?? "",
+                            FakeInput = block.FakeInput ?? ""
                         };
 
                         var result = CodeValidator.Validate(context);
@@ -166,13 +184,35 @@ namespace DevPath.Services
                         resultText.Foreground = result.IsPassed
                             ? Brushes.DarkGreen
                             : Brushes.DarkRed;
+
+                        if (result.ConsoleSimulation != null && result.ConsoleSimulation.OutputLines.Any())
+                        {
+                            outputText.Text = "Program Output:\n" + string.Join("\n", result.ConsoleSimulation.OutputLines);
+                        }
+                        else
+                        {
+                            outputText.Text = "";
+                        }
+
+                        if (result.ConsoleSimulation != null && result.ConsoleSimulation.InputValues.Any())
+                        {
+                            inputText.Text = "User Input:\n" + string.Join("\n", result.ConsoleSimulation.InputValues);
+                        }
+                        else
+                        {
+                            inputText.Text = "";
+                        }
                     };
+
+
 
                     taskPanel.Children.Add(taskHeader);
                     taskPanel.Children.Add(taskText);
                     taskPanel.Children.Add(answerBox);
                     taskPanel.Children.Add(checkButton);
                     taskPanel.Children.Add(resultText);
+                    taskPanel.Children.Add(outputText);
+                    taskPanel.Children.Add(inputText);
 
                     taskBorder.Child = taskPanel;
                     contentColumn.Children.Add(taskBorder);

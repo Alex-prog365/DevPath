@@ -49,25 +49,24 @@
             "type": "Text",
             "content": "A variable stores data."
         },
-
         {
             "type": "Task",
             "content": "Retype this code and check it.",
             "expectedAnswer": "int age = 25;",
             "requiredVariableName": "age",
             "requiredVariableType": "int",
-            "requiredVariableValue": "25"
+            "requiredVariableValue": "25",
+            "validationProfile": "variable_basic"
         },
-
         {
             "type": "Task",
             "content": "Try to create a similar variable. Name it score and store the number 100 inside it.",
             "expectedAnswer": "int score = 100;",
             "requiredVariableName": "score",
             "requiredVariableType": "int",
-            "requiredVariableValue": "100"
+            "requiredVariableValue": "100",
+            "validationProfile": "variable_basic"
         },
-
         {
             "type": "Tip",
             "content": "A variable is not the number or the word itself. A variable is a named place where the value is stored."

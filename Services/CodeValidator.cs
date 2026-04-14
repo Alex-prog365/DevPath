@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq;
 using DevPath.Rules;
+using DevPath.Simulation;
 
 namespace DevPath.Services
 {
@@ -17,6 +18,7 @@ namespace DevPath.Services
         public static EvaluationResult Validate(CodeAnalysisContext context)
         {
             var facts = FactCollector.Collect(context);
+            var simulationResult = ConsoleSimulationEngine.Simulate(context);
 
             if (facts.HasSyntaxErrors)
             {
@@ -26,7 +28,8 @@ namespace DevPath.Services
                     Message = "Syntax error in code",
                     ErrorCode = "SYNTAX_ERROR",
                     Facts = facts,
-                    Details = facts.Diagnostics
+                    Details = facts.Diagnostics,
+                    ConsoleSimulation = simulationResult
                 };
             }
 
@@ -44,7 +47,8 @@ namespace DevPath.Services
                     ErrorCode = "RULE_FAILED",
                     Facts = facts,
                     RuleResults = ruleResults,
-                    Details = messages
+                    Details = messages,
+                    ConsoleSimulation = simulationResult
                 };
             }
 
@@ -59,7 +63,8 @@ namespace DevPath.Services
                     Message = "Correct",
                     ErrorCode = "OK",
                     Facts = facts,
-                    RuleResults = ruleResults
+                    RuleResults = ruleResults,
+                    ConsoleSimulation = simulationResult
                 };
             }
 
@@ -69,7 +74,8 @@ namespace DevPath.Services
                 Message = "Try again",
                 ErrorCode = "MISMATCH",
                 Facts = facts,
-                RuleResults = ruleResults
+                RuleResults = ruleResults,
+                ConsoleSimulation = simulationResult
             };
         }
 

@@ -11,6 +11,8 @@ using System.Collections.Generic;
 
 using System.Collections.Generic;
 
+using System.Collections.Generic;
+
 namespace DevPath.Models
 {
     public class CodeAnalysisContext
@@ -23,12 +25,14 @@ namespace DevPath.Models
 
         public string TopicTitle { get; set; } = "";
 
-        public List<string> RequiredFacts { get; set; } = new();
-
         public string RequiredVariableName { get; set; } = "";
 
         public string RequiredVariableType { get; set; } = "";
 
         public string RequiredVariableValue { get; set; } = "";
+
+        public string ValidationProfile { get; set; } = "";
+
+        public string FakeInput { get; set; } = "";
     }
 }

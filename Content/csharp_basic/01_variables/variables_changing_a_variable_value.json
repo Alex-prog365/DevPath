@@ -23,7 +23,8 @@
             "expectedAnswer": "int score = 10;\nscore = 20;",
             "requiredVariableName": "score",
             "requiredVariableType": "int",
-            "requiredVariableValue": "20"
+            "requiredVariableValue": "20",
+            "validationProfile": "variable_change"
         },
         {
             "type": "Task",
@@ -31,7 +32,8 @@
             "expectedAnswer": "int age = 18;\nage = 21;",
             "requiredVariableName": "age",
             "requiredVariableType": "int",
-            "requiredVariableValue": "21"
+            "requiredVariableValue": "21",
+            "validationProfile": "variable_change"
         },
         {
             "Type": "Tip",
