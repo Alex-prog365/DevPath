@@ -2,68 +2,52 @@
     "blocks": [
         {
             "type": "Title",
-            "content": "Printing variables to console"
+            "content": "Console output with WriteLine"
         },
         {
             "type": "Text",
-            "content": "You already know how to create variables."
+            "content": "A program often needs to show information to the user.\n\nFor example:\n\n• a greeting message\n• instructions\n• a result of a calculation\n\nIn console programs the text appears in the console window."
         },
         {
             "type": "Text",
-            "content": "For example, we can create a variable named `age` and store the number 25 in it."
-        },
-        {
-            "type": "Text",
-            "content": "When a program prints information to the console, we do not have to write the number itself."
-        },
-        {
-            "type": "Text",
-            "content": "Instead, we can write the **name of the variable**, and the program will print the value stored inside it."
+            "content": "In C# we use the command `Console.WriteLine` to print text in the console."
         },
         {
             "type": "Code",
-            "content": "int age = 25;\nConsole.WriteLine(age);"
+            "content": "Console.WriteLine(\"Hello\");"
         },
         {
             "type": "Text",
-            "content": "Let’s look at this code."
+            "content": "Let’s look at this line of code."
         },
         {
             "type": "Text",
-            "content": "`int age = 25;` creates a variable named `age` and stores the number 25 in it."
+            "content": "`Console` is the part of the program that works with the console window."
         },
         {
             "type": "Text",
-            "content": "`Console.WriteLine(age);` prints the value of the variable."
+            "content": "`WriteLine` is the command that tells the program to print something in the console."
         },
         {
             "type": "Text",
-            "content": "The program already knows that the variable `age` contains the number 25, so the console will show:\n\n25"
-        },
-        {
-            "type": "Text",
-            "content": "It is important to see the difference between a variable and text."
-        },
-        {
-            "type": "Text",
-            "content": "If we write `Console.WriteLine(age);`, the program prints the value of the variable.\n\nIf we write `Console.WriteLine(\"age\");`, the program prints the text \"age\"."
+            "content": "`\"Hello\"` is the text that will appear in the console.\n\nText in C# must always be written inside quotation marks."
         },
         {
             "type": "Task",
             "content": "Retype this code and check it.",
-            "code": "int age = 25;\nConsole.WriteLine(age);",
-            "expectedAnswer": "int age = 25;\nConsole.WriteLine(age);",
+            "code": "Console.WriteLine(\"Hello\");",
+            "expectedAnswer": "Console.WriteLine(\"Hello\");",
             "validationProfile": "input_output_write"
         },
         {
             "type": "Task",
-            "content": "Create a variable `score` of type `int` and assign the value 100.\n\nThen print this variable using `Console.WriteLine`.",
-            "expectedAnswer": "int score = 100;\nConsole.WriteLine(score);",
-            "validationProfile": "variable_basic"
+            "content": "Write two lines of code.\n\nFirst print the text \"Hello\".\nThen print the number 25.\n\nUse `Console.WriteLine`.",
+            "expectedAnswer": "Console.WriteLine(\"Hello\");\nConsole.WriteLine(25);",
+            "validationProfile": "input_output_write"
         },
         {
             "type": "Tip",
-            "content": "Important to remember:\n\nEverything written inside quotation marks is treated as text.\n\nConsole.WriteLine(\"Hello\");\n\nThe program prints the text exactly as it is written.\n\nIf there are no quotation marks, the program treats the word as a variable name.\n\nConsole.WriteLine(age);"
+            "content": "Important to remember:\n\nText in C# must always be written inside quotation marks.\n\nExample:\n`Console.WriteLine(\"Hello\");`\n\nIf a word is written without quotation marks, the program will not treat it as text."
         }
     ]
 }

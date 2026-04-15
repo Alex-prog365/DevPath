@@ -1,0 +1,69 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "Printing variables to console"
+        },
+        {
+            "type": "Text",
+            "content": "You already know how to create variables."
+        },
+        {
+            "type": "Text",
+            "content": "For example, we can create a variable named `age` and store the number 25 in it."
+        },
+        {
+            "type": "Text",
+            "content": "When a program prints information to the console, we do not have to write the number itself."
+        },
+        {
+            "type": "Text",
+            "content": "Instead, we can write the **name of the variable**, and the program will print the value stored inside it."
+        },
+        {
+            "type": "Code",
+            "content": "int age = 25;\nConsole.WriteLine(age);"
+        },
+        {
+            "type": "Text",
+            "content": "Let’s look at this code."
+        },
+        {
+            "type": "Text",
+            "content": "`int age = 25;` creates a variable named `age` and stores the number 25 in it."
+        },
+        {
+            "type": "Text",
+            "content": "`Console.WriteLine(age);` prints the value of the variable."
+        },
+        {
+            "type": "Text",
+            "content": "The program already knows that the variable `age` contains the number 25, so the console will show:\n\n25"
+        },
+        {
+            "type": "Text",
+            "content": "It is important to see the difference between a variable and text."
+        },
+        {
+            "type": "Text",
+            "content": "If we write `Console.WriteLine(age);`, the program prints the value of the variable.\n\nIf we write `Console.WriteLine(\"age\");`, the program prints the text \"age\"."
+        },
+        {
+            "type": "Task",
+            "content": "Retype this code and check it.",
+            "code": "int age = 25;\nConsole.WriteLine(age);",
+            "expectedAnswer": "int age = 25;\nConsole.WriteLine(age);",
+            "validationProfile": "input_output_write"
+        },
+        {
+            "type": "Task",
+            "content": "Create a variable `score` of type `int` and assign the value 100.\n\nThen print this variable using `Console.WriteLine`.",
+            "expectedAnswer": "int score = 100;\nConsole.WriteLine(score);",
+            "validationProfile": "variable_basic"
+        },
+        {
+            "type": "Tip",
+            "content": "Important to remember:\n\nEverything written inside quotation marks is treated as text.\n\nConsole.WriteLine(\"Hello\");\n\nThe program prints the text exactly as it is written.\n\nIf there are no quotation marks, the program treats the word as a variable name.\n\nConsole.WriteLine(age);"
+        }
+    ]
+}

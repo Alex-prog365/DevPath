@@ -1,0 +1,71 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "Console input with ReadLine"
+        },
+        {
+            "type": "Text",
+            "content": "Sometimes a program needs not only to show information, but also to receive data from the user."
+        },
+        {
+            "type": "Text",
+            "content": "For example, a program may ask the user to enter:\n\n• a name\n• an age\n• a login\n• or other information."
+        },
+        {
+            "type": "Text",
+            "content": "In console programs we use the command `Console.ReadLine` to read data from the console."
+        },
+        {
+            "type": "Text",
+            "content": "`Console.ReadLine()` reads the text that the user enters in the console."
+        },
+        {
+            "type": "Text",
+            "content": "Important to remember:\n\n`Console.ReadLine()` always returns text.\n\nBecause of this, the result should be stored in a variable of type `string`."
+        },
+        {
+            "type": "Code",
+            "content": "string name = Console.ReadLine();\nConsole.WriteLine(name);"
+        },
+        {
+            "type": "Text",
+            "content": "Let's look at the first line of code."
+        },
+        {
+            "type": "Text",
+            "content": "`string name = Console.ReadLine();`\n\n`Console.ReadLine()` reads the text from the console.\n\nThe entered text is stored in the variable `name`."
+        },
+        {
+            "type": "Text",
+            "content": "`string` means that the variable stores text."
+        },
+        {
+            "type": "Text",
+            "content": "Now look at the second line."
+        },
+        {
+            "type": "Text",
+            "content": "`Console.WriteLine(name);` prints the value stored in the variable `name`.\n\nSo the program shows the same text that was entered."
+        },
+        {
+            "type": "Task",
+            "content": "Retype this code and check it.",
+            "code": "string name = Console.ReadLine();\nConsole.WriteLine(name);",
+            "expectedAnswer": "string name = Console.ReadLine();\nConsole.WriteLine(name);",
+            "validationProfile": "input_output_write",
+            "fakeInput": "Alex"
+        },
+        {
+            "type": "Task",
+            "content": "Read text from the console and store it in a variable named `city`.\n\nThen print this variable using `Console.WriteLine`.",
+            "expectedAnswer": "string city = Console.ReadLine();\nConsole.WriteLine(city);",
+            "validationProfile": "input_output_write",
+            "fakeInput": "London"
+        },
+        {
+            "type": "Tip",
+            "content": "`Console.ReadLine()` always reads text from the console.\n\nBecause of this, the value should be stored in a variable of type `string`."
+        }
+    ]
+}
