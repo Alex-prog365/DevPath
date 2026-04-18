@@ -1,0 +1,68 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "Simple input and output practice"
+        },
+        {
+            "type": "Text",
+            "content": "Before starting the practice tasks, let's remember the main steps of working with console input and output.\n\nIn the previous topics you learned how to read data from the console, convert text to numbers, and print values."
+        },
+        {
+            "type": "Text",
+            "content": "Look at the following lines of code. These are the main commands you will use in the tasks."
+        },
+        {
+            "type": "Code",
+            "content": "string textAge = Console.ReadLine();"
+        },
+        {
+            "type": "Text",
+            "content": "This line does two things.\n\nFirst, the program reads the text that the user enters in the console.\n\nThen this text is stored in a variable of type `string` named `textAge`.\n\nNow the program can use this value later in the code."
+        },
+        {
+            "type": "Code",
+            "content": "int age = Convert.ToInt32(textAge);"
+        },
+        {
+            "type": "Text",
+            "content": "This line converts text into a number.\n\nThe value stored in the variable `textAge` is converted into an integer.\n\nAfter the conversion, the result is stored in a variable named `age` of type `int`."
+        },
+        {
+            "type": "Code",
+            "content": "Console.WriteLine(age);"
+        },
+        {
+            "type": "Text",
+            "content": "This line prints the result to the console.\n\nThe program takes the value stored in the variable `age` and shows it to the user."
+        },
+        {
+            "type": "Task",
+            "content": "The user enters the name Alex.\n\nRead this text from the console.\n\nStore it in a variable named `name`.\n\nThen print the variable `name` to the console.",
+            "validationProfile": "input_output_write",
+            "fakeInput": "Alex"
+        },
+        {
+            "type": "Task",
+            "content": "The user enters the age 25.\n\nRead this value from the console.\n\nFirst store it in a variable `textAge` of type `string`.\n\nThen convert it to a number and store it in a variable `age`.\n\nFinally print the variable `age`.",
+            "validationProfile": "input_output_write",
+            "fakeInput": "25"
+        },
+        {
+            "type": "Text",
+            "content": "Sometimes programs need to work not only with integers but also with decimal numbers.\n\n`Convert.ToInt32()` converts text into an integer.\n\n`Convert.ToDouble()` converts text into a decimal number."
+        },
+        {
+            "type": "Task",
+            "content": "The user enters the price 12.5.\n\nRead this value from the console.\n\nConvert it to a decimal number using `Convert.ToDouble()`.\n\nStore the result in a variable `price`.\n\nThen print the variable `price`.",
+            "validationProfile": "input_output_write",
+            "fakeInput": "12.5"
+        },
+        {
+            "type": "Task",
+            "content": "The user enters the weight 84.6.\n\nRead this value from the console.\n\nConvert it to a decimal number.\n\nStore the result in a variable `weight`.\n\nThen print the variable `weight`.",
+            "validationProfile": "input_output_write",
+            "fakeInput": "84.6"
+        }
+    ]
+}

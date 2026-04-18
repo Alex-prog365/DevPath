@@ -2,13 +2,6 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System;
-using System.Collections.Generic;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevPath.Simulation
 {
@@ -17,6 +10,23 @@ namespace DevPath.Simulation
         public static ConsoleSimulationResult Simulate(CodeAnalysisContext context)
         {
             var result = new ConsoleSimulationResult();
+
+            if (context.UserCode.Contains("if") ||
+                context.UserCode.Contains("for") ||
+                context.UserCode.Contains("while"))
+            {
+                var output = RoslynExecutionEngine.Execute(context.UserCode, context.FakeInput ?? "");
+
+                result.HasConsoleInteraction = true;
+
+                foreach (var line in output.Split('\n'))
+                {
+                    if (!string.IsNullOrWhiteSpace(line))
+                        result.OutputLines.Add(line.Trim());
+                }
+
+                return result;
+            }
 
             var code = context.UserCode ?? string.Empty;
             var syntaxTree = CSharpSyntaxTree.ParseText(code);

@@ -14,7 +14,15 @@
         },
         {
             "type": "Text",
-            "content": "In console programs we use the command `Console.ReadLine` to read data from the console."
+            "content": "In console programs we use `Console.ReadLine()` to read data from the console."
+        },
+        {
+            "type": "Code",
+            "content": "string name = Console.ReadLine();\nConsole.WriteLine(name);"
+        },
+        {
+            "type": "Text",
+            "content": "Let's look at this example."
         },
         {
             "type": "Text",
@@ -22,11 +30,11 @@
         },
         {
             "type": "Text",
-            "content": "Important to remember:\n\n`Console.ReadLine()` always returns text.\n\nBecause of this, the result should be stored in a variable of type `string`."
+            "content": "Important to remember:\n\n`Console.ReadLine()` always returns text."
         },
         {
-            "type": "Code",
-            "content": "string name = Console.ReadLine();\nConsole.WriteLine(name);"
+            "type": "Text",
+            "content": "So the result should be stored in a `string` variable."
         },
         {
             "type": "Text",
@@ -65,7 +73,7 @@
         },
         {
             "type": "Tip",
-            "content": "`Console.ReadLine()` always reads text from the console.\n\nBecause of this, the value should be stored in a variable of type `string`."
+            "content": "When the user enters data with `Console.ReadLine()`, the program reads it as text.\n\nEven if the user enters a number or other symbols, the program first sees it as a text string."
         }
     ]
 }

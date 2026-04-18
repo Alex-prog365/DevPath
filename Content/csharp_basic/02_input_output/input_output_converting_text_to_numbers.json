@@ -1,0 +1,79 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "Converting text to numbers"
+        },
+        {
+            "type": "Text",
+            "content": "Sometimes a user enters a number in the console."
+        },
+        {
+            "type": "Text",
+            "content": "For example, it can be an age, a quantity, or a price."
+        },
+        {
+            "type": "Text",
+            "content": "However, `Console.ReadLine()` always reads the input as text."
+        },
+        {
+            "type": "Text",
+            "content": "If the program needs to work with a number, the text must be converted to a number."
+        },
+        {
+            "type": "Text",
+            "content": "In C# this can be done with `Convert.ToInt32()`."
+        },
+        {
+            "type": "Code",
+            "content": "string textAge = Console.ReadLine();\nint age = Convert.ToInt32(textAge);\nConsole.WriteLine(age);"
+        },
+        {
+            "type": "Text",
+            "content": "Let's look at the first line."
+        },
+        {
+            "type": "Text",
+            "content": "`string textAge = Console.ReadLine();`\n\n`Console.ReadLine()` reads what the user enters in the console."
+        },
+        {
+            "type": "Text",
+            "content": "The entered value is stored in the variable `textAge`.\n\nAt this moment the value is still text."
+        },
+        {
+            "type": "Text",
+            "content": "Now look at the second line."
+        },
+        {
+            "type": "Text",
+            "content": "`int age = Convert.ToInt32(textAge);`\n\n`Convert.ToInt32()` converts the text into an integer number."
+        },
+        {
+            "type": "Text",
+            "content": "After this conversion the number is stored in the variable `age`."
+        },
+        {
+            "type": "Text",
+            "content": "`Console.WriteLine(age);` prints the number to the console."
+        },
+        {
+            "type": "Task",
+            "content": "Retype this code and check it.",
+            "code": "string textAge = Console.ReadLine();\nint age = Convert.ToInt32(textAge);\nConsole.WriteLine(age);",
+            "expectedAnswer": "string textAge = Console.ReadLine();\nint age = Convert.ToInt32(textAge);\nConsole.WriteLine(age);",
+            "validationProfile": "input_output_write",
+            "fakeInput": "25"
+        },
+        {
+            "type": "Task",
+            "content": "Read a number from the console.\n\nFirst store it in a variable `textNumber` of type `string`.\n\nThen convert it to an integer and store it in a variable `number`.\n\nFinally print the variable `number`.",
+            "expectedAnswer": "string textNumber = Console.ReadLine();\nint number = Convert.ToInt32(textNumber);\nConsole.WriteLine(number);",
+            "validationProfile": "input_output_write",
+            "fakeInput": "42"
+        },
+        {
+            "type": "Tip",
+            "content": "Important:\n\nIf the entered text cannot be converted to a number, the program will show an error.\n\nExample of incorrect input:\nhello\n\nThis text cannot be converted to a number."
+        }
+    ]
+}

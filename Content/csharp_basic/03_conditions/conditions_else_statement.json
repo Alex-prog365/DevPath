@@ -1,0 +1,63 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "The else statement"
+        },
+        {
+            "type": "Text",
+            "content": "Sometimes a program needs to perform a different action when a condition is false.\n\nFor this purpose, the `else` statement is used.\n\n`else` works together with `if`.\n\nIf the condition inside `if` is true, the program runs the code inside the `if` block.\n\nIf the condition is false, the program runs the code inside the `else` block."
+        },
+        {
+            "type": "Code",
+            "content": "int age = 16;\n\nif (age > 18)\n{\n    Console.WriteLine(\"Access allowed\");\n}\nelse\n{\n    Console.WriteLine(\"Access denied\");\n}"
+        },
+        {
+            "type": "Text",
+            "content": "`int age = 16;`\n— a variable named `age` is created with the value 16."
+        },
+        {
+            "type": "Text",
+            "content": "`if (age > 18)`\n— here the program checks a condition.\n\nIt checks: \"Is the age greater than 18?\""
+        },
+        {
+            "type": "Text",
+            "content": "If this condition is **true**, the program executes the code inside the `if` block."
+        },
+        {
+            "type": "Text",
+            "content": "But in our example the value of `age` is **16**, and 16 is less than 18.\n\nSo the condition is **false**."
+        },
+        {
+            "type": "Text",
+            "content": "When the condition in `if` is false, the program skips the `if` block and moves to the next block.\n\nThis block is called `else`."
+        },
+        {
+            "type": "Text",
+            "content": "The `else` block tells the program:\n\nif the `if` condition is false, run the code inside this block."
+        },
+        {
+            "type": "Text",
+            "content": "`Console.WriteLine(\"Access denied\");`\n— the program prints the message from the `else` block."
+        },
+        {
+            "type": "Text",
+            "content": "It is important to remember that a program runs from top to bottom.\n\nFirst the program checks the `if` condition.\n\nIf the condition is false, it skips the `if` block and continues to the next block, which is `else`."
+        },
+        {
+            "type": "Task",
+            "content": "Retype the code and check it.",
+            "code": "int age = 16;\n\nif (age > 18)\n{\n    Console.WriteLine(\"Access allowed\");\n}\nelse\n{\n    Console.WriteLine(\"Access denied\");\n}",
+            "validationProfile": "conditions_if_else_basic"
+        },
+        {
+            "type": "Task",
+            "content": "A cashier enters the total price of a purchase.\n\nCreate a variable `price` and set it to 60.\n\nIf the price is greater than 50, print:\n\n\"5% discount applied\"\n\nIf the price is not greater than 50, print:\n\n\"No discount\".\n\nUse `if` and `else`.",
+            "validationProfile": "conditions_if_else_basic"
+        },
+        {
+            "type": "Tip",
+            "content": "Only one block runs: `if` or `else`.\n\nIf the condition is true, the `if` block runs.\n\nIf the condition is false, the `else` block runs."
+        }
+    ]
+}

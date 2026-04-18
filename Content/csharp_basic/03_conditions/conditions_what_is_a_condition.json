@@ -1,0 +1,92 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "What is a condition"
+        },
+        {
+            "type": "Text",
+            "content": "Sometimes a program needs to make a decision."
+        },
+        {
+            "type": "Text",
+            "content": "For example:\n\nif the user enters the correct password — the program allows access.\n\nif the age is less than 18 — the program may block access.\n\nif a number is greater than 100 — the program may do something different."
+        },
+        {
+            "type": "Text",
+            "content": "To make such decisions, programs use conditions."
+        },
+        {
+            "type": "Text",
+            "content": "A condition is a check.\n\nThe program checks whether something is true or false."
+        },
+        {
+            "type": "Text",
+            "content": "The result of this check always has only two possible values:\n\ntrue — the condition is true\nfalse — the condition is false"
+        },
+        {
+            "type": "Text",
+            "content": "For example, imagine a situation in a shop.\n\nThe cashier enters the total price of a purchase.\n\nThe program checks this value."
+        },
+        {
+            "type": "Text",
+            "content": "If the total is less than 100 euros, the program does not apply a discount.\n\nIf the total is greater than 100 euros, the program applies a 10% discount."
+        },
+        {
+            "type": "Text",
+            "content": "In this way, the program makes a decision based on a condition."
+        },
+        {
+            "type": "Text",
+            "content": "A condition often looks like a comparison."
+        },
+        {
+            "type": "Code",
+            "content": "price > 100"
+        },
+        {
+            "type": "Text",
+            "content": "This is an example of a condition.\n\nIt means:\n\nthe price is greater than 100."
+        },
+        {
+            "type": "Text",
+            "content": "In programming there are special constructions that help a program make such decisions."
+        },
+        {
+            "type": "Text",
+            "content": "The most common ones are:\n\n`if`, `else`, and `else if`."
+        },
+        {
+            "type": "Text",
+            "content": "These constructions allow the program to choose different actions depending on a condition."
+        },
+        {
+            "type": "Text",
+            "content": "To check conditions, programs use comparison operators.\n\nThese operators show what should be compared."
+        },
+        {
+            "type": "Text",
+            "content": "For example:\n\n`>` means greater than\n`<` means less than\n`==` means equal to"
+        },
+        {
+            "type": "Text",
+            "content": "Sometimes one condition is not enough.\n\nA program may need to check several conditions together."
+        },
+        {
+            "type": "Text",
+            "content": "For this, logical operators are used."
+        },
+        {
+            "type": "Text",
+            "content": "Examples of logical operators are:\n\n`&&` (and)\n`||` (or)"
+        },
+        {
+            "type": "Text",
+            "content": "In the next topics, you will learn:\n\n- how `if` works\n- how `else` is used\n- how `else if` chains work\n- how comparison operators work\n- how logical operators work"
+        },
+        {
+            "type": "Tip",
+            "content": "Conditions are the basis of decision making in programs. They allow a program to choose different actions in different situations."
+        }
+    ]
+}

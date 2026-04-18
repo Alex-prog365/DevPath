@@ -1,0 +1,59 @@
+{
+    "blocks": [
+        {
+            "type": "Title",
+            "content": "The if statement"
+        },
+        {
+            "type": "Text",
+            "content": "Sometimes a program needs to perform an action only if a condition is true.\n\nFor this purpose, the `if` statement is used.\n\n`if` allows the program to check a condition and run code only when that condition is true.\n\nIf the condition is false, the code inside the `if` block will not run."
+        },
+        {
+            "type": "Code",
+            "content": "int age = 20;\n\nif (age > 18)\n{\n    Console.WriteLine(\"Access allowed\");\n}"
+        },
+        {
+            "type": "Text",
+            "content": "Let's look at this code step by step."
+        },
+        {
+            "type": "Text",
+            "content": "`int age = 20;`\n\nA variable named `age` is created. It stores the value 20."
+        },
+        {
+            "type": "Text",
+            "content": "`if (age > 18)`\n\nThis is where the condition begins.\n\nThe keyword `if` tells the program:\ncheck the condition inside the parentheses.\n\nInside the parentheses we write the condition that must be checked.\n\nIn this example the program checks:\n\n`age > 18`\n\nThis means: \"Is the value of `age` greater than 18?\""
+        },
+        {
+            "type": "Text",
+            "content": "If the condition is **true**, the program will execute the code inside the curly braces.\n\nIf the condition is **false**, the program will skip this block of code."
+        },
+        {
+            "type": "Text",
+            "content": "`{ }`\n\nCurly braces show which code belongs to the `if` block."
+        },
+        {
+            "type": "Text",
+            "content": "`Console.WriteLine(\"Access allowed\");`\n\nThis line will run only if the condition is true."
+        },
+        {
+            "type": "Text",
+            "content": "In this example `20 > 18`, so the program prints the message."
+        },
+        {
+            "type": "Task",
+            "content": "Retype the code and check it.",
+            "code": "int age = 20;\n\nif (age > 18)\n{\n    Console.WriteLine(\"Access allowed\");\n}",
+            "validationProfile": "conditions_if_basic"
+        },
+        {
+            "type": "Task",
+            "content": "Create a variable `score` and set its value to 120.\n\nWrite an `if` statement.\n\nIf `score` is greater than 100, print the text \"Level completed\".",
+            "validationProfile": "conditions_if_basic"
+        },
+        {
+            "type": "Tip",
+            "content": "The code inside `if` runs only when the condition is true.\n\nIf the condition is false, the program simply skips this block."
+        }
+    ]
+}
