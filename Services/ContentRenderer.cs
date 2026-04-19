@@ -112,6 +112,56 @@ namespace DevPath.Services
                         Margin = new Thickness(0, 0, 0, 12)
                     };
 
+                    var showExampleButton = new Button
+                    {
+                        Content = "Show example",
+                        Width = 130,
+                        Height = 30,
+                        Margin = new Thickness(0, 0, 0, 10)
+                    };
+
+                    var exampleCodeBox = new TextEditor
+                    {
+                        Text = block.Code ?? "",
+                        IsReadOnly = true,
+                        ShowLineNumbers = false,
+                        SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("C#"),
+                        FontFamily = new FontFamily("Consolas"),
+                        FontSize = 15,
+                        MinHeight = 70,
+                        Margin = new Thickness(0),
+                        HorizontalAlignment = HorizontalAlignment.Stretch,
+                        Visibility = Visibility.Visible,
+                        Background = new SolidColorBrush(Color.FromRgb(226, 230, 236)),
+                        Foreground = Brushes.Black
+                    };
+
+                    var exampleBorder = new Border
+                    {
+                        Background = new SolidColorBrush(Color.FromRgb(220, 225, 232)),
+                        BorderBrush = new SolidColorBrush(Color.FromRgb(150, 160, 175)),
+                        BorderThickness = new Thickness(1),
+                        CornerRadius = new CornerRadius(6),
+                        Padding = new Thickness(10),
+                        Margin = new Thickness(0, 0, 0, 10),
+                        Child = exampleCodeBox,
+                        Visibility = Visibility.Collapsed
+                    };
+
+                    showExampleButton.Click += (s, e) =>
+                    {
+                        if (exampleBorder.Visibility == Visibility.Collapsed)
+                        {
+                            exampleBorder.Visibility = Visibility.Visible;
+                            showExampleButton.Content = "Hide example";
+                        }
+                        else
+                        {
+                            exampleBorder.Visibility = Visibility.Collapsed;
+                            showExampleButton.Content = "Show example";
+                        }
+                    };
+
                     var answerBox = new TextEditor
                     {
                         ShowLineNumbers = false,
@@ -204,10 +254,10 @@ namespace DevPath.Services
                         }
                     };
 
-
-
                     taskPanel.Children.Add(taskHeader);
                     taskPanel.Children.Add(taskText);
+                    taskPanel.Children.Add(showExampleButton);
+                    taskPanel.Children.Add(exampleBorder);
                     taskPanel.Children.Add(answerBox);
                     taskPanel.Children.Add(checkButton);
                     taskPanel.Children.Add(resultText);
