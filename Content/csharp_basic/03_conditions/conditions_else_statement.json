@@ -45,14 +45,15 @@
             "content": "It is important to remember that a program runs from top to bottom.\n\nFirst the program checks the `if` condition.\n\nIf the condition is false, it skips the `if` block and continues to the next block, which is `else`."
         },
         {
-            "type": "Task",
+            "type": "TaskRetype",
             "content": "Retype the code and check it.",
             "code": "int age = 16;\n\nif (age > 18)\n{\n    Console.WriteLine(\"Access allowed\");\n}\nelse\n{\n    Console.WriteLine(\"Access denied\");\n}",
             "validationProfile": "conditions_if_else_basic"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "A cashier enters the total price of a purchase.\n\nCreate a variable `price` and set it to 60.\n\nIf the price is greater than 50, print:\n\n\"5% discount applied\"\n\nIf the price is not greater than 50, print:\n\n\"No discount\".\n\nUse `if` and `else`.",
+            "code": "int price = 60;\n\nif (price > 50)\n{\n    Console.WriteLine(\"5% discount applied\");\n}\nelse\n{\n    Console.WriteLine(\"No discount\");\n}",
             "validationProfile": "conditions_if_else_basic"
         },
         {

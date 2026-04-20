@@ -17,7 +17,7 @@
             "Content": "In the first line the variable age is created.\nIt does not have a value yet.\n\nIn the second line the value 25 is assigned to it.\n\nNow the variable stores a number."
         },
         {
-            "Type": "Task",
+            "Type": "TaskRetype",
             "Content": "Retype this code and check it.",
             "Code": "int age;\nage = 25;",
             "ExpectedAnswer": "int age;\nage = 25;",
@@ -27,9 +27,9 @@
             "validationProfile": "variable_change"
         },
         {
-            "Type": "Task",
+            "Type": "TaskSolve",
             "Content": "Try to create a variable and assign a value to it in two steps.\n\nName it score.\nFirst create the variable.\nThen assign the value 50.",
-            "ExpectedAnswer": "int score;\nscore = 50;",
+            "Code": "int score;\nscore = 50;",
             "requiredVariableName": "score",
             "requiredVariableType": "int",
             "requiredVariableValue": "50",

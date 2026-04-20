@@ -17,7 +17,7 @@
             "Content": "First the variable `score` gets the value 10.\n\nThen a new value 20 is assigned to it.\n\nThe old value is replaced by the new one.\n\nNow the variable stores the number 20."
         },
         {
-            "type": "Task",
+            "type": "TaskRetype",
             "content": "Retype this code and check it.",
             "code": "int score = 10;\nscore = 20;",
             "expectedAnswer": "int score = 10;\nscore = 20;",
@@ -27,9 +27,9 @@
             "validationProfile": "variable_change"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Try to change the value of a variable.\n\nCreate a variable age\nand first store the number 18 in it.\n\nThen change the value to 21.\n\nType the code yourself using the example above.",
-            "expectedAnswer": "int age = 18;\nage = 21;",
+            "code": "int age = 18;\nage = 21;",
             "requiredVariableName": "age",
             "requiredVariableType": "int",
             "requiredVariableValue": "21",

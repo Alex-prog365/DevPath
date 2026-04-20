@@ -33,16 +33,16 @@
             "content": "`\"Hello\"` is the text that will appear in the console.\n\nText in C# must always be written inside quotation marks."
         },
         {
-            "type": "Task",
+            "type": "TaskRetype",
             "content": "Retype this code and check it.",
             "code": "Console.WriteLine(\"Hello\");",
             "expectedAnswer": "Console.WriteLine(\"Hello\");",
             "validationProfile": "input_output_write"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Write two lines of code.\n\nFirst print the text \"Hello\".\nThen print the number 25.\n\nUse `Console.WriteLine`.",
-            "expectedAnswer": "Console.WriteLine(\"Hello\");\nConsole.WriteLine(25);",
+            "code": "Console.WriteLine(\"Hello\");\nConsole.WriteLine(25);",
             "validationProfile": "input_output_write"
         },
         {

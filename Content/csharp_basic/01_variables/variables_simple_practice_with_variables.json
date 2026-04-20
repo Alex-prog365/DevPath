@@ -9,44 +9,44 @@
             "content": "Now try to apply the knowledge from this lesson.\n\nIn the tasks below you need to choose the correct code and write it yourself.\n\nBe careful: some options contain small syntax mistakes. Even one missing detail can cause an error in the program."
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable `city` and store the text \"Helsinki\".",
-            "expectedAnswer": "string city = \"Helsinki\";",
+            "code": "string city = \"Helsinki\";",
             "requiredVariableName": "city",
             "requiredVariableType": "string",
             "requiredVariableValue": "\"Helsinki\"",
             "validationProfile": "variable_basic"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable `price` and store the decimal number `19.99`.",
-            "expectedAnswer": "double price = 19.99;",
+            "code": "double price = 19.99;",
             "requiredVariableName": "price",
             "requiredVariableType": "double",
             "requiredVariableValue": "19.99",
             "validationProfile": "variable_basic"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable `temperature` using `var` and store the number `22.5`.",
-            "expectedAnswer": "var temperature = 22.5;",
+            "code": "var temperature = 22.5;",
             "requiredVariableName": "temperature",
             "requiredVariableValue": "22.5",
             "validationProfile": "variable_var"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a constant named `monthsInYear` with the value `12`.\n\nChoose the correct option:",
-            "expectedAnswer": "const int monthsInYear = 12;",
+            "code": "const int monthsInYear = 12;",
             "requiredVariableName": "monthsInYear",
             "requiredVariableType": "int",
             "requiredVariableValue": "12",
             "validationProfile": "variable_const"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable with the correct name `totalPrice` and store the number `50`.\n\nChoose the correct option:",
-            "expectedAnswer": "int totalPrice = 50;",
+            "code": "int totalPrice = 50;",
             "requiredVariableName": "totalPrice",
             "requiredVariableType": "int",
             "requiredVariableValue": "50",

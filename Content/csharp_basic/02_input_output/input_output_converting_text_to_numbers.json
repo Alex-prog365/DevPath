@@ -57,7 +57,7 @@
             "content": "`Console.WriteLine(age);` prints the number to the console."
         },
         {
-            "type": "Task",
+            "type": "TaskRetype",
             "content": "Retype this code and check it.",
             "code": "string textAge = Console.ReadLine();\nint age = Convert.ToInt32(textAge);\nConsole.WriteLine(age);",
             "expectedAnswer": "string textAge = Console.ReadLine();\nint age = Convert.ToInt32(textAge);\nConsole.WriteLine(age);",
@@ -65,9 +65,9 @@
             "fakeInput": "25"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Read a number from the console.\n\nFirst store it in a variable `textNumber` of type `string`.\n\nThen convert it to an integer and store it in a variable `number`.\n\nFinally print the variable `number`.",
-            "expectedAnswer": "string textNumber = Console.ReadLine();\nint number = Convert.ToInt32(textNumber);\nConsole.WriteLine(number);",
+            "code": "string textNumber = Console.ReadLine();\nint number = Convert.ToInt32(textNumber);\nConsole.WriteLine(number);",
             "validationProfile": "input_output_write",
             "fakeInput": "42"
         },

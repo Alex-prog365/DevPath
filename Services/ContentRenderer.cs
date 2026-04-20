@@ -76,8 +76,11 @@ namespace DevPath.Services
                     contentColumn.Children.Add(codeBorder);
                     
                 }
-                else if (block.Type == "Task")
+                else if (block.Type == "TaskRetype" || block.Type == "TaskSolve")
                 {
+                    bool isRetypeTask = block.Type == "TaskRetype";
+                    bool isSolveTask = block.Type == "TaskSolve";
+
                     var taskBorder = new Border
                     {
                         Background = new SolidColorBrush(Color.FromRgb(255, 248, 220)),
@@ -96,7 +99,7 @@ namespace DevPath.Services
 
                     var taskHeader = new TextBlock
                     {
-                        Text = "Practice Task",
+                        Text = isRetypeTask ? "Retype Task" : "Solve Task",
                         FontSize = 22,
                         FontWeight = FontWeights.Bold,
                         Margin = new Thickness(0, 0, 0, 10)
@@ -114,10 +117,11 @@ namespace DevPath.Services
 
                     var showExampleButton = new Button
                     {
-                        Content = "Show example",
+                        Content = isRetypeTask ? "Show example" : "Show solution",
                         Width = 130,
                         Height = 30,
-                        Margin = new Thickness(0, 0, 0, 10)
+                        Margin = new Thickness(0, 0, 0, 10),
+                        IsEnabled = isRetypeTask
                     };
 
                     var exampleCodeBox = new TextEditor
@@ -153,12 +157,12 @@ namespace DevPath.Services
                         if (exampleBorder.Visibility == Visibility.Collapsed)
                         {
                             exampleBorder.Visibility = Visibility.Visible;
-                            showExampleButton.Content = "Hide example";
+                            showExampleButton.Content = isRetypeTask ? "Hide example" : "Hide solution";
                         }
                         else
                         {
                             exampleBorder.Visibility = Visibility.Collapsed;
-                            showExampleButton.Content = "Show example";
+                            showExampleButton.Content = isRetypeTask ? "Show example" : "Show solution";
                         }
                     };
 
@@ -213,6 +217,12 @@ namespace DevPath.Services
 
                     checkButton.Click += (sender, e) =>
                     {
+                       
+                        if (isSolveTask)
+                        {
+                            showExampleButton.IsEnabled = true;
+                        }
+
                         var context = new CodeAnalysisContext
                         {
                             UserCode = answerBox.Text,

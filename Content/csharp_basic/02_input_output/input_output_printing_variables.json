@@ -49,16 +49,16 @@
             "content": "If we write `Console.WriteLine(age);`, the program prints the value of the variable.\n\nIf we write `Console.WriteLine(\"age\");`, the program prints the text \"age\"."
         },
         {
-            "type": "Task",
+            "type": "TaskRetype",
             "content": "Retype this code and check it.",
             "code": "int age = 25;\nConsole.WriteLine(age);",
             "expectedAnswer": "int age = 25;\nConsole.WriteLine(age);",
             "validationProfile": "input_output_write"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable `score` of type `int` and assign the value 100.\n\nThen print this variable using `Console.WriteLine`.",
-            "expectedAnswer": "int score = 100;\nConsole.WriteLine(score);",
+            "code": "int score = 100;\nConsole.WriteLine(score);",
             "validationProfile": "variable_basic"
         },
         {

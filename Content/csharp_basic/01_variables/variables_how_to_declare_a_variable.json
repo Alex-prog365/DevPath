@@ -37,8 +37,9 @@
             "content": "The text \"Alex\" is the value stored inside the variable."
         },
         {
-            "type": "Task",
+            "type": "TaskRetype",
             "content": "Retype this code and check it.",
+            "code": "string name = \"Alex\";",
             "expectedAnswer": "string name = \"Alex\";",
             "requiredVariableName": "name",
             "requiredVariableType": "string",
@@ -46,9 +47,9 @@
             "validationProfile": "variable_basic"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Try to create a similar variable.\nName it `city` and store the text \"Helsinki\" inside it.",
-            "expectedAnswer": "string city = \"Helsinki\";",
+            "code": "string city = \"Helsinki\";",
             "requiredVariableName": "city",
             "requiredVariableType": "string",
             "requiredVariableValue": "\"Helsinki\"",

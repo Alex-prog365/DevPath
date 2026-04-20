@@ -28,27 +28,27 @@
             "validationProfile": "variable_var"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable `store` and assign the value \"Market\".",
-            "expectedAnswer": "var store = \"Market\";",
+            "code": "var store = \"Market\";",
             "requiredVariableName": "store",
             "requiredVariableType": "var",
             "requiredVariableValue": "\"Market\"",
             "validationProfile": "variable_var"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable `customers` and assign the value 45.",
-            "expectedAnswer": "var customers = 45;",
+            "code": "var customers = 45;",
             "requiredVariableName": "customers",
             "requiredVariableType": "var",
             "requiredVariableValue": "45",
             "validationProfile": "variable_var"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable `temperature` and assign the value 18.5.",
-            "expectedAnswer": "var temperature = 18.5;",
+            "code": "var temperature = 18.5;",
             "requiredVariableName": "temperature",
             "requiredVariableType": "var",
             "requiredVariableValue": "18.5",
@@ -57,6 +57,6 @@
         {
             "type": "Tip",
             "content": "When `var` is used, the value must be assigned immediately.\n\nThat means the variable must already contain something:\n\na number\na decimal number\ntext\nor another value\n\nThe program uses that value to understand what data type the variable should have."
-        } 
+        }
     ]
 }

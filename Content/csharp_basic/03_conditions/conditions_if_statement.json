@@ -41,14 +41,15 @@
             "content": "In this example `20 > 18`, so the program prints the message."
         },
         {
-            "type": "Task",
+            "type": "TaskRetype",
             "content": "Retype the code and check it.",
             "code": "int age = 20;\n\nif (age > 18)\n{\n    Console.WriteLine(\"Access allowed\");\n}",
             "validationProfile": "conditions_if_basic"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable `score` and set its value to 120.\n\nWrite an `if` statement.\n\nIf `score` is greater than 100, print the text \"Level completed\".",
+            "code": "int score = 120;\n\nif (score > 100)\n{\n    Console.WriteLine(\"Level completed\");\n}",
             "validationProfile": "conditions_if_basic"
         },
         {

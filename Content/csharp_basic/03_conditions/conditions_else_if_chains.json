@@ -17,13 +17,13 @@
             "content": "`int score = 75;`\n\nA variable named `score` is created with the value 75.\n\n`if (score > 90)`\n\nThe program first checks the first condition.\n\nIt asks: is the score greater than 90?\n\n75 is not greater than 90, so the condition is false.\n\nThe program moves to the next condition.\n\n`else if (score > 70)`\n\nNow the program checks the next condition.\n\nIt asks: is the score greater than 70?\n\n75 is greater than 70, so the condition is true.\n\nThe program runs the code inside this block:\n\n`Console.WriteLine(\"Good\");`\n\nAfter this, the program stops checking the remaining conditions because a matching condition has already been found."
         },
         {
-            "type": "Task",
+            "type": "TaskRetype",
             "content": "Retype the code from the example and check it.",
             "code": "int score = 75;\n\nif (score > 90)\n{\n    Console.WriteLine(\"Excellent\");\n}\nelse if (score > 70)\n{\n    Console.WriteLine(\"Good\");\n}\nelse if (score > 50)\n{\n    Console.WriteLine(\"Pass\");\n}\nelse\n{\n    Console.WriteLine(\"Try again\");\n}",
             "validationProfile": "conditions_else_if_chain"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Imagine a program that checks the total price of a purchase in a store.\n\nCreate a variable `total` and set its value to 80.\n\nIf the total is greater than 100, print \"10% discount\".\n\nIf the total is greater than 50, print \"5% discount\".\n\nOtherwise print \"No discount\".\n\nUse `if`, `else if`, and `else`.",
             "code": "int total = 80;\n\nif (total > 100)\n{\n    Console.WriteLine(\"10% discount\");\n}\nelse if (total > 50)\n{\n    Console.WriteLine(\"5% discount\");\n}\nelse\n{\n    Console.WriteLine(\"No discount\");\n}",
             "validationProfile": "conditions_else_if_chain"

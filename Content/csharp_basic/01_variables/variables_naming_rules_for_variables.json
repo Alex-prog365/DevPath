@@ -23,17 +23,17 @@
             "expectedAnswer": "int studentAge = 20;\ndouble totalPrice = 19.99;\nstring storeName = \"Market\";"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable of type `string` that stores the city \"New York\".\n\nWhich variable name is correct?\n\nCityName\ncity name\ncityName\n\nWrite the correct line of code.",
-            "expectedAnswer": "string cityName = \"New York\";",
+            "code": "string cityName = \"New York\";",
             "requiredVariableName": "cityName",
             "requiredVariableType": "string",
             "requiredVariableValue": "\"New York\""
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable of type `int` that stores the number `120` (number of visitors).\n\nWhich variable name is correct?\n\nVisitorsCount\nvisitorsCount\nvisitors count\n\nWrite the correct line of code.",
-            "expectedAnswer": "int visitorsCount = 120;",
+            "code": "int visitorsCount = 120;",
             "requiredVariableName": "visitorsCount",
             "requiredVariableType": "int",
             "requiredVariableValue": "120"

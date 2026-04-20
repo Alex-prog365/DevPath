@@ -21,34 +21,34 @@
             "content": "You can imagine this like refrigerators in a store.\n\nEach refrigerator is designed for a specific type of product.\n\nOne refrigerator stores fish, another stores meat, and another stores desserts.\n\nIn programming it works the same way: each data type is designed to store a specific kind of information."
         },
         {
-            "type": "Task",
+            "type": "TaskRetype",
             "content": "Retype this code and check it.",
             "code": "string name = \"Alex\";\nint age = 25;\ndouble temperature = 22.5;\nbool isStudent = true;",
             "expectedAnswer": "string name = \"Alex\";\nint age = 25;\ndouble temperature = 22.5;\nbool isStudent = true;",
             "validationProfile": "variable_basic"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable `price` and assign the value `19.99`.",
-            "expectedAnswer": "double price = 19.99;",
+            "code": "double price = 19.99;",
             "requiredVariableName": "price",
             "requiredVariableType": "double",
             "requiredVariableValue": "19.99",
             "validationProfile": "variable_basic"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable `isOpen` and assign the value `true`.",
-            "expectedAnswer": "bool isOpen = true;",
+            "code": "bool isOpen = true;",
             "requiredVariableName": "isOpen",
             "requiredVariableType": "bool",
             "requiredVariableValue": "true",
             "validationProfile": "variable_basic"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create a variable `city` and assign the value `\"Espoo\"`.",
-            "expectedAnswer": "string city = \"Espoo\";",
+            "code": "string city = \"Espoo\";",
             "requiredVariableName": "city",
             "requiredVariableType": "string",
             "requiredVariableValue": "\"Espoo\"",

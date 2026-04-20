@@ -50,8 +50,9 @@
             "content": "A variable stores data."
         },
         {
-            "type": "Task",
+            "type": "TaskRetype",
             "content": "Retype this code and check it.",
+            "code": "int age = 25;",
             "expectedAnswer": "int age = 25;",
             "requiredVariableName": "age",
             "requiredVariableType": "int",
@@ -59,9 +60,9 @@
             "validationProfile": "variable_basic"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Try to create a similar variable. Name it score and store the number 100 inside it.",
-            "expectedAnswer": "int score = 100;",
+            "code": "int score = 100;",
             "requiredVariableName": "score",
             "requiredVariableType": "int",
             "requiredVariableValue": "100",

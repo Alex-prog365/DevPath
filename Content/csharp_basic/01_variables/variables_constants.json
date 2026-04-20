@@ -17,16 +17,16 @@
             "content": "Here the keyword `const` is used.\n\nIt tells the program that the value of this variable cannot be changed.\n\nFor example, the number of days in a week is always `7`.\n\nThis value should stay the same in the program."
         },
         {
-            "type": "Task",
+            "type": "TaskRetype",
             "content": "Retype this code and check it.",
             "code": "const int daysInWeek = 7;",
             "expectedAnswer": "const int daysInWeek = 7;",
             "validationProfile": "variable_const"
         },
         {
-            "type": "Task",
+            "type": "TaskSolve",
             "content": "Create your own constant.\n\nName it `monthsInYear` and assign the value `12`.\n\nType the code yourself using the example above.",
-            "expectedAnswer": "const int monthsInYear = 12;",
+            "code": "const int monthsInYear = 12;",
             "requiredVariableName": "monthsInYear",
             "requiredVariableType": "int",
             "requiredVariableValue": "12",
