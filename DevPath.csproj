@@ -30,7 +30,6 @@
 	  <Folder Include="Content\csharp_basic\00_introduction\" />
 	  <Folder Include="Content\csharp_basic\02_input_output\" />
 	  <Folder Include="Content\csharp_basic\03_conditions\" />
-	  <Folder Include="Content\csharp_basic\04_operators\" />
 	  <Folder Include="Content\csharp_basic\05_loops\" />
 	  <Folder Include="Content\csharp_basic\06_methods\" />
 	  <Folder Include="Content\csharp_basic\07_arrays_lists\" />

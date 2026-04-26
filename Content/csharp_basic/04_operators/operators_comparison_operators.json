@@ -1,0 +1,64 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Comparison operators"
+    },
+    {
+      "type": "Text",
+      "content": "In previous topics, we already used conditions with `if`, `else`, and `else if`.\n\nNow we will focus on comparison operators.\n\nComparison operators are used inside conditions to compare values."
+    },
+    {
+      "type": "Text",
+      "content": "There are several comparison operators:\n\n`>` greater than\n`<` less than\n`>=` greater than or equal to\n`<=` less than or equal to\n`==` equal to\n`!=` not equal to"
+    },
+    {
+      "type": "Text",
+      "content": "In this topic, we will focus on the operator `==`.\n\nIt is used to check if two values are equal.\n\nBeginners often confuse `=` and `==`.\n\n`=` assigns a value.\n\n`==` compares values."
+    },
+    {
+      "type": "Code",
+      "content": "int temperature = 0;\n\nif (temperature > 0)\n{\n    Console.WriteLine(\"Above zero\");\n}\nelse if (temperature == 0)\n{\n    Console.WriteLine(\"Exactly zero\");\n}\nelse\n{\n    Console.WriteLine(\"Below zero\");\n}"
+    },
+    {
+      "type": "Text",
+      "content": "Let’s look at how this code works."
+    },
+    {
+      "type": "Text",
+      "content": "After `int temperature = 0;`, the variable `temperature` contains the value 0."
+    },
+    {
+      "type": "Text",
+      "content": "In the first `if`, the operator `>` is used:\n\n`if (temperature > 0)`\n\nThe program checks whether 0 is greater than 0.\n\nThis is false, so the program skips this block."
+    },
+    {
+      "type": "Text",
+      "content": "In the `else if`, the operator `==` is used:\n\n`else if (temperature == 0)`\n\nThe program checks whether the value is equal to 0.\n\nThis condition is true, so the program executes this block."
+    },
+    {
+      "type": "Text",
+      "content": "The program prints:\n\n`Exactly zero`"
+    },
+    {
+      "type": "Text",
+      "content": "After finding the first true condition, the program stops checking the rest of the chain.\n\nThe `else` block does not run."
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and check it.\n\nThen change the value of the variable `temperature`.\n\nTry:\n\n5\n0\n-3\n\nAfter each change, press Check and see how the result changes.",
+      "code": "int temperature = 0;\n\nif (temperature > 0)\n{\n    Console.WriteLine(\"Above zero\");\n}\nelse if (temperature == 0)\n{\n    Console.WriteLine(\"Exactly zero\");\n}\nelse\n{\n    Console.WriteLine(\"Below zero\");\n}",
+      "validationProfile": "conditions_comparison_operators_basic"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a similar program.\n\nCreate a variable `points` and set it to 10.\n\nIf `points` is greater than 10, print:\n\n\"More than 10\"\n\nIf `points` is equal to 10, print:\n\n\"Exactly 10\"\n\nOtherwise print:\n\n\"Less than 10\"",
+      "code": "int points = 10;\n\nif (points > 10)\n{\n    Console.WriteLine(\"More than 10\");\n}\nelse if (points == 10)\n{\n    Console.WriteLine(\"Exactly 10\");\n}\nelse\n{\n    Console.WriteLine(\"Less than 10\");\n}",
+      "validationProfile": "conditions_comparison_operators_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "In this topic, we looked at one comparison operator: `==`.\n\nOther comparison operators (`>`, `<`, `>=`, `<=`, `!=`) work in the same way.\n\nThey compare values and return either `true` or `false`.\n\nThe program then uses this result to decide which code to run."
+    }
+  ]
+}

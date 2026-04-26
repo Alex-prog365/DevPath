@@ -1,36 +1,68 @@
 {
-    "blocks": [
-        {
-            "type": "Title",
-            "content": "Else if chains"
-        },
-        {
-            "type": "Text",
-            "content": "Sometimes a program needs to choose between more than two options.\n\nIn previous topics we used `if` and `else`. This allowed the program to choose between two actions.\n\nBut sometimes a program needs to check several possible conditions.\n\nFor these situations we use an `else if` chain.\n\nAn `else if` chain allows the program to check conditions one by one.\n\nThe program starts with the first condition. If it is false, the program checks the next one.\n\nThe checks continue from top to bottom until one of the conditions becomes true.\n\nWhen the program finds the first true condition, it runs that block of code and stops checking the rest."
-        },
-        {
-            "type": "Code",
-            "content": "int score = 75;\n\nif (score > 90)\n{\n    Console.WriteLine(\"Excellent\");\n}\nelse if (score > 70)\n{\n    Console.WriteLine(\"Good\");\n}\nelse if (score > 50)\n{\n    Console.WriteLine(\"Pass\");\n}\nelse\n{\n    Console.WriteLine(\"Try again\");\n}"
-        },
-        {
-            "type": "Text",
-            "content": "`int score = 75;`\n\nA variable named `score` is created with the value 75.\n\n`if (score > 90)`\n\nThe program first checks the first condition.\n\nIt asks: is the score greater than 90?\n\n75 is not greater than 90, so the condition is false.\n\nThe program moves to the next condition.\n\n`else if (score > 70)`\n\nNow the program checks the next condition.\n\nIt asks: is the score greater than 70?\n\n75 is greater than 70, so the condition is true.\n\nThe program runs the code inside this block:\n\n`Console.WriteLine(\"Good\");`\n\nAfter this, the program stops checking the remaining conditions because a matching condition has already been found."
-        },
-        {
-            "type": "TaskRetype",
-            "content": "Retype the code from the example and check it.",
-            "code": "int score = 75;\n\nif (score > 90)\n{\n    Console.WriteLine(\"Excellent\");\n}\nelse if (score > 70)\n{\n    Console.WriteLine(\"Good\");\n}\nelse if (score > 50)\n{\n    Console.WriteLine(\"Pass\");\n}\nelse\n{\n    Console.WriteLine(\"Try again\");\n}",
-            "validationProfile": "conditions_else_if_chain"
-        },
-        {
-            "type": "TaskSolve",
-            "content": "Imagine a program that checks the total price of a purchase in a store.\n\nCreate a variable `total` and set its value to 80.\n\nIf the total is greater than 100, print \"10% discount\".\n\nIf the total is greater than 50, print \"5% discount\".\n\nOtherwise print \"No discount\".\n\nUse `if`, `else if`, and `else`.",
-            "code": "int total = 80;\n\nif (total > 100)\n{\n    Console.WriteLine(\"10% discount\");\n}\nelse if (total > 50)\n{\n    Console.WriteLine(\"5% discount\");\n}\nelse\n{\n    Console.WriteLine(\"No discount\");\n}",
-            "validationProfile": "conditions_else_if_chain"
-        },
-        {
-            "type": "Tip",
-            "content": "Conditions in an `else if` chain are checked from top to bottom.\n\nWhen the program finds the first true condition, it runs that block and stops checking the rest."
-        }
-    ]
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Else if chains"
+    },
+    {
+      "type": "Text",
+      "content": "Sometimes a program needs to choose between more than two options.\n\nIn previous topics we used `if` and `else`.\n\nThis allowed the program to choose between two actions.\n\nBut what if there are more options?\n\nFor this, we use an `else if` chain."
+    },
+    {
+      "type": "Text",
+      "content": "How it works:\n\nThe program checks conditions one by one.\n\nIt starts from the top and moves down.\n\nAs soon as it finds the first true condition, it runs that block and stops."
+    },
+    {
+      "type": "Code",
+      "content": "int score = 75;\n\nif (score > 90)\n{\n    Console.WriteLine(\"Excellent\");\n}\nelse if (score > 70)\n{\n    Console.WriteLine(\"Good\");\n}\nelse if (score > 50)\n{\n    Console.WriteLine(\"Pass\");\n}\nelse\n{\n    Console.WriteLine(\"Test not passed\");\n}"
+    },
+    {
+      "type": "Text",
+      "content": "Let’s go through the code step by step."
+    },
+    {
+      "type": "Text",
+      "content": "int score = 75;\nThe program gets a value — the score is 75."
+    },
+    {
+      "type": "Text",
+      "content": "Then the program starts checking the conditions from top to bottom."
+    },
+    {
+      "type": "Text",
+      "content": "if (score > 90)\nThe program checks:\n\nIs 75 greater than 90?\n\nNo → false → move to the next condition"
+    },
+    {
+      "type": "Text",
+      "content": "else if (score > 70)\nThe program checks:\n\nIs 75 greater than 70?\n\nYes → true"
+    },
+    {
+      "type": "Text",
+      "content": "Since the condition is true, the program runs this block:\n\nConsole.WriteLine(\"Good\");"
+    },
+    {
+      "type": "Text",
+      "content": "After this, the program stops.\n\nIt does not check the remaining conditions."
+    },
+    {
+      "type": "Text",
+      "content": "Important:\n\nThe program always executes only the first true condition."
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and check it.\n\nThen change the value of the variable `score`.\n\nTry:\n\n120\n75\n40\n10\n\nAfter each change, press Check and see how the result changes.",
+      "code": "int score = 75;\n\nif (score > 90)\n{\n    Console.WriteLine(\"Excellent\");\n}\nelse if (score > 70)\n{\n    Console.WriteLine(\"Good\");\n}\nelse if (score > 50)\n{\n    Console.WriteLine(\"Pass\");\n}\nelse\n{\n    Console.WriteLine(\"Test not passed\");\n}",
+      "validationProfile": "conditions_else_if_chain"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a program that checks the total price.\n\nCreate a variable `total` and set it to 80.\n\nIf the total is greater than 100, print \"10% discount\".\n\nIf the total is greater than 50, print \"5% discount\".\n\nOtherwise print \"No discount\".\n\nUse `if`, `else if`, and `else`.",
+      "code": "int total = 80;\n\nif (total > 100)\n{\n    Console.WriteLine(\"10% discount\");\n}\nelse if (total > 50)\n{\n    Console.WriteLine(\"5% discount\");\n}\nelse\n{\n    Console.WriteLine(\"No discount\");\n}",
+      "validationProfile": "conditions_else_if_chain"
+    },
+    {
+      "type": "Tip",
+      "content": "Conditions are checked from top to bottom.\n\nThe program stops at the first true condition."
+    }
+  ]
 }

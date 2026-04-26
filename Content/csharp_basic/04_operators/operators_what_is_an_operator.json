@@ -1,0 +1,36 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "What is an operator"
+    },
+    {
+      "type": "Text",
+      "content": "An operator is a special symbol that tells the program what action to perform.\n\nSimple idea:\n\noperator = action\n\nA program does not understand commands like a human.\nIt only follows actions written in code."
+    },
+    {
+      "type": "Code",
+      "content": "int totalPrice = 80;\ntotalPrice = totalPrice + 20;"
+    },
+    {
+      "type": "Text",
+      "content": "Here the program changes the value step by step.\n\nFirst, the program takes the current value of `totalPrice`.\nThe value is 80.\n\nThen the `+` operator is used.\nThe program adds 20.\n\nThe result becomes 100.\n\nAfter that, the `=` operator saves the result back into the variable `totalPrice`."
+    },
+    {
+      "type": "Text",
+      "content": "Operators are not only used for calculations.\n\nA program can use operators to:\n\ncalculate values\ncompare values\ncheck conditions\nchange data"
+    },
+    {
+      "type": "Code",
+      "content": "age >= 18"
+    },
+    {
+      "type": "Text",
+      "content": "Here the `>=` operator compares two values.\n\nThe program checks if the value of `age` is greater than or equal to 18.\n\nThe result of this check is always:\n\n`true`\nor\n`false`"
+    },
+    {
+      "type": "Text",
+      "content": "In this lesson, you will learn different types of operators:\n\narithmetic operators\ncomparison operators\nlogical operators\nassignment operators\nincrement and decrement\norder of operations\n\nYou do not need to remember everything now.\n\nThe main idea is:\n\nAn operator is a tool that helps the program work with data."
+    }
+  ]
+}

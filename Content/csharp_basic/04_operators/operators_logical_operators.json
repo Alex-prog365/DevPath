@@ -1,0 +1,161 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Logical operators"
+    },
+    {
+      "type": "Text",
+      "content": "In previous topics, we used conditions with `if`, `else`, and `else if`.\n\nWe also used comparison operators like `>`, `<`, `>=`, `==`.\n\nNow we can combine conditions together.\n\nFor this, we use logical operators."
+    },
+    {
+      "type": "Text",
+      "content": "Logical operators help the program work with more than one condition.\n\nThe main logical operators are:\n\n`&&` AND\n`||` OR\n`!` NOT\n\nWe will look at each one separately."
+    },
+
+    {
+      "type": "Text",
+      "content": "1. Logical AND: `&&`\n\n`&&` means AND.\n\nIt is used when all conditions must be true."
+    },
+    {
+      "type": "Text",
+      "content": "Example:\n\nA person can enter only if:\n\n- the age is 18 or more\n- the person has a ticket\n\nBoth conditions must be true."
+    },
+    {
+      "type": "Code",
+      "content": "int age = 20;\nbool hasTicket = true;\n\nif (age >= 18 && hasTicket == true)\n{\n    Console.WriteLine(\"Access allowed\");\n}\nelse\n{\n    Console.WriteLine(\"Access denied\");\n}"
+    },
+    {
+      "type": "Text",
+      "content": "In this code, the program has two values:\n\n`age` contains 20.\n`hasTicket` contains true."
+    },
+    {
+      "type": "Text",
+      "content": "The condition has two parts:\n\n`age >= 18`\n`hasTicket == true`\n\nThe operator `&&` connects these two conditions."
+    },
+    {
+      "type": "Text",
+      "content": "The program checks both conditions:\n\n`age >= 18` → 20 is greater than or equal to 18 → true\n\n`hasTicket == true` → hasTicket is true → true"
+    },
+    {
+      "type": "Text",
+      "content": "Now the program checks the full condition:\n\n`true && true`\n\nThe result is true.\n\nSo the program runs the `if` block and prints:\n\n`Access allowed`"
+    },
+    {
+      "type": "Text",
+      "content": "With `&&`, one false condition is enough to make the whole condition false.\n\nFor example:\n\n`true && false` → false\n`false && true` → false\n`false && false` → false"
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and check it.\n\nThen change the values and check again.\n\nTry:\n\n`age = 16`\n`hasTicket = true`\n\nThen try:\n\n`age = 20`\n`hasTicket = false`\n\nWatch when the program prints `Access allowed` and when it prints `Access denied`.",
+      "code": "int age = 20;\nbool hasTicket = true;\n\nif (age >= 18 && hasTicket == true)\n{\n    Console.WriteLine(\"Access allowed\");\n}\nelse\n{\n    Console.WriteLine(\"Access denied\");\n}",
+      "validationProfile": "logical_operator_and_basic"
+    },
+
+    {
+      "type": "Text",
+      "content": "2. Logical OR: `||`\n\n`||` means OR.\n\nIt is used when at least one condition must be true."
+    },
+    {
+      "type": "Text",
+      "content": "Example:\n\nA user can get a discount if:\n\n- the user is a student\n- or the user has a discount card\n\nOnly one of these conditions is enough."
+    },
+    {
+      "type": "Code",
+      "content": "bool isStudent = false;\nbool hasDiscountCard = true;\n\nif (isStudent == true || hasDiscountCard == true)\n{\n    Console.WriteLine(\"Discount applied\");\n}\nelse\n{\n    Console.WriteLine(\"No discount\");\n}"
+    },
+    {
+      "type": "Text",
+      "content": "In this code, the program has two boolean values:\n\n`isStudent` contains `false`.\n`hasDiscountCard` contains `true`."
+    },
+    {
+      "type": "Text",
+      "content": "The full condition is:\n\n`isStudent == true || hasDiscountCard == true`\n\nThis condition has two checks:\n\nCheck 1: Is `isStudent` equal to `true`?\nCheck 2: Is `hasDiscountCard` equal to `true`?"
+    },
+    {
+      "type": "Text",
+      "content": "First check:\n\nIs `isStudent` equal to `true`?\n\nNo.\n\nThe value of `isStudent` is `false`.\n\nSo the first check gives `false`."
+    },
+    {
+      "type": "Text",
+      "content": "Second check:\n\nIs `hasDiscountCard` equal to `true`?\n\nYes.\n\nThe value of `hasDiscountCard` is `true`.\n\nSo the second check gives `true`."
+    },
+    {
+      "type": "Text",
+      "content": "After that, the program uses the logical operator `||`:\n\n`false || true`\n\nWith `||`, at least one check must be true.\n\nHere the second check is true, so the whole condition becomes `true`."
+    },
+    {
+      "type": "Text",
+      "content": "Because the whole condition is `true`, the program runs the `if` block and prints:\n\n`Discount applied`"
+    },
+    {
+      "type": "Text",
+      "content": "With `||`, the whole condition is false only when all conditions are false.\n\nFor example:\n\n`true || false` → true\n`false || true` → true\n`true || true` → true\n`false || false` → false"
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and check it.\n\nThen change the values and check again.\n\nTry:\n\n`isStudent = true`\n`hasDiscountCard = false`\n\nThen try:\n\n`isStudent = false`\n`hasDiscountCard = false`\n\nWatch when the program gives a discount.",
+      "code": "bool isStudent = false;\nbool hasDiscountCard = true;\n\nif (isStudent == true || hasDiscountCard == true)\n{\n    Console.WriteLine(\"Discount applied\");\n}\nelse\n{\n    Console.WriteLine(\"No discount\");\n}",
+      "validationProfile": "logical_operator_or_basic"
+    },
+
+    {
+      "type": "Text",
+      "content": "3. Logical NOT: `!`\n\n`!` means NOT.\n\nIt changes the result to the opposite value."
+    },
+    {
+      "type": "Text",
+      "content": "`!` is often used with `bool` values.\n\nIf the value is true, `!` makes it false.\n\nIf the value is false, `!` makes it true."
+    },
+    {
+      "type": "Code",
+      "content": "bool isLoggedIn = false;\n\nif (!isLoggedIn)\n{\n    Console.WriteLine(\"Please log in\");\n}\nelse\n{\n    Console.WriteLine(\"Welcome\");\n}"
+    },
+    {
+      "type": "Text",
+      "content": "In this code, the variable `isLoggedIn` is set to `false`.\n\nThis means the user is NOT logged in."
+    },
+    {
+      "type": "Text",
+      "content": "Now the program checks the condition:\n\n`!isLoggedIn`"
+    },
+    {
+      "type": "Text",
+      "content": "Step by step:\n\nThe program looks at `isLoggedIn`\n→ the value is `false`\n\nThe `!` operator means \"NOT\"\n→ it changes the value to the opposite\n\nNOT `false` becomes `true`"
+    },
+    {
+      "type": "Text",
+      "content": "So the condition is `true`.\n\nBecause the condition is true, the program runs the `if` block."
+    },
+    {
+      "type": "Text",
+      "content": "Output:\n\n`Please log in`"
+    },
+    {
+      "type": "Text",
+      "content": "Now imagine we change the value:\n\n`isLoggedIn = true`"
+    },
+    {
+      "type": "Text",
+      "content": "Step by step:\n\nThe program sees `isLoggedIn = true`\n\n`!true` becomes `false`"
+    },
+    {
+      "type": "Text",
+      "content": "So the condition is `false`.\n\nBecause the condition is false, the program skips `if` and runs `else`."
+    },
+    {
+      "type": "Text",
+      "content": "Output:\n\n`Welcome`"
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and check it.\n\nThen change the value:\n\n`isLoggedIn = true`\n\nCheck the code again and see how the result changes.",
+      "code": "bool isLoggedIn = false;\n\nif (!isLoggedIn)\n{\n    Console.WriteLine(\"Please log in\");\n}\nelse\n{\n    Console.WriteLine(\"Welcome\");\n}",
+      "validationProfile": "logical_operator_not_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "Logical operators help the program combine conditions.\n\n`&&` means: all conditions must be true.\n\n`||` means: at least one condition must be true.\n\n`!` means: change true to false, or false to true."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Simple decision program"
+    },
+    {
+      "type": "Text",
+      "content": "In this topic, you will practice everything you learned in this lesson.\n\nYou already know how to use:\n\n`if`\n`else`\n`else if`\n\nNow you will use them in small tasks.\n\nThe tasks go from simple to more complex."
+    },
+    {
+      "type": "Text",
+      "content": "Task 1 — one condition"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a variable `temperature` and set it to 10.\n\nIf the temperature is greater than 0, print:\n\n\"Above zero\"\n\nUse only `if`.",
+      "code": "int temperature = 10;\n\nif (temperature > 0)\n{\n    Console.WriteLine(\"Above zero\");\n}",
+      "validationProfile": "practice_if_basic"
+    },
+    {
+      "type": "Text",
+      "content": "Task 2 — if / else"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a variable `age` and set it to 16.\n\nIf the age is 18 or more, print:\n\n\"Access allowed\"\n\nOtherwise print:\n\n\"Access denied\"\n\nUse `if` and `else`.",
+      "code": "int age = 16;\n\nif (age >= 18)\n{\n    Console.WriteLine(\"Access allowed\");\n}\nelse\n{\n    Console.WriteLine(\"Access denied\");\n}",
+      "validationProfile": "practice_if_else_basic"
+    },
+    {
+      "type": "Text",
+      "content": "Task 3 — multiple conditions"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a variable `score` and set it to 65.\n\nIf `score` is greater than or equal to 80, print:\n\n\"Excellent\"\n\nOtherwise, if `score` is greater than or equal to 50, print:\n\n\"Pass\"\n\nOtherwise print:\n\n\"Fail\"\n\nUse `if`, `else if`, and `else`.",
+      "code": "int score = 65;\n\nif (score >= 80)\n{\n    Console.WriteLine(\"Excellent\");\n}\nelse if (score >= 50)\n{\n    Console.WriteLine(\"Pass\");\n}\nelse\n{\n    Console.WriteLine(\"Fail\");\n}",
+      "validationProfile": "practice_else_if_basic"
+    },
+    {
+      "type": "Text",
+      "content": "Task 4 — mini program"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a variable `age` and set it to 17.\n\nIf the age is less than 18, print:\n\n\"Too young\"\n\nOtherwise, if the age is equal to 18, print:\n\n\"Just allowed\"\n\nOtherwise print:\n\n\"Access allowed\"",
+      "code": "int age = 17;\n\nif (age < 18)\n{\n    Console.WriteLine(\"Too young\");\n}\nelse if (age == 18)\n{\n    Console.WriteLine(\"Just allowed\");\n}\nelse\n{\n    Console.WriteLine(\"Access allowed\");\n}",
+      "validationProfile": "practice_else_if_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "Common mistake:\n\nUsing multiple `if` statements instead of `else if`.\n\nThe program can still run, but it may work incorrectly.\n\nIf you use several `if` statements, the program can run more than one block.\n\nUse `else if` when you want to choose only one correct option."
+    }
+  ]
+}

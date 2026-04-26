@@ -104,8 +104,6 @@ namespace DevPath.Data
                 ("The if statement", "csharp_basic/03_conditions/conditions_if_statement.json"),
                 ("The else statement", "csharp_basic/03_conditions/conditions_else_statement.json"),
                 ("else if chains", "csharp_basic/03_conditions/conditions_else_if_chains.json"),
-                ("Comparison operators", "csharp_basic/03_conditions/conditions_comparison_operators.json"),
-                ("Logical operators", "csharp_basic/03_conditions/conditions_logical_operators.json"),
                 ("Simple decision program", "csharp_basic/03_conditions/conditions_simple_decision_program.json")
             };
         }
@@ -117,6 +115,8 @@ namespace DevPath.Data
             {
                 ("What is an operator", "csharp_basic/04_operators/operators_what_is_an_operator.json"),
                 ("Arithmetic operators", "csharp_basic/04_operators/operators_arithmetic_operators.json"),
+                ("Comparison operators", "csharp_basic/04_operators/operators_comparison_operators.json"),
+                ("Logical operators", "csharp_basic/04_operators/operators_logical_operators.json"),
                 ("Assignment operators", "csharp_basic/04_operators/operators_assignment_operators.json"),
                 ("Increment and decrement", "csharp_basic/04_operators/operators_increment_decrement.json"),
                 ("Operator precedence", "csharp_basic/04_operators/operators_operator_precedence.json"),
