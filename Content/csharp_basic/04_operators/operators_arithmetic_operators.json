@@ -1,0 +1,68 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Arithmetic operators"
+    },
+    {
+      "type": "Text",
+      "content": "Arithmetic operators are used when the program needs to calculate numbers.\n\nIn this topic, we will use them in a real example: calculating the final purchase price."
+    },
+    {
+      "type": "Text",
+      "content": "The main arithmetic operators are:\n\n`+` addition\n`-` subtraction\n`*` multiplication\n`/` division"
+    },
+    {
+      "type": "Code",
+      "content": "int total = 120;\nint discount = 0;\n\nif (total > 100)\n{\n    discount = total * 20 / 100;\n}\nelse if (total == 100)\n{\n    discount = total * 10 / 100;\n}\nelse\n{\n    discount = total * 5 / 100;\n}\n\ntotal = total - discount;\n\nConsole.WriteLine(\"Final purchase price: \" + total);"
+    },
+    {
+      "type": "Text",
+      "content": "Let’s look at how the calculation works."
+    },
+    {
+      "type": "Text",
+      "content": "`total` starts with the value 120.\n\nThis is the original purchase price.\n\n`discount` starts with the value 0.\n\nThe program will calculate the discount and save it into this variable."
+    },
+    {
+      "type": "Text",
+      "content": "Because `total > 100` is true, the program uses the first block.\n\nThis block calculates a 20% discount."
+    },
+    {
+      "type": "Text",
+      "content": "The discount is calculated here:\n\n`discount = total * 20 / 100`\n\nWith the current value, this means:\n\n120 * 20 / 100 = 24"
+    },
+    {
+      "type": "Text",
+      "content": "Now the value of `discount` is 24.\n\nAfter that, the program subtracts the discount from the original price:\n\n`total = total - discount`\n\nSo the new value of `total` becomes 96."
+    },
+    {
+      "type": "Text",
+      "content": "The program does not check the other branches because the first condition was already true."
+    },
+    {
+      "type": "Text",
+      "content": "Finally, the program prints:\n\n`Final purchase price: 96`"
+    },
+    {
+      "type": "Text",
+      "content": "If you change the first value, the final result will change.\n\nFor example:\n\n`total = 120` → the program applies a 20% discount\n`total = 100` → the program applies a 10% discount\n`total = 80` → the program applies a 5% discount"
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and check it.\n\nThen change the value of `total`.\n\nTry:\n\n120\n100\n80\n\nAfter each change, press Check and watch how the final purchase price changes.",
+      "code": "int total = 120;\nint discount = 0;\n\nif (total > 100)\n{\n    discount = total * 20 / 100;\n}\nelse if (total == 100)\n{\n    discount = total * 10 / 100;\n}\nelse\n{\n    discount = total * 5 / 100;\n}\n\ntotal = total - discount;\n\nConsole.WriteLine(\"Final purchase price: \" + total);",
+      "validationProfile": "operators_arithmetic_basic"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a similar program.\n\nCreate a variable `points` and set it to 80.\nCreate a variable `bonus` and set it to 0.\n\nIf `points` is greater than 70, calculate a 20% bonus.\n\nIf `points` is equal to 70, calculate a 10% bonus.\n\nOtherwise calculate a 5% bonus.\n\nAdd the bonus to `points`.\n\nPrint the final result with this text:\n\n\"Final points: \"",
+      "code": "int points = 80;\nint bonus = 0;\n\nif (points > 70)\n{\n    bonus = points * 20 / 100;\n}\nelse if (points == 70)\n{\n    bonus = points * 10 / 100;\n}\nelse\n{\n    bonus = points * 5 / 100;\n}\n\npoints = points + bonus;\n\nConsole.WriteLine(\"Final points: \" + points);",
+      "validationProfile": "operators_arithmetic_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "Arithmetic operators can calculate a new value and save it back into a variable.\n\nFor example:\n\n`total = total - discount`\n\nThis means: take the old value of `total`, subtract `discount`, and save the new result back into `total`."
+    }
+  ]
+}

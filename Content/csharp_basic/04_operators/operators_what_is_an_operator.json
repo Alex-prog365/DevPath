@@ -30,7 +30,11 @@
     },
     {
       "type": "Text",
-      "content": "In this lesson, you will learn different types of operators:\n\narithmetic operators\ncomparison operators\nlogical operators\nassignment operators\nincrement and decrement\norder of operations\n\nYou do not need to remember everything now.\n\nThe main idea is:\n\nAn operator is a tool that helps the program work with data."
+      "content": "In this lesson, you will learn different types of operators:\n\narithmetic operators\ncomparison operators\nlogical operators\nassignment operators\nincrement and decrement\norder of operations\n\nYou do not need to remember everything now."
+    },
+    {
+      "type": "Tip",
+      "content": "The main idea is:\n\nAn operator is a tool that helps the program work with data."
     }
   ]
 }
