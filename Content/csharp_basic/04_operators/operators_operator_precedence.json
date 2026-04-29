@@ -1,0 +1,66 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Operator precedence"
+    },
+    {
+      "type": "Text",
+      "content": "In previous topics, we used expressions with several operators.\n\nFor example:\n\n`+`, `-`, `*`, `/`.\n\nNow we need to understand one important thing:\n\nThe program does not always calculate expressions from left to right."
+    },
+    {
+      "type": "Text",
+      "content": "Operators have a priority.\n\nThis is called operator precedence.\n\nIt means that some operations are calculated before others."
+    },
+    {
+      "type": "Text",
+      "content": "Look at this expression:\n\n`2 + 3 * 4`\n\nA beginner may expect the result to be 20.\n\nBut in C#, multiplication has higher priority than addition."
+    },
+    {
+      "type": "Code",
+      "content": "int result = 2 + 3 * 4;\n\nif (result == 14)\n{\n    Console.WriteLine(\"Multiplication first\");\n}\nelse\n{\n    Console.WriteLine(\"Different result\");\n}\n\nConsole.WriteLine(result);"
+    },
+    {
+      "type": "Text",
+      "content": "The program calculates multiplication first:\n\n`3 * 4 = 12`\n\nThen it adds 2:\n\n`2 + 12 = 14`"
+    },
+    {
+      "type": "Text",
+      "content": "The value of `result` becomes 14.\n\nBecause `result == 14` is true, the program outputs:\n\n`Multiplication first`\n\nThen it outputs the value:\n\n`14`"
+    },
+    {
+      "type": "Text",
+      "content": "Important rule:\n\n`*` and `/` are calculated before `+` and `-`."
+    },
+    {
+      "type": "Text",
+      "content": "If we want to change the order of calculation, we can use parentheses."
+    },
+    {
+      "type": "Code",
+      "content": "int result = (2 + 3) * 4;\n\nif (result == 20)\n{\n    Console.WriteLine(\"Parentheses first\");\n}\nelse\n{\n    Console.WriteLine(\"Different result\");\n}\n\nConsole.WriteLine(result);"
+    },
+    {
+      "type": "Text",
+      "content": "Now the program calculates what is inside the parentheses first:\n\n`2 + 3 = 5`\n\nThen it multiplies:\n\n`5 * 4 = 20`"
+    },
+    {
+      "type": "Text",
+      "content": "The value of `result` becomes 20.\n\nBecause `result == 20` is true, the program outputs:\n\n`Parentheses first`\n\nThen it outputs the value:\n\n`20`"
+    },
+    {
+      "type": "Text",
+      "content": "Parentheses are useful when you want to clearly control the order of calculation."
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and check it.\n\nThen experiment with the expression.\n\nTry:\n\nRemove the parentheses\nAdd the parentheses back\nChange the numbers\nAdd more operations like `+`, `-`, `*`, `/`\n\nAfter each change, check the code again.\n\nWatch how the value of `result` changes.\n\nFocus on this question:\n\nWhich part of the expression is calculated first?",
+      "code": "int result = (2 + 3) * 4;\n\nif (result == 20)\n{\n    Console.WriteLine(\"Parentheses first\");\n}\nelse\n{\n    Console.WriteLine(\"Different result\");\n}\n\nConsole.WriteLine(result);",
+      "validationProfile": "operator_precedence_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "Operator precedence controls the order of calculation.\n\n`*` and `/` have higher priority than `+` and `-`.\n\nParentheses can change the order and make the expression clearer."
+    }
+  ]
+}

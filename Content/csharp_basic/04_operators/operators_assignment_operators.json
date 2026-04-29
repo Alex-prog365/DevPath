@@ -1,0 +1,120 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Assignment operators"
+    },
+    {
+      "type": "Text",
+      "content": "In previous topics, we used variables and conditions.\n\nWe also used `=` to give a value to a variable.\n\nNow we will look at how variables can CHANGE their value."
+    },
+    {
+      "type": "Text",
+      "content": "Assignment operators are used to:\n\n• store a value\n• update a value\n\nThe most basic one is `=`."
+    },
+    {
+      "type": "Code",
+      "content": "int score = 10;\n\nscore = score + 5;\n\nConsole.WriteLine(score);"
+    },
+    {
+      "type": "Text",
+      "content": "Let’s slow down and see what really happens."
+    },
+    {
+      "type": "Text",
+      "content": "Step 1:\n\n`int score = 10;`\n\nNow `score` = 10"
+    },
+    {
+      "type": "Text",
+      "content": "Step 2:\n\n`score = score + 5;`\n\nImportant idea:\n\nThe variable uses its CURRENT value."
+    },
+    {
+      "type": "Text",
+      "content": "The program does this:\n\nTake `score` → 10\nAdd 5 → 15\nSave result back to `score`"
+    },
+    {
+      "type": "Text",
+      "content": "After this line:\n\n`score` = 15\n\nThe old value (10) is gone."
+    },
+    {
+      "type": "Text",
+      "content": "Step 3:\n\nThe program prints:\n\n`15`"
+    },
+    {
+      "type": "Text",
+      "content": "Important:\n\nThis does NOT create a new variable.\n\nIt updates the same variable."
+    },
+    {
+      "type": "Text",
+      "content": "Because this pattern is used very often, C# has a shorter way."
+    },
+    {
+      "type": "Text",
+      "content": "Instead of:\n\n`score = score + 5;`\n\nwe can write:\n\n`score += 5;`"
+    },
+    {
+      "type": "Code",
+      "content": "int score = 10;\n\nscore += 5;\n\nConsole.WriteLine(score);"
+    },
+    {
+      "type": "Text",
+      "content": "`score += 5;` means:\n\nTake current value → add 5 → save back"
+    },
+    {
+      "type": "Text",
+      "content": "So this:\n\n`score += 5;`\n\nis exactly the same as:\n\n`score = score + 5;`"
+    },
+    {
+      "type": "Text",
+      "content": "Other assignment operators:\n\n`+=` add\n`-=` subtract\n`*=` multiply\n`/=` divide\n\nAll of them follow the same idea."
+    },
+    {
+      "type": "Text",
+      "content": "Now let’s use this in a real situation."
+    },
+    {
+      "type": "Code",
+      "content": "int balance = 100;\nint purchase = 30;\n\nbalance -= purchase;\n\nif (balance >= 50)\n{\n    Console.WriteLine(\"Enough money left\");\n}\nelse\n{\n    Console.WriteLine(\"Low balance\");\n}\n\nConsole.WriteLine(balance);"
+    },
+    {
+      "type": "Text",
+      "content": "Start:\n\n`balance` = 100\n`purchase` = 30"
+    },
+    {
+      "type": "Text",
+      "content": "Then:\n\n`balance -= purchase;`\n\nStep by step:\n\n100 - 30 = 70\n\nNow `balance` = 70"
+    },
+    {
+      "type": "Text",
+      "content": "Important:\n\nThe program now works with 70.\n\nNOT with 100."
+    },
+    {
+      "type": "Text",
+      "content": "Condition:\n\n`balance >= 50`\n\n70 >= 50 → true"
+    },
+    {
+      "type": "Text",
+      "content": "So the program prints:\n\n`Enough money left`"
+    },
+    {
+      "type": "Text",
+      "content": "Then it prints:\n\n`70`"
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and run it.\n\nThen change `purchase`.\n\nTry:\n\n`purchase = 30`\n`purchase = 60`\n`purchase = 90`\n\nWatch TWO things:\n\n1. How `balance` changes\n2. When the program prints different messages",
+      "code": "int balance = 100;\nint purchase = 30;\n\nbalance -= purchase;\n\nif (balance >= 50)\n{\n    Console.WriteLine(\"Enough money left\");\n}\nelse\n{\n    Console.WriteLine(\"Low balance\");\n}\n\nConsole.WriteLine(balance);",
+      "validationProfile": "assignment_operators_basic"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create your own version.\n\n1. Create `points = 40`\n2. Create `bonus = 15`\n3. Add bonus to points using assignment operator\n\nThen:\n\nIf points >= 50 → print \"Level passed\"\nElse → print \"Try again\"\n\nFinally, print points",
+      "code": "int points = 40;\nint bonus = 15;\n\npoints += bonus;\n\nif (points >= 50)\n{\n    Console.WriteLine(\"Level passed\");\n}\nelse\n{\n    Console.WriteLine(\"Try again\");\n}\n\nConsole.WriteLine(points);",
+      "validationProfile": "assignment_operators_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "Key idea:\n\nA variable remembers ONLY its last value.\n\nWhen you use `+=`, `-=`, `*=`, `/=`:\n\n• take current value\n• calculate new value\n• overwrite old value\n\nThe old value is gone."
+    }
+  ]
+}

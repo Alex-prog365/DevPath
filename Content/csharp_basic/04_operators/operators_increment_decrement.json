@@ -1,0 +1,80 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Increment and decrement"
+    },
+    {
+      "type": "Text",
+      "content": "In the previous topic, we updated variables using operators like `+=` and `-=`.\n\nNow we will look at a shorter way to change a value by 1."
+    },
+    {
+      "type": "Text",
+      "content": "`++` is called increment.\n\nIt increases a variable by 1.\n\n`--` is called decrement.\n\nIt decreases a variable by 1."
+    },
+    {
+      "type": "Text",
+      "content": "These operators are used when we count something, for example lives, points, or attempts."
+    },
+    {
+      "type": "Text",
+      "content": "Example:\n\nA player has lives. When the player gets hit, one life is lost."
+    },
+    {
+      "type": "Code",
+      "content": "int lives = 3;\n\nlives--;\n\nif (lives > 0)\n{\n    Console.WriteLine(\"Still playing\");\n}\nelse\n{\n    Console.WriteLine(\"Game over\");\n}\n\nConsole.WriteLine(lives);"
+    },
+    {
+      "type": "Text",
+      "content": "`lives--` decreases the value by 1.\n\nSo:\n\n3 becomes 2."
+    },
+    {
+      "type": "Text",
+      "content": "The program then checks the updated value.\n\nBecause 2 is greater than 0, it prints:\n\n`Still playing`"
+    },
+    {
+      "type": "Text",
+      "content": "Final value:\n\n`2`"
+    },
+    {
+      "type": "Text",
+      "content": "Important idea:\n\n`--` changes the variable itself.\n\nThe new value is used in the next steps of the program."
+    },
+    {
+      "type": "Text",
+      "content": "`++` works the same way, but adds 1 instead of subtracting."
+    },
+    {
+      "type": "Code",
+      "content": "int points = 0;\n\npoints++;\npoints++;\n\nif (points >= 2)\n{\n    Console.WriteLine(\"Level passed\");\n}\nelse\n{\n    Console.WriteLine(\"Try again\");\n}\n\nConsole.WriteLine(points);"
+    },
+    {
+      "type": "Text",
+      "content": "Each `points++` adds 1.\n\n0 → 1 → 2."
+    },
+    {
+      "type": "Text",
+      "content": "The condition uses the updated value.\n\nBecause the value is 2, the program prints:\n\n`Level passed`"
+    },
+    {
+      "type": "Text",
+      "content": "Final value:\n\n`2`"
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and check it.\n\nThen change the value of `lives` and check again.\n\nTry:\n\n`lives = 3`\n`lives = 1`\n\nWatch how `lives--` changes the value before the condition is checked.",
+      "code": "int lives = 3;\n\nlives--;\n\nif (lives > 0)\n{\n    Console.WriteLine(\"Still playing\");\n}\nelse\n{\n    Console.WriteLine(\"Game over\");\n}\n\nConsole.WriteLine(lives);",
+      "validationProfile": "increment_decrement_basic"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a similar program.\n\nCreate a variable `points` and set it to 0.\n\nIncrease `points` two times using `++`.\n\nThen check the updated value of `points`.\n\nIf `points` is greater than or equal to 2, print:\n\n\"Level passed\"\n\nOtherwise print:\n\n\"Try again\"\n\nAfter that, print the final value of `points`.",
+      "code": "int points = 0;\n\npoints++;\npoints++;\n\nif (points >= 2)\n{\n    Console.WriteLine(\"Level passed\");\n}\nelse\n{\n    Console.WriteLine(\"Try again\");\n}\n\nConsole.WriteLine(points);",
+      "validationProfile": "increment_decrement_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "`++` increases a value by 1.\n\n`--` decreases a value by 1.\n\nThey update the current value of the variable, and the program uses this new value in the next steps."
+    }
+  ]
+}

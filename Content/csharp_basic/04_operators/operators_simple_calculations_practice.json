@@ -1,0 +1,56 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Simple calculations practice"
+    },
+    {
+      "type": "Text",
+      "content": "In this topic, we will combine several operators in one small program.\n\nThe program calculates the final price of an order.\n\nYou can change the values at the top of the code and check how the result changes."
+    },
+    {
+      "type": "Code",
+      "content": "int price = 80;\nint quantity = 2;\nint customerPoints = 9;\nbool isMember = true;\n\nint total = price * quantity;\n\nif (isMember && total >= 100)\n{\n    total -= 20;\n    customerPoints++;\n    Console.WriteLine(\"Member discount applied\");\n}\nelse if (total >= 100)\n{\n    total -= 10;\n    Console.WriteLine(\"Regular discount applied\");\n}\nelse\n{\n    total += 5;\n    customerPoints--;\n    Console.WriteLine(\"Small order fee added\");\n}\n\nif (customerPoints >= 10 || isMember)\n{\n    Console.WriteLine(\"Bonus available\");\n}\nelse\n{\n    Console.WriteLine(\"No bonus yet\");\n}\n\nConsole.WriteLine(total);\nConsole.WriteLine(customerPoints);"
+    },
+    {
+      "type": "Text",
+      "content": "This program has several steps.\n\nFirst, it stores the starting data:\n\n`price`, `quantity`, `customerPoints`, and `isMember`."
+    },
+    {
+      "type": "Text",
+      "content": "Then the program calculates the first value of `total`:\n\n`int total = price * quantity;`\n\nWith the current values, this means:\n\n`80 * 2 = 160`"
+    },
+    {
+      "type": "Text",
+      "content": "After that, the program checks the order.\n\nBecause the customer is a member and `total` is greater than or equal to 100, the first `if` block runs."
+    },
+    {
+      "type": "Text",
+      "content": "Inside this block, two things happen:\n\n`total -= 20;`\n\nThe discount changes `total` from 160 to 140.\n\n`customerPoints++;`\n\nThe points change from 9 to 10."
+    },
+    {
+      "type": "Text",
+      "content": "Then the program checks the bonus condition:\n\n`customerPoints >= 10 || isMember`\n\nIn this example, both parts are enough to give a bonus, so the program outputs:\n\n`Bonus available`"
+    },
+    {
+      "type": "Text",
+      "content": "Final result:\n\n`total` is 140.\n\n`customerPoints` is 10."
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and check it.\n\nThen change the values at the top and check again.\n\nTry:\n\n`price = 80`, `quantity = 2`, `customerPoints = 9`, `isMember = true`\n\n`price = 40`, `quantity = 2`, `customerPoints = 4`, `isMember = false`\n\n`price = 60`, `quantity = 2`, `customerPoints = 10`, `isMember = false`\n\nWatch which block runs: `if`, `else if`, or `else`.\n\nAlso watch how `total` and `customerPoints` change.",
+      "code": "int price = 80;\nint quantity = 2;\nint customerPoints = 9;\nbool isMember = true;\n\nint total = price * quantity;\n\nif (isMember && total >= 100)\n{\n    total -= 20;\n    customerPoints++;\n    Console.WriteLine(\"Member discount applied\");\n}\nelse if (total >= 100)\n{\n    total -= 10;\n    Console.WriteLine(\"Regular discount applied\");\n}\nelse\n{\n    total += 5;\n    customerPoints--;\n    Console.WriteLine(\"Small order fee added\");\n}\n\nif (customerPoints >= 10 || isMember)\n{\n    Console.WriteLine(\"Bonus available\");\n}\nelse\n{\n    Console.WriteLine(\"No bonus yet\");\n}\n\nConsole.WriteLine(total);\nConsole.WriteLine(customerPoints);",
+      "validationProfile": "operators_practice_basic"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a similar program.\n\nCreate these variables:\n\n`int ticketPrice = 30;`\n`int tickets = 4;`\n`int bonusPoints = 8;`\n`bool hasDiscountCard = true;`\n\nCalculate `total`.\n\nIf the customer has a discount card and `total` is greater than or equal to 100:\nsubtract 15 from `total`, increase `bonusPoints` by 1, and output \"Card discount applied\".\n\nElse if `total` is greater than or equal to 100:\nsubtract 5 from `total` and output \"Small discount applied\".\n\nOtherwise:\nadd 3 to `total`, decrease `bonusPoints` by 1, and output \"Service fee added\".\n\nThen check bonus points.\n\nIf `bonusPoints` is greater than or equal to 9 or the customer has a discount card, output \"Extra bonus available\".\n\nOtherwise output \"No extra bonus\".\n\nAfter that, output the final value of `total` and `bonusPoints`.",
+      "code": "int ticketPrice = 30;\nint tickets = 4;\nint bonusPoints = 8;\nbool hasDiscountCard = true;\n\nint total = ticketPrice * tickets;\n\nif (hasDiscountCard && total >= 100)\n{\n    total -= 15;\n    bonusPoints++;\n    Console.WriteLine(\"Card discount applied\");\n}\nelse if (total >= 100)\n{\n    total -= 5;\n    Console.WriteLine(\"Small discount applied\");\n}\nelse\n{\n    total += 3;\n    bonusPoints--;\n    Console.WriteLine(\"Service fee added\");\n}\n\nif (bonusPoints >= 9 || hasDiscountCard)\n{\n    Console.WriteLine(\"Extra bonus available\");\n}\nelse\n{\n    Console.WriteLine(\"No extra bonus\");\n}\n\nConsole.WriteLine(total);\nConsole.WriteLine(bonusPoints);",
+      "validationProfile": "operators_practice_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "This practice combines arithmetic operators, comparison operators, logical operators, assignment operators, increment, and decrement.\n\nChange the starting values and watch how the program chooses a different path."
+    }
+  ]
+}
