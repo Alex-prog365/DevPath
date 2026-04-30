@@ -62,16 +62,15 @@ namespace DevPath.Simulation
 
         private static string WrapCode(string userCode)
         {
-            return $@"
-using System;
+            return $@"using System;
 
-class Program
-{{
-    static void Main()
-    {{
-        {userCode}
-    }}
-}}";
+                class Program
+                {{
+                    static void Main()
+                {{
+                {userCode}
+                }}
+                }}";
         }
     }
 }

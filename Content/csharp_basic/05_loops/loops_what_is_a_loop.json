@@ -1,0 +1,44 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "What is a loop"
+    },
+    {
+      "type": "Text",
+      "content": "Until now, each line of code in the program was executed only once.\n\nBut sometimes a program needs to repeat the same action several times."
+    },
+    {
+      "type": "Text",
+      "content": "A loop is a part of the program that repeats a block of code.\n\nThis repetition is controlled by conditions written in the code."
+    },
+    {
+      "type": "Text",
+      "content": "A loop does not repeat code randomly.\n\nIt always follows a rule that decides whether the next repetition should happen."
+    },
+    {
+      "type": "Text",
+      "content": "Let’s look at a simple idea.\n\nImagine a program that checks a PIN code.\n\nThe same check needs to run multiple times until something changes."
+    },
+    {
+      "type": "Text",
+      "content": "There are two common situations when the repetition should stop:\n\n- the correct PIN code is entered\n- the number of attempts reaches a limit (for example, 3)"
+    },
+    {
+      "type": "Text",
+      "content": "The program repeats the same block of code again and again while these conditions are not met.\n\nEach repetition runs the same instructions."
+    },
+    {
+      "type": "Text",
+      "content": "Before each new repetition, the program checks a condition.\n\nIf the condition is true, the loop continues.\n\nIf the condition becomes false, the loop stops."
+    },
+    {
+      "type": "Text",
+      "content": "So every loop has two key parts:\n\n- a block of code that is repeated\n- a condition that controls when the repetition stops"
+    },
+    {
+      "type": "Tip",
+      "content": "Important:\n\nA loop runs while the condition is true.\n\nTrue → the code runs again\nFalse → the loop stops"
+    }
+  ]
+}

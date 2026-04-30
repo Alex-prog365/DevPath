@@ -132,7 +132,6 @@ namespace DevPath.Data
                 ("What is a loop", "csharp_basic/05_loops/loops_what_is_a_loop.json"),
                 ("The while loop", "csharp_basic/05_loops/loops_while_loop.json"),
                 ("The for loop", "csharp_basic/05_loops/loops_for_loop.json"),
-                ("Loop counters", "csharp_basic/05_loops/loops_loop_counters.json"),
                 ("Break and continue", "csharp_basic/05_loops/loops_break_continue.json"),
                 ("Simple loop practice", "csharp_basic/05_loops/loops_simple_loop_practice.json")
             };

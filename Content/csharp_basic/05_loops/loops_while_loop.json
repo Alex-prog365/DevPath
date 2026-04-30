@@ -1,0 +1,67 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "The while loop"
+    },
+    {
+      "type": "Text",
+      "content": "In the previous topic, we learned that a loop repeats a block of code while a condition is true.\n\nNow we will see how this works in a real program using the `while` loop."
+    },
+    {
+      "type": "Code",
+      "content": "int correctPin = 1234;\nint attemptsLeft = 3;\nbool isCorrect = false;\n\nwhile (attemptsLeft > 0 && isCorrect == false)\n{\n    Console.WriteLine(\"Enter PIN:\");\n    int enteredPin = int.Parse(Console.ReadLine());\n\n    if (enteredPin == correctPin)\n    {\n        isCorrect = true;\n        Console.WriteLine(\"Access granted\");\n    }\n    else\n    {\n        attemptsLeft--;\n        Console.WriteLine(\"Wrong PIN\");\n    }\n}\n\nif (isCorrect == false)\n{\n    Console.WriteLine(\"Access blocked\");\n}",
+      "fakeInput": "1111\n1234"
+    },
+    {
+      "type": "Text",
+      "content": "This program checks a PIN code using a `while` loop.\n\nBefore the loop starts, the programmer defines:\n\n`correctPin` — the correct code\n`attemptsLeft` — how many attempts are allowed\n`isCorrect` — whether the correct code has been entered"
+    },
+    {
+      "type": "Text",
+      "content": "The loop condition is:\n\n`while (attemptsLeft > 0 && isCorrect == false)`\n\nThe loop runs only while both conditions are true:\n\n- there are attempts left\n- the correct code has not been entered"
+    },
+    {
+      "type": "Text",
+      "content": "Inside the loop, the program reads a value from the user and stores it in `enteredPin`.\n\n`Console.ReadLine()` returns text, and `int.Parse()` converts it to a number."
+    },
+    {
+      "type": "Text",
+      "content": "Then the program compares `enteredPin` with `correctPin`.\n\nIf they are equal:\n\n- `isCorrect` becomes true\n- the program outputs \"Access granted\""
+    },
+    {
+      "type": "Text",
+      "content": "If the values are not equal:\n\n- the program decreases `attemptsLeft`\n- the program outputs \"Wrong PIN\"\n\nThis changes the loop condition for the next check."
+    },
+    {
+      "type": "Text",
+      "content": "After each repetition, the program checks the `while` condition again.\n\nIf it is still true, the loop runs again.\n\nIf it becomes false, the loop stops."
+    },
+    {
+      "type": "Text",
+      "content": "The loop stops in two cases:\n\n- the correct PIN is entered\n- or the number of attempts reaches 0"
+    },
+    {
+      "type": "Text",
+      "content": "After the loop ends, the program checks the result.\n\nIf the correct code was not entered, it outputs \"Access blocked\"."
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and run it.\n\nTry different inputs.\n\nFirst try only wrong PINs.\nThen try entering the correct PIN.\n\nWatch how:\n\n- `attemptsLeft` changes\n- the loop stops in different situations",
+      "code": "int correctPin = 1234;\nint attemptsLeft = 3;\nbool isCorrect = false;\n\nwhile (attemptsLeft > 0 && isCorrect == false)\n{\n    Console.WriteLine(\"Enter PIN:\");\n    int enteredPin = int.Parse(Console.ReadLine());\n\n    if (enteredPin == correctPin)\n    {\n        isCorrect = true;\n        Console.WriteLine(\"Access granted\");\n    }\n    else\n    {\n        attemptsLeft--;\n        Console.WriteLine(\"Wrong PIN\");\n    }\n}\n\nif (isCorrect == false)\n{\n    Console.WriteLine(\"Access blocked\");\n}",
+      "fakeInput": "1111\n2222\n1234",
+      "validationProfile": "while_loop_basic"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a similar program.\n\nCreate these variables:\n\n`int correctNumber = 7;`\n`int attempts = 2;`\n`bool isFound = false;`\n\nUse a `while` loop that runs while:\n\n- attempts are greater than 0\n- and the number is not found\n\nInside the loop:\n\nRead a number from the user.\n\nIf the number is equal to `correctNumber`:\n\n- set `isFound = true`\n- output \"Correct number\"\n\nOtherwise:\n\n- decrease `attempts`\n- output \"Wrong number\"\n\nAfter the loop:\n\nIf the number was not found, output \"No attempts left\".",
+      "code": "int correctNumber = 7;\nint attempts = 2;\nbool isFound = false;\n\nwhile (attempts > 0 && isFound == false)\n{\n    Console.WriteLine(\"Enter number:\");\n    int input = int.Parse(Console.ReadLine());\n\n    if (input == correctNumber)\n    {\n        isFound = true;\n        Console.WriteLine(\"Correct number\");\n    }\n    else\n    {\n        attempts--;\n        Console.WriteLine(\"Wrong number\");\n    }\n}\n\nif (isFound == false)\n{\n    Console.WriteLine(\"No attempts left\");\n}",
+      "fakeInput": "3\n7",
+      "validationProfile": "while_loop_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "Important:\n\nThe `while` loop runs while its condition is true.\n\nIf any part of the condition becomes false, the loop stops.\n\nIn this example, the loop is controlled by two values:\n\n- attempts\n- result of the check"
+    }
+  ]
+}

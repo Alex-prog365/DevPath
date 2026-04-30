@@ -1,0 +1,56 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "The for loop"
+    },
+    {
+      "type": "Text",
+      "content": "In the previous topic, we used a `while` loop.\n\nA `while` loop is useful when the program should repeat while a condition is true.\n\nNow we will look at another loop: the `for` loop."
+    },
+    {
+      "type": "Text",
+      "content": "A `for` loop is often used when the programmer already knows how many times the code should repeat.\n\nFor example:\n\n- repeat something 3 times\n- check 5 items\n- count from 1 to 10"
+    },
+    {
+      "type": "Code",
+      "content": "int totalPoints = 0;\n\nfor (int day = 1; day <= 3; day++)\n{\n    totalPoints += 10;\n    Console.WriteLine(\"Day completed\");\n}\n\nif (totalPoints >= 30)\n{\n    Console.WriteLine(\"Reward unlocked\");\n}\nelse\n{\n    Console.WriteLine(\"More points needed\");\n}\n\nConsole.WriteLine(totalPoints);"
+    },
+    {
+      "type": "Text",
+      "content": "This program uses a `for` loop to repeat the same action 3 times.\n\nEach repetition adds 10 points to `totalPoints`."
+    },
+    {
+      "type": "Text",
+      "content": "The `for` line has three parts:\n\n`int day = 1` — where the counter starts\n`day <= 3` — how long the loop continues\n`day++` — how the counter changes after each repetition"
+    },
+    {
+      "type": "Text",
+      "content": "In this example, the loop runs for day 1, day 2, and day 3.\n\nAfter each repetition, `day++` increases the counter by 1."
+    },
+    {
+      "type": "Text",
+      "content": "Inside the loop, this line runs each time:\n\n`totalPoints += 10;`\n\nSo the value changes like this:\n\n0 → 10 → 20 → 30"
+    },
+    {
+      "type": "Text",
+      "content": "After the loop ends, the program checks `totalPoints`.\n\nBecause the value is 30, the program outputs:\n\n`Reward unlocked`\n\nThen it outputs the final value:\n\n`30`"
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and run it.\n\nThen change the loop condition and check again.\n\nTry:\n\n`day <= 3`\n`day <= 5`\n\nAlso try changing:\n\n`totalPoints += 10`\n\nto:\n\n`totalPoints += 5`\n\nWatch how the number of repetitions changes the final value.",
+      "code": "int totalPoints = 0;\n\nfor (int day = 1; day <= 3; day++)\n{\n    totalPoints += 10;\n    Console.WriteLine(\"Day completed\");\n}\n\nif (totalPoints >= 30)\n{\n    Console.WriteLine(\"Reward unlocked\");\n}\nelse\n{\n    Console.WriteLine(\"More points needed\");\n}\n\nConsole.WriteLine(totalPoints);",
+      "validationProfile": "for_loop_basic"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a similar program.\n\nCreate a variable `totalCoins` and set it to 0.\n\nUse a `for` loop that runs 4 times.\n\nInside the loop, add 5 to `totalCoins`.\n\nAfter the loop:\n\nIf `totalCoins` is greater than or equal to 20, output \"Bonus unlocked\".\n\nOtherwise output \"Not enough coins\".\n\nThen output the final value of `totalCoins`.",
+      "code": "int totalCoins = 0;\n\nfor (int round = 1; round <= 4; round++)\n{\n    totalCoins += 5;\n    Console.WriteLine(\"Round completed\");\n}\n\nif (totalCoins >= 20)\n{\n    Console.WriteLine(\"Bonus unlocked\");\n}\nelse\n{\n    Console.WriteLine(\"Not enough coins\");\n}\n\nConsole.WriteLine(totalCoins);",
+      "validationProfile": "for_loop_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "A `for` loop is useful when the number of repetitions is known.\n\nThe counter controls how many times the loop runs.\n\nIn the `for` line, the programmer defines where the counter starts, when the loop continues, and how the counter changes."
+    }
+  ]
+}
