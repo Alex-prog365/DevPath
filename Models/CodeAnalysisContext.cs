@@ -34,5 +34,9 @@ namespace DevPath.Models
         public string ValidationProfile { get; set; } = "";
 
         public string FakeInput { get; set; } = "";
+
+        public string ExpectedOutput { get; set; } = "";
+
+        public ExecutionMode ExecutionMode { get; set; } = ExecutionMode.MainBody;
     }
 }

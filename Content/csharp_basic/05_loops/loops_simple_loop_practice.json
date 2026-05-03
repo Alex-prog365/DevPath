@@ -1,0 +1,26 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Simple loop practice"
+    },
+    {
+      "type": "Text",
+      "content": "In this topic, you will practice using `break` and `continue`.\n\nYour task is to write a program yourself and control how the loop behaves."
+    },
+    {
+      "type": "Text",
+      "content": "If you get stuck, you can check the solution.\n\nAfter that, try changing the values and see how the program behaves in different situations."
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a program that checks items in a list.\n\nUse a loop from 1 to 10.\n\nInside the loop:\n\n- skip item 4 using `continue`\n- stop the loop when the item is 8 using `break`\n- for all other items, output:\n\n\"Checking item X\"\n\nwhere X is the current number.\n\nThe program should output:\n\nChecking item 1\nChecking item 2\nChecking item 3\nChecking item 5\nChecking item 6\nChecking item 7",
+      "code": "for (int i = 1; i <= 10; i++)\n{\n    if (i == 4)\n    {\n        continue;\n    }\n\n    if (i == 8)\n    {\n        break;\n    }\n\n    Console.WriteLine(\"Checking item \" + i);\n}",
+      "validationProfile": "break_continue_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "Try experimenting:\n\n- change the numbers in conditions\n- move `break` and `continue`\n- change the loop range\n\nWatch how the behavior of the loop changes.\n\nThis helps you understand how control flow works."
+    }
+  ]
+}

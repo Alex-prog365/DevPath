@@ -24,5 +24,7 @@ namespace DevPath.Models
         public List<RuleResult> RuleResults { get; set; } = new();
 
         public ConsoleSimulationResult ConsoleSimulation { get; set; } = new();
+
+        public List<string> ExecutionOutput { get; set; } = new();
     }
 }

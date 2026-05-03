@@ -142,10 +142,8 @@ namespace DevPath.Data
             return new List<(string, string)>
             {
                 ("What is a method", "csharp_basic/06_methods/methods_what_is_a_method.json"),
-                ("Creating your first method", "csharp_basic/06_methods/methods_creating_first_method.json"),
-                ("Calling a method", "csharp_basic/06_methods/methods_calling_a_method.json"),
-                ("Method parameters", "csharp_basic/06_methods/methods_method_parameters.json"),
-                ("Return values", "csharp_basic/06_methods/methods_return_values.json"),
+                ("Creating and calling a method", "csharp_basic/06_methods/methods_creating_and_calling_a_method.json"),
+                ("Methods with parameters and return values", "csharp_basic/06_methods/methods_parameters_and_return_values.json"),
                 ("Splitting program into methods", "csharp_basic/06_methods/methods_splitting_program_into_methods.json"),
                 ("Simple methods practice", "csharp_basic/06_methods/methods_simple_methods_practice.json")
             };

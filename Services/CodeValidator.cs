@@ -19,6 +19,7 @@ namespace DevPath.Services
         {
             var facts = FactCollector.Collect(context);
             var simulationResult = ConsoleSimulationEngine.Simulate(context);
+            var executionOutput = CodeExecutionService.Execute(context.UserCode, context.FakeInput);
 
             if (facts.HasSyntaxErrors)
             {
@@ -52,6 +53,45 @@ namespace DevPath.Services
                 };
             }
 
+            if (!string.IsNullOrWhiteSpace(context.ExpectedOutput))
+            {
+                var actualOutput = string.Join("\n", executionOutput).Trim();
+                var expectedOutput = context.ExpectedOutput.Trim();
+
+                if (actualOutput == expectedOutput)
+                {
+                    return new EvaluationResult
+                    {
+                        IsPassed = true,
+                        Message = "Correct",
+                        ErrorCode = "OK",
+                        Facts = facts,
+                        RuleResults = ruleResults,
+                        ConsoleSimulation = simulationResult,
+                        ExecutionOutput = executionOutput
+                    };
+                }
+
+                return new EvaluationResult
+                {
+                    IsPassed = false,
+                    Message = "Output is incorrect",
+                    ErrorCode = "OUTPUT_MISMATCH",
+                    Facts = facts,
+                    RuleResults = ruleResults,
+                    Details = new List<string>
+                    {
+                        "Expected output:",
+                        expectedOutput,
+                        "Actual output:",
+                        actualOutput
+                    },
+                    ConsoleSimulation = simulationResult,
+                    ExecutionOutput = executionOutput
+                };
+            }
+
+            
             var normalizedUserCode = Normalize(context.UserCode);
             var normalizedExpectedCode = Normalize(context.ExpectedCode);
 

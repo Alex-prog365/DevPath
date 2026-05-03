@@ -26,5 +26,7 @@ namespace DevPath.Models
         public string ValidationProfile { get; set; } = "";
 
         public string FakeInput { get; set; } = "";
+
+        public string ExecutionMode { get; set; } = "MainBody";
     }
 }

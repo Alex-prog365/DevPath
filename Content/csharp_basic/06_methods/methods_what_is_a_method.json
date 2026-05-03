@@ -1,0 +1,48 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "What is a method"
+    },
+    {
+      "type": "Text",
+      "content": "Until now, the program has executed code from top to bottom, one line at a time.\n\nBut sometimes the same block of code is needed more than once."
+    },
+    {
+      "type": "Text",
+      "content": "For example, you may want to repeat the same action several times:\n\nprint messages,\nrun a loop,\ncheck values.\n\nCopying the same code again and again makes the program longer and harder to read."
+    },
+    {
+      "type": "Text",
+      "content": "A method allows you to move such code into a separate block and give it a name.\n\nLater, the program can run this block by calling its name."
+    },
+    {
+      "type": "Code",
+      "content": "void ShowLevels()\n{\n    for (int i = 1; i <= 3; i++)\n    {\n        Console.WriteLine(\"Level \" + i);\n    }\n}"
+    },
+    {
+      "type": "Text",
+      "content": "This method contains a loop that prints three levels.\n\nNow the program can run this code by calling the method."
+    },
+    {
+      "type": "Code",
+      "content": "ShowLevels();"
+    },
+    {
+      "type": "Text",
+      "content": "When the program reaches `ShowLevels();`, it executes all the code inside the method."
+    },
+    {
+      "type": "Text",
+      "content": "The method can be called again:\n\n`ShowLevels();`\n\nEach time, the same block of code is executed."
+    },
+    {
+      "type": "Text",
+      "content": "So instead of copying the loop, the program simply calls the method."
+    },
+    {
+      "type": "Tip",
+      "content": "Important:\n\nA method does not run automatically.\n\nIt runs only when it is called.\n\nA method is a named block of code that can be reused."
+    }
+  ]
+}

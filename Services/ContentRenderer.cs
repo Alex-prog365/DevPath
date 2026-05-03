@@ -7,6 +7,7 @@ using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.Highlighting;
 using DevPath.Services;
 using System.Linq;
+using System;
 
 namespace DevPath.Services
 {
@@ -233,7 +234,14 @@ namespace DevPath.Services
                             RequiredVariableType = block.RequiredVariableType ?? "",
                             RequiredVariableValue = block.RequiredVariableValue ?? "",
                             ValidationProfile = block.ValidationProfile ?? "",
-                            FakeInput = block.FakeInput ?? ""
+                            FakeInput = block.FakeInput ?? "",
+                            ExecutionMode = Enum.TryParse<ExecutionMode>(
+                                block.ExecutionMode,
+                                true,
+                                out var executionMode
+                            )
+                                ? executionMode
+                                : ExecutionMode.MainBody
                         };
 
                         var result = CodeValidator.Validate(context);
@@ -245,7 +253,11 @@ namespace DevPath.Services
                             ? Brushes.DarkGreen
                             : Brushes.DarkRed;
 
-                        if (result.ConsoleSimulation != null && result.ConsoleSimulation.OutputLines.Any())
+                        if (result.ExecutionOutput != null && result.ExecutionOutput.Any())
+                        {
+                            outputText.Text = "Program Output:\n" + string.Join("\n", result.ExecutionOutput);
+                        }
+                        else if (result.ConsoleSimulation != null && result.ConsoleSimulation.OutputLines.Any())
                         {
                             outputText.Text = "Program Output:\n" + string.Join("\n", result.ConsoleSimulation.OutputLines);
                         }

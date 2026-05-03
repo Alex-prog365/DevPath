@@ -1,0 +1,72 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Creating and calling a method"
+    },
+    {
+      "type": "Text",
+      "content": "In the previous topic, you learned that a method is a named block of code.\n\nNow we will create a method and run it."
+    },
+    {
+      "type": "Text",
+      "content": "A method has a name and a block of code inside it.\n\nThe name is used to call the method when the program needs to execute that code."
+    },
+    {
+      "type": "Code",
+      "content": "void CheckScore()\n{\n    int score = 75;\n\n    if (score >= 90)\n    {\n        Console.WriteLine(\"Excellent\");\n    }\n    else if (score >= 60)\n    {\n        Console.WriteLine(\"Passed\");\n    }\n    else\n    {\n        Console.WriteLine(\"Failed\");\n    }\n}"
+    },
+    {
+      "type": "Text",
+      "content": "This method is called `CheckScore`.\n\nThe name comes after the keyword `void`."
+    },
+    {
+      "type": "Text",
+      "content": "`void` means that the method does not return a value.\n\nIt simply executes the code inside it."
+    },
+    {
+      "type": "Text",
+      "content": "All the code inside the curly braces `{ }` belongs to the method."
+    },
+    {
+      "type": "Text",
+      "content": "The method contains a complete piece of logic:\n\n- it creates a variable\n- it checks conditions using `if`, `else if`, and `else`\n- it outputs a result"
+    },
+    {
+      "type": "Text",
+      "content": "However, this code will not run automatically.\n\nTo execute it, the program must call the method."
+    },
+    {
+      "type": "Code",
+      "content": "CheckScore();"
+    },
+    {
+      "type": "Text",
+      "content": "When the program reaches `CheckScore();`, it executes all the code inside the method."
+    },
+    {
+      "type": "Text",
+      "content": "So the program works in two steps:\n\n1. The method is defined\n2. The method is called"
+    },
+    {
+      "type": "Text",
+      "content": "You can call the method multiple times, and each time it will execute the same logic."
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and run it.\n\nThen modify the logic inside the method.\n\nFor example:\n\n- change the value of `score`\n- change the conditions\n- change the output messages\n\nRun the program again and observe how the behavior changes.",
+      "code": "void CheckScore()\n{\n    int score = 75;\n\n    if (score >= 90)\n    {\n        Console.WriteLine(\"Excellent\");\n    }\n    else if (score >= 60)\n    {\n        Console.WriteLine(\"Passed\");\n    }\n    else\n    {\n        Console.WriteLine(\"Failed\");\n    }\n}\n\nCheckScore();",
+      "validationProfile": "methods_basic_retype"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a method called `CheckTemperature`.\n\nInside the method:\n\nCreate a variable `temperature` and set it to 20.\n\nIf `temperature` is greater than or equal to 30, output:\n\n\"Hot\"\n\nElse if `temperature` is greater than or equal to 15, output:\n\n\"Warm\"\n\nOtherwise output:\n\n\"Cold\"\n\nAfter that, call the method.",
+      "code": "void CheckTemperature()\n{\n    int temperature = 20;\n\n    if (temperature >= 30)\n    {\n        Console.WriteLine(\"Hot\");\n    }\n    else if (temperature >= 15)\n    {\n        Console.WriteLine(\"Warm\");\n    }\n    else\n    {\n        Console.WriteLine(\"Cold\");\n    }\n}\n\nCheckTemperature();",
+      "validationProfile": "methods_basic_solve"
+    },
+    {
+      "type": "Tip",
+      "content": "Important:\n\n- `void` means the method does not return a value\n- defining a method does not execute it\n- a method runs only when it is called\n- the same method can be called multiple times"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Break and continue"
+    },
+    {
+      "type": "Text",
+      "content": "In previous topics, we used loops to repeat code.\n\nBut sometimes the programmer needs more control over this repetition."
+    },
+    {
+      "type": "Text",
+      "content": "For example:\n\n- skip one specific step\n- or stop the loop earlier\n\nFor this, C# uses `continue` and `break`."
+    },
+    {
+      "type": "Text",
+      "content": "Let’s look at a real situation.\n\nImagine a program that checks a list of items.\n\nThe program goes through each item one by one.\n\nBut:\n\n- item 3 should be skipped\n- if item 5 is reached, the process should stop completely"
+    },
+    {
+      "type": "Code",
+      "content": "for (int i = 1; i <= 6; i++)\n{\n    if (i == 3)\n    {\n        continue;\n    }\n\n    if (i == 5)\n    {\n        break;\n    }\n\n    Console.WriteLine(\"Checking item \" + i);\n}"
+    },
+    {
+      "type": "Text",
+      "content": "First, it is important to understand what `i` is.\n\n`i` is a counter variable.\n\nIt is created in this line:\n\n`for (int i = 1; i <= 6; i++)`\n\nThis means:\n\n- `i` starts from 1\n- after each iteration, it increases by 1\n- the loop runs while `i` is less than or equal to 6"
+    },
+    {
+      "type": "Text",
+      "content": "So the loop goes through these values:\n\n1 → 2 → 3 → 4 → 5 → 6"
+    },
+    {
+      "type": "Text",
+      "content": "When `i == 3`:\n\n- `continue` is executed\n- the rest of the code in this iteration is skipped\n\nSo item 3 is not processed"
+    },
+    {
+      "type": "Text",
+      "content": "When `i == 5`:\n\n- `break` is executed\n- the loop stops completely\n\nNo further iterations happen"
+    },
+    {
+      "type": "Text",
+      "content": "The output will be:\n\nChecking item 1\nChecking item 2\nChecking item 4"
+    },
+    {
+      "type": "Text",
+      "content": "So:\n\n- item 3 is skipped\n- the loop stops before item 5"
+    },
+    {
+      "type": "Text",
+      "content": "This is how `continue` and `break` control the loop."
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype this code and run it.\n\nThen change the conditions.\n\nTry:\n\n`i == 2` for continue\n`i == 4` for break\n\nWatch how:\n\n- `continue` skips one iteration\n- `break` stops the loop",
+      "code": "for (int i = 1; i <= 6; i++)\n{\n    if (i == 3)\n    {\n        continue;\n    }\n\n    if (i == 5)\n    {\n        break;\n    }\n\n    Console.WriteLine(\"Checking item \" + i);\n}",
+      "validationProfile": "break_continue_basic"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a similar program.\n\nUse a loop from 1 to 7.\n\nInside the loop:\n\n- skip number 4 using `continue`\n- stop the loop when the number is 6 using `break`\n\nPrint the values that remain.",
+      "code": "for (int i = 1; i <= 7; i++)\n{\n    if (i == 4)\n    {\n        continue;\n    }\n\n    if (i == 6)\n    {\n        break;\n    }\n\n    Console.WriteLine(\"Checking item \" + i);\n}",
+      "validationProfile": "break_continue_basic"
+    },
+    {
+      "type": "Tip",
+      "content": "Important:\n\n`continue` skips the current iteration\n\n`break` stops the loop completely"
+    }
+  ]
+}
