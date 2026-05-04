@@ -40,13 +40,17 @@
       "type": "TaskRetype",
       "content": "Retype the full program and run it.\n\nThen change the values of `income` and `expenses`.\n\nRun the program again and observe how the returned value changes.",
       "code": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int income = 1000;\n        int expenses = 600;\n\n        int balance = CalculateBalance(income, expenses);\n\n        Console.WriteLine(\"Money left: \" + balance);\n    }\n\n    static int CalculateBalance(int income, int expenses)\n    {\n        int result = income - expenses;\n        return result;\n    }\n}",
-      "validationProfile": "methods_parameters_return_retype"
+      "validationProfile": "methods_parameters_return_retype",
+      "executionMode": "FullProgram",
+      "expectedOutput": "Money left: 400"
     },
     {
       "type": "TaskSolve",
       "content": "Create a similar program.\n\nCreate a method called `CalculateTotal`.\n\nThe method should receive two parameters:\n\n`price`\n`quantity`\n\nInside the method, calculate the total price and return the result.\n\nIn the main part of the program:\n\nCreate variables `price` and `quantity`.\n\nCall `CalculateTotal` and save the returned value in `total`.\n\nThen output the value of `total`.",
       "code": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        int price = 20;\n        int quantity = 3;\n\n        int total = CalculateTotal(price, quantity);\n\n        Console.WriteLine(\"Total price: \" + total);\n    }\n\n    static int CalculateTotal(int price, int quantity)\n    {\n        int result = price * quantity;\n        return result;\n    }\n}",
-      "validationProfile": "methods_parameters_return_solve"
+      "validationProfile": "methods_parameters_return_solve",
+      "executionMode": "FullProgram",
+      "expectedOutput": "Total price: 60"
     },
     {
       "type": "Tip",

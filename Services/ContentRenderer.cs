@@ -257,22 +257,9 @@ namespace DevPath.Services
                         {
                             outputText.Text = "Program Output:\n" + string.Join("\n", result.ExecutionOutput);
                         }
-                        else if (result.ConsoleSimulation != null && result.ConsoleSimulation.OutputLines.Any())
-                        {
-                            outputText.Text = "Program Output:\n" + string.Join("\n", result.ConsoleSimulation.OutputLines);
-                        }
                         else
                         {
                             outputText.Text = "";
-                        }
-
-                        if (result.ConsoleSimulation != null && result.ConsoleSimulation.InputValues.Any())
-                        {
-                            inputText.Text = "User Input:\n" + string.Join("\n", result.ConsoleSimulation.InputValues);
-                        }
-                        else
-                        {
-                            inputText.Text = "";
                         }
                     };
 

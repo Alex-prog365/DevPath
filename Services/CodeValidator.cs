@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq;
 using DevPath.Rules;
-using DevPath.Simulation;
 
 namespace DevPath.Services
 {
@@ -18,8 +17,7 @@ namespace DevPath.Services
         public static EvaluationResult Validate(CodeAnalysisContext context)
         {
             var facts = FactCollector.Collect(context);
-            var simulationResult = ConsoleSimulationEngine.Simulate(context);
-            var executionOutput = CodeExecutionService.Execute(context.UserCode, context.FakeInput);
+            var executionOutput = CodeExecutionService.Execute(context.UserCode, context.FakeInput, context.ExecutionMode);
 
             if (facts.HasSyntaxErrors)
             {
@@ -30,7 +28,7 @@ namespace DevPath.Services
                     ErrorCode = "SYNTAX_ERROR",
                     Facts = facts,
                     Details = facts.Diagnostics,
-                    ConsoleSimulation = simulationResult
+                    ExecutionOutput = executionOutput,
                 };
             }
 
@@ -49,7 +47,7 @@ namespace DevPath.Services
                     Facts = facts,
                     RuleResults = ruleResults,
                     Details = messages,
-                    ConsoleSimulation = simulationResult
+                    ExecutionOutput = executionOutput
                 };
             }
 
@@ -67,7 +65,6 @@ namespace DevPath.Services
                         ErrorCode = "OK",
                         Facts = facts,
                         RuleResults = ruleResults,
-                        ConsoleSimulation = simulationResult,
                         ExecutionOutput = executionOutput
                     };
                 }
@@ -86,7 +83,6 @@ namespace DevPath.Services
                         "Actual output:",
                         actualOutput
                     },
-                    ConsoleSimulation = simulationResult,
                     ExecutionOutput = executionOutput
                 };
             }
@@ -104,7 +100,7 @@ namespace DevPath.Services
                     ErrorCode = "OK",
                     Facts = facts,
                     RuleResults = ruleResults,
-                    ConsoleSimulation = simulationResult
+                    ExecutionOutput = executionOutput
                 };
             }
 
@@ -115,7 +111,7 @@ namespace DevPath.Services
                 ErrorCode = "MISMATCH",
                 Facts = facts,
                 RuleResults = ruleResults,
-                ConsoleSimulation = simulationResult
+                ExecutionOutput = executionOutput
             };
         }
 

@@ -1,20 +1,40 @@
-﻿using System;
+﻿using DevPath.Models;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using System.Collections.Generic;
 
 namespace DevPath.Services
 {
     public static class CodeExecutionService
     {
-        public static List<string> Execute(string code, string fakeInput)
+        public static List<string> Execute(string code, string fakeInput, ExecutionMode mode)
         {
             var output = new List<string>();
 
-            var wrappedCode = WrapCode(code);
+            string wrappedCode;
+
+            switch (mode)
+            {
+                case ExecutionMode.MainBody:
+                    wrappedCode = WrapMainBody(code);
+                    break;
+
+                case ExecutionMode.ClassBody:
+                    wrappedCode = WrapClassBody(code);
+                    break;
+
+                case ExecutionMode.FullProgram:
+                    wrappedCode = code;
+                    break;
+
+                default:
+                    wrappedCode = WrapMainBody(code);
+                    break;
+            }
 
             var syntaxTree = CSharpSyntaxTree.ParseText(wrappedCode);
 
@@ -54,11 +74,16 @@ namespace DevPath.Services
 
             if (entry != null)
             {
-                entry.Invoke(null, new object[] { new string[] { } });
-            }
-            else
-            {
-                output.Add("No entry point found");
+                var parameters = entry.GetParameters();
+
+                if (parameters.Length == 0)
+                {
+                    entry.Invoke(null, null);
+                }
+                else
+                {
+                    entry.Invoke(null, new object[] { new string[] { } });
+                }
             }
 
             var lines = writer.ToString()
@@ -80,6 +105,35 @@ namespace DevPath.Services
                 static void Main(string[] args)
                 {{
                     {userCode}
+                }}
+            }}";
+        }
+
+        private static string WrapMainBody(string userCode)
+        {
+            return $@"
+            using System;
+
+            class Program
+            {{
+                static void Main(string[] args)
+                {{
+                    {userCode}
+                }}
+            }}";
+        }
+
+        private static string WrapClassBody(string userCode)
+        {
+            return $@"
+            using System;
+
+                {userCode}
+
+            class EntryPoint
+            {{
+                static void Main(string[] args)
+                {{
                 }}
             }}";
         }
