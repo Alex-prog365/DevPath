@@ -1,0 +1,100 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Splitting program into methods"
+    },
+    {
+      "type": "Text",
+      "content": "In previous topics, we learned that a method can receive data through parameters and return a result using `return`.\n\nNow we will take another step forward."
+    },
+    {
+      "type": "Text",
+      "content": "A program does not need to keep all its logic inside one method.\n\nIt can be split into several smaller methods where each method is responsible for one part of the work."
+    },
+    {
+      "type": "Text",
+      "content": "In this example, the program checks the result of a test.\n\nThe test has two parts:\n\n- theory\n- practice\n\nFirst, one method checks the theory result.\nThen another method checks the practice result.\nAfter that, a third method receives both results and prints the final message."
+    },
+    {
+      "type": "Code",
+      "content": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        bool theoryPassed = CheckTheory();\n        bool practicePassed = CheckPractice();\n\n        ShowFinalResult(theoryPassed, practicePassed);\n    }\n\n    // This method checks the theory score\n    static bool CheckTheory()\n    {\n        int theoryScore = 75;\n\n        if (theoryScore >= 60)\n        {\n            return true;\n        }\n        else\n        {\n            return false;\n        }\n    }\n\n    // This method checks the practice score\n    static bool CheckPractice()\n    {\n        int practiceScore = 80;\n\n        if (practiceScore >= 60)\n        {\n            return true;\n        }\n        else\n        {\n            return false;\n        }\n    }\n\n    // This method receives both results and prints the final message\n    static void ShowFinalResult(bool theoryPassed, bool practicePassed)\n    {\n        if (theoryPassed == true && practicePassed == true)\n        {\n            Console.WriteLine(\"Test passed\");\n        }\n        else\n        {\n            Console.WriteLine(\"Test failed\");\n        }\n    }\n}"
+    },
+    {
+      "type": "Text",
+      "content": "This program is split into three methods:\n\n`CheckTheory()`\n`CheckPractice()`\n`ShowFinalResult()`\n\nEach method is responsible for one task."
+    },
+    {
+      "type": "Text",
+      "content": "`CheckTheory()` checks the theory score and returns either `true` or `false`.\n\n`CheckPractice()` checks the practice score and also returns either `true` or `false`."
+    },
+    {
+      "type": "Text",
+      "content": "`ShowFinalResult()` receives both results and prints the final message."
+    },
+    {
+      "type": "Text",
+      "content": "The program starts execution in the `Main()` method."
+    },
+    {
+      "type": "Text",
+      "content": "First, this line runs:\n\n`bool theoryPassed = CheckTheory();`\n\nThe program calls the `CheckTheory()` method.\n\nThe method checks the value of `theoryScore` and returns a result."
+    },
+    {
+      "type": "Text",
+      "content": "If the score is 60 or higher, the method returns `true`.\n\nIf the score is lower than 60, the method returns `false`."
+    },
+    {
+      "type": "Text",
+      "content": "The returned value is stored in the variable `theoryPassed`."
+    },
+    {
+      "type": "Text",
+      "content": "After that, the next line runs:\n\n`bool practicePassed = CheckPractice();`\n\nThe program calls the `CheckPractice()` method.\n\nThis method checks the practice score and returns the result."
+    },
+    {
+      "type": "Text",
+      "content": "The returned value is stored in the variable `practicePassed`."
+    },
+    {
+      "type": "Text",
+      "content": "Then the program runs this line:\n\n`ShowFinalResult(theoryPassed, practicePassed);`\n\nThe program calls the third method and sends both results into it."
+    },
+    {
+      "type": "Text",
+      "content": "`ShowFinalResult()` does not check the scores itself.\n\nIt works with the results returned by the first two methods."
+    },
+    {
+      "type": "Text",
+      "content": "If both values are `true`, the program prints:\n\n`Test passed`\n\nIf at least one value is `false`, the program prints:\n\n`Test failed`"
+    },
+    {
+      "type": "Text",
+      "content": "Notice that all three methods are placed inside one class called `Program`.\n\nWe will learn more about classes later.\n\nFor now, focus on the methods and how they work together."
+    },
+    {
+      "type": "Text",
+      "content": "The code also contains comments.\n\nA comment starts with double slashes:\n\n`//`\n\nComments are ignored by the program.\n\nProgrammers use comments to explain parts of the code or leave notes for other developers."
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype the full program and run it.\n\nThen:\n\n- change the values of `theoryScore` and `practiceScore`\n- make one result fail\n- make both results fail\n\nObserve how the final method changes the output depending on the returned values.",
+      "code": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        bool theoryPassed = CheckTheory();\n        bool practicePassed = CheckPractice();\n\n        ShowFinalResult(theoryPassed, practicePassed);\n    }\n\n    // This method checks the theory score\n    static bool CheckTheory()\n    {\n        int theoryScore = 75;\n\n        if (theoryScore >= 60)\n        {\n            return true;\n        }\n        else\n        {\n            return false;\n        }\n    }\n\n    // This method checks the practice score\n    static bool CheckPractice()\n    {\n        int practiceScore = 80;\n\n        if (practiceScore >= 60)\n        {\n            return true;\n        }\n        else\n        {\n            return false;\n        }\n    }\n\n    // This method receives both results and prints the final message\n    static void ShowFinalResult(bool theoryPassed, bool practicePassed)\n    {\n        if (theoryPassed == true && practicePassed == true)\n        {\n            Console.WriteLine(\"Test passed\");\n        }\n        else\n        {\n            Console.WriteLine(\"Test failed\");\n        }\n    }\n}",
+      "validationProfile": "methods_split_program_retype",
+      "executionMode": "FullProgram",
+      "expectedOutput": "Test passed"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a similar program.\n\nCreate three methods:\n\n`CheckAge()`\n`CheckTicket()`\n`ShowAccessResult()`\n\n`CheckAge()` should return `true` if age is 18 or higher.\n\n`CheckTicket()` should return `true` if the person has a ticket.\n\n`ShowAccessResult()` should receive both results and print:\n\n`Access allowed`\nor\n`Access denied`\n\nIn `Main()`, call all methods in the correct order.",
+      "code": "using System;\n\nclass Program\n{\n    static void Main()\n    {\n        bool agePassed = CheckAge();\n        bool ticketPassed = CheckTicket();\n\n        ShowAccessResult(agePassed, ticketPassed);\n    }\n\n    // This method checks the age\n    static bool CheckAge()\n    {\n        int age = 20;\n\n        if (age >= 18)\n        {\n            return true;\n        }\n        else\n        {\n            return false;\n        }\n    }\n\n    // This method checks the ticket\n    static bool CheckTicket()\n    {\n        bool hasTicket = true;\n\n        if (hasTicket == true)\n        {\n            return true;\n        }\n        else\n        {\n            return false;\n        }\n    }\n\n    // This method prints the final result\n    static void ShowAccessResult(bool agePassed, bool ticketPassed)\n    {\n        if (agePassed == true && ticketPassed == true)\n        {\n            Console.WriteLine(\"Access allowed\");\n        }\n        else\n        {\n            Console.WriteLine(\"Access denied\");\n        }\n    }\n}",
+      "validationProfile": "methods_split_program_solve",
+      "executionMode": "FullProgram",
+      "expectedOutput": "Access allowed"
+    },
+    {
+      "type": "Tip",
+      "content": "Important:\n\nA program can be split into several methods.\n\nOne method can check one piece of data.\nAnother method can check another piece of data.\nA third method can combine these results and make a final decision.\n\nThis makes the program easier to understand because each method has one clear responsibility."
+    }
+  ]
+}

@@ -145,7 +145,6 @@ namespace DevPath.Data
                 ("Creating and calling a method", "csharp_basic/06_methods/methods_creating_and_calling_a_method.json"),
                 ("Methods with parameters and return values", "csharp_basic/06_methods/methods_parameters_and_return_values.json"),
                 ("Splitting program into methods", "csharp_basic/06_methods/methods_splitting_program_into_methods.json"),
-                ("Simple methods practice", "csharp_basic/06_methods/methods_simple_methods_practice.json")
             };
         }
 
@@ -153,13 +152,11 @@ namespace DevPath.Data
         {
             return new List<(string, string)>
             {
-                ("What is an array", "csharp_basic/07_arrays/arrays_what_is_an_array.json"),
-                ("Creating an array", "csharp_basic/07_arrays/arrays_creating_an_array.json"),
-                ("Accessing array elements", "csharp_basic/07_arrays/arrays_accessing_array_elements.json"),
-                ("Looping through arrays", "csharp_basic/07_arrays/arrays_looping_through_arrays.json"),
-                ("What is a list", "csharp_basic/07_arrays/lists_what_is_a_list.json"),
-                ("Creating and using lists", "csharp_basic/07_arrays/lists_creating_using_lists.json"),
-                ("Simple collections practice", "csharp_basic/07_arrays/collections_simple_practice.json")
+                ("Arrays and lists", "csharp_basic/07_arrays_lists/arrays_and_lists.json"),
+                ("Creating and accessing collections", "csharp_basic/07_arrays_lists/collections_creating_and_accessing.json"),
+                ("Looping through collections", "csharp_basic/07_arrays_lists/collections_looping_through.json"),
+                ("Working with lists", "csharp_basic/07_arrays_lists/lists_working_with_lists.json"),
+                ("Collections mini program", "csharp_basic/07_arrays_lists/collections_mini_program.json")
             };
         }
 

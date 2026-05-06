@@ -1,0 +1,76 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Creating and accessing collections"
+    },
+    {
+      "type": "Text",
+      "content": "In the previous topic, we learned that collections can store multiple values together.\n\nNow we will learn how collections are created in code and how the program accesses individual elements."
+    },
+    {
+      "type": "Text",
+      "content": "Most programs do not work with only one value.\n\nFor example, a program may need to store:\n\n- several student scores\n- multiple player names\n- a list of products\n\nCollections make this possible."
+    },
+    {
+      "type": "Text",
+      "content": "To access a specific element inside a collection, the program uses an index.\n\nAn index is the position of an element inside the collection.\n\nIn C#, indexes start at 0.\n\nThis means:\n\nindex 0 → first element\nindex 1 → second element\nindex 2 → third element"
+    },
+    {
+      "type": "Text",
+      "content": "Let’s first look at an array example."
+    },
+    {
+      "type": "Code",
+      "content": "int[] scores = { 75, 80, 92, 60, 88 };\n\nConsole.WriteLine(\"First score: \" + scores[0]);\nConsole.WriteLine(\"Third score: \" + scores[2]);\nConsole.WriteLine(\"Last score: \" + scores[4]);"
+    },
+    {
+      "type": "Text",
+      "content": "This array stores several student scores.\n\n`scores[0]` accesses the first element.\n`scores[2]` accesses the third element.\n`scores[4]` accesses the fifth element.\n\nThe program does not search for the value directly.\n\nIt accesses the value by its position inside the array."
+    },
+    {
+      "type": "Text",
+      "content": "Arrays work well when the number of elements is known from the beginning.\n\nBut sometimes a program needs to add new elements while it is running.\n\nFor this, programmers often use lists."
+    },
+    {
+      "type": "Text",
+      "content": "Now let’s look at a list example."
+    },
+    {
+      "type": "Code",
+      "content": "using System.Collections.Generic;\n\nList<string> players = new List<string>();\n\nplayers.Add(\"Alex\");\nplayers.Add(\"Mia\");\nplayers.Add(\"John\");\nplayers.Add(\"Sara\");\nplayers.Add(\"Leo\");\n\nConsole.WriteLine(\"First player: \" + players[0]);\nConsole.WriteLine(\"Fourth player: \" + players[3]);\nConsole.WriteLine(\"Players count: \" + players.Count);\n\nplayers.Add(\"Emma\");\n\nConsole.WriteLine(\"Players count after adding: \" + players.Count);\nConsole.WriteLine(\"New player: \" + players[5]);"
+    },
+    {
+      "type": "Text",
+      "content": "This example uses a `List`.\n\nThe program first creates an empty list.\n\nEach `Add()` line adds a new player to the end of the list."
+    },
+    {
+      "type": "Text",
+      "content": "The program accesses players using indexes:\n\n`players[0]` accesses the first player.\n`players[3]` accesses the fourth player."
+    },
+    {
+      "type": "Text",
+      "content": "`Count` shows how many elements are currently stored in the list.\n\nAfter adding `Emma`, the list grows and the total number of elements changes from 5 to 6."
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype the code with the `players` list and run it.\n\nThen:\n\n- add one more player using `Add()`\n- print the new player by index\n- print `Count` again\n\nWatch how the list changes after adding new elements.",
+      "code": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        List<string> players = new List<string>();\n\n        players.Add(\"Alex\");\n        players.Add(\"Mia\");\n        players.Add(\"John\");\n        players.Add(\"Sara\");\n        players.Add(\"Leo\");\n\n        Console.WriteLine(\"First player: \" + players[0]);\n        Console.WriteLine(\"Fourth player: \" + players[3]);\n        Console.WriteLine(\"Players count: \" + players.Count);\n\n        players.Add(\"Emma\");\n\n        Console.WriteLine(\"Players count after adding: \" + players.Count);\n        Console.WriteLine(\"New player: \" + players[5]);\n    }\n}",
+      "validationProfile": "collections_create_access_retype",
+      "executionMode": "FullProgram",
+      "expectedOutput": "First player: Alex\nFourth player: Sara\nPlayers count: 5\nPlayers count after adding: 6\nNew player: Emma"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a list called `products`.\n\nAdd these products:\n\n- Bread\n- Milk\n- Cheese\n- Apple\n\nThen:\n\n- print the first product\n- print the third product\n- print the number of products using `Count`\n\nAfter that:\n\n- add one more product\n- print the updated number of products",
+      "code": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        List<string> products = new List<string>();\n\n        products.Add(\"Bread\");\n        products.Add(\"Milk\");\n        products.Add(\"Cheese\");\n        products.Add(\"Apple\");\n\n        Console.WriteLine(\"First product: \" + products[0]);\n        Console.WriteLine(\"Third product: \" + products[2]);\n        Console.WriteLine(\"Products count: \" + products.Count);\n\n        products.Add(\"Juice\");\n\n        Console.WriteLine(\"Updated products count: \" + products.Count);\n    }\n}",
+      "validationProfile": "collections_create_access_solve",
+      "executionMode": "FullProgram",
+      "expectedOutput": "First product: Bread\nThird product: Cheese\nProducts count: 4\nUpdated products count: 5"
+    },
+    {
+      "type": "Tip",
+      "content": "Important:\n\nCollections store multiple values together.\n\n`[ ]` is used to access elements by index.\n\nIn C#, the first index is always 0.\n\n`Count` shows how many elements are currently stored in a list.\n\nLists can grow by adding new elements with `Add()`."
+    }
+  ]
+}

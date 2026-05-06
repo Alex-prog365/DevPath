@@ -1,0 +1,152 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Arrays and lists"
+    },
+    {
+      "type": "Text",
+      "content": "Until now, we often worked with one variable.\n\nOne variable usually stores one value."
+    },
+    {
+      "type": "Text",
+      "content": "For example:\n\n`name` stores one name.\n`age` stores one age.\n`score` stores one number of points."
+    },
+    {
+      "type": "Text",
+      "content": "But sometimes a program needs to store not one value, but several values together."
+    },
+    {
+      "type": "Text",
+      "content": "For example:\n\n- days of the week\n- months of the year\n- student grades\n- product lists\n- player names"
+    },
+    {
+      "type": "Text",
+      "content": "For this kind of data, programs use collections.\n\nA collection is a structure that stores several values together."
+    },
+    {
+      "type": "Text",
+      "content": "In C#, two common types of collections are:\n\n`array`\n`list`"
+    },
+    {
+      "type": "Title",
+      "content": "What is an array"
+    },
+    {
+      "type": "Text",
+      "content": "An array is a collection with a fixed size."
+    },
+    {
+      "type": "Text",
+      "content": "You can imagine an array as a row of cells where each cell stores one value."
+    },
+    {
+      "type": "Text",
+      "content": "For example, an array with days of the week:"
+    },
+    {
+      "type": "Code",
+      "content": "Index    Value\n0        Monday\n1        Tuesday\n2        Wednesday"
+    },
+    {
+      "type": "Text",
+      "content": "Each element is stored in a separate cell.\n\nEach cell has its own number.\n\nThis number is called an `index`."
+    },
+    {
+      "type": "Text",
+      "content": "Important:\n\nIn C#, indexing starts from `0`."
+    },
+    {
+      "type": "Text",
+      "content": "This means:\n\n- the first element has index `0`\n- the second element has index `1`\n- the third element has index `2`"
+    },
+    {
+      "type": "Title",
+      "content": "Main feature of an array"
+    },
+    {
+      "type": "Text",
+      "content": "The size of an array is defined in advance."
+    },
+    {
+      "type": "Text",
+      "content": "For example, if an array is created for 7 days of the week, it is designed for exactly 7 elements."
+    },
+    {
+      "type": "Text",
+      "content": "After an array is created, its size cannot simply be increased or decreased."
+    },
+    {
+      "type": "Text",
+      "content": "Because of this, arrays work well for data where the number of elements is known in advance and usually does not change."
+    },
+    {
+      "type": "Text",
+      "content": "For example:\n\n- 7 days of the week\n- 12 months\n- a fixed number of difficulty levels"
+    },
+    {
+      "type": "Title",
+      "content": "What is a list"
+    },
+    {
+      "type": "Text",
+      "content": "A list also stores several values together."
+    },
+    {
+      "type": "Text",
+      "content": "It also consists of elements.\n\nEach element also has an index."
+    },
+    {
+      "type": "Text",
+      "content": "But the main difference is that the size of a list can change."
+    },
+    {
+      "type": "Text",
+      "content": "A list can:\n\n- add new elements\n- remove elements\n- store as many values as the program needs during execution"
+    },
+    {
+      "type": "Text",
+      "content": "Because of this, lists work well for data that may change."
+    },
+    {
+      "type": "Text",
+      "content": "For example:\n\n- student grades\n- product lists\n- messages\n- player names"
+    },
+    {
+      "type": "Title",
+      "content": "Main difference"
+    },
+    {
+      "type": "Text",
+      "content": "An `array` is a collection with a fixed size.\n\nA `list` is a collection with a dynamic size."
+    },
+    {
+      "type": "Text",
+      "content": "They are similar because both store multiple values."
+    },
+    {
+      "type": "Text",
+      "content": "But arrays work better when the number of elements is known in advance.\n\nLists work better when the number of elements may change."
+    },
+    {
+      "type": "Title",
+      "content": "Important point"
+    },
+    {
+      "type": "Text",
+      "content": "Collections become especially useful together with loops."
+    },
+    {
+      "type": "Text",
+      "content": "For example, a program can go through all elements of an array or list and process them one by one."
+    },
+    {
+      "type": "Text",
+      "content": "Later in this lesson, we will learn how to work with collections inside loops."
+    },
+    {
+      "type": "Tip",
+      "content": "Important:\n\nCollections store multiple values together.\n\nArrays have a fixed size.\n\nLists can change size during program execution.\n\nElements inside collections are accessed using indexes."
+    }
+  ]
+}
