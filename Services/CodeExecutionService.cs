@@ -55,7 +55,13 @@ namespace DevPath.Services
 
             if (!result.Success)
             {
-                output.Add("Execution failed");
+                output.Add("Compilation failed:");
+
+                foreach (var diagnostic in result.Diagnostics)
+                {
+                    output.Add(diagnostic.ToString());
+                }
+
                 return output;
             }
 

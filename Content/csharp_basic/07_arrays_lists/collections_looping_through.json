@@ -1,0 +1,80 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Looping through collections"
+    },
+    {
+      "type": "Text",
+      "content": "In the previous topic, we created collections and accessed elements by index.\n\nNow we will learn how to go through a collection automatically using a loop."
+    },
+    {
+      "type": "Text",
+      "content": "When a list has many elements, it is not practical to access each element manually.\n\nInstead of writing:\n\n`stock[0]`\n`stock[1]`\n`stock[2]`\n\nwe can use a loop."
+    },
+    {
+      "type": "Text",
+      "content": "Let’s imagine a simple warehouse program.\n\nThe program stores product stock numbers in a list.\n\nThen it goes through the list and checks which products have low stock."
+    },
+    {
+      "type": "Code",
+      "content": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        List<int> stock = new List<int>();\n\n        stock.Add(12);\n        stock.Add(4);\n        stock.Add(18);\n        stock.Add(2);\n        stock.Add(9);\n\n        CheckStock(stock);\n    }\n\n    static void CheckStock(List<int> stock)\n    {\n        for (int i = 0; i < stock.Count; i++)\n        {\n            if (stock[i] < 5)\n            {\n                Console.WriteLine(\"Low stock: \" + stock[i]);\n            }\n            else\n            {\n                Console.WriteLine(\"Stock OK: \" + stock[i]);\n            }\n        }\n    }\n}"
+    },
+    {
+      "type": "Text",
+      "content": "This program creates a list called `stock`.\n\nEach number represents how many items are available for one product."
+    },
+    {
+      "type": "Text",
+      "content": "After the list is created, this line calls the method:\n\n`CheckStock(stock);`\n\nThe list is sent into the method as a parameter."
+    },
+    {
+      "type": "Text",
+      "content": "The method `CheckStock` receives the list and uses a `for` loop to go through all its elements."
+    },
+    {
+      "type": "Text",
+      "content": "This line controls the loop:\n\n`for (int i = 0; i < stock.Count; i++)`\n\n`i` starts at 0 because the first index in C# is always 0.\n\n`stock.Count` tells how many elements are currently stored in the list."
+    },
+    {
+      "type": "Text",
+      "content": "On each iteration, `i` points to a different element:\n\n`i = 0` → `stock[0]`\n`i = 1` → `stock[1]`\n`i = 2` → `stock[2]`\n`i = 3` → `stock[3]`\n`i = 4` → `stock[4]`"
+    },
+    {
+      "type": "Text",
+      "content": "Inside the loop, this condition checks the current value:\n\n`if (stock[i] < 5)`\n\nThe program does not check the whole list at once.\n\nIt checks one element at a time."
+    },
+    {
+      "type": "Text",
+      "content": "If the current stock number is less than 5, the program outputs a low stock message.\n\nOtherwise, it outputs that the stock is OK."
+    },
+    {
+      "type": "Text",
+      "content": "Important difference:\n\nArrays use `Length`.\n\nLists use `Count`.\n\nAn array has a fixed size.\n\nA list has a dynamic size."
+    },
+    {
+      "type": "Text",
+      "content": "For now, you do not need to know how lists work inside memory.\n\nIt is enough to understand this:\n\n- arrays use `Length`\n- lists use `Count`\n- lists are more flexible when the number of elements can change"
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype the full program and run it.\n\nThen modify the list:\n\n- add one more stock value\n- change one of the numbers\n- remove one stock value\n\nRun the program again and observe how the loop checks the updated list.",
+      "code": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        List<int> stock = new List<int>();\n\n        stock.Add(12);\n        stock.Add(4);\n        stock.Add(18);\n        stock.Add(2);\n        stock.Add(9);\n\n        CheckStock(stock);\n    }\n\n    static void CheckStock(List<int> stock)\n    {\n        for (int i = 0; i < stock.Count; i++)\n        {\n            if (stock[i] < 5)\n            {\n                Console.WriteLine(\"Low stock: \" + stock[i]);\n            }\n            else\n            {\n                Console.WriteLine(\"Stock OK: \" + stock[i]);\n            }\n        }\n    }\n}",
+      "validationProfile": "collections_looping_through_retype",
+      "executionMode": "FullProgram",
+      "expectedOutput": "Stock OK: 12\nLow stock: 4\nStock OK: 18\nLow stock: 2\nStock OK: 9"
+    },
+    {
+      "type": "TaskSolve",
+      "content": "Create a similar program.\n\nCreate a list called `temperatures`.\n\nAdd these values to the list:\n\n`18`\n`25`\n`12`\n`30`\n\nCreate a method called `CheckTemperatures`.\n\nThe method should receive the list as a parameter.\n\nInside the method, use a `for` loop to go through the list.\n\nIf the current temperature is greater than or equal to 25, output:\n\n`Warm day: X`\n\nOtherwise output:\n\n`Cool day: X`\n\nwhere X is the current temperature.",
+      "code": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        List<int> temperatures = new List<int>();\n\n        temperatures.Add(18);\n        temperatures.Add(25);\n        temperatures.Add(12);\n        temperatures.Add(30);\n\n        CheckTemperatures(temperatures);\n    }\n\n    static void CheckTemperatures(List<int> temperatures)\n    {\n        for (int i = 0; i < temperatures.Count; i++)\n        {\n            if (temperatures[i] >= 25)\n            {\n                Console.WriteLine(\"Warm day: \" + temperatures[i]);\n            }\n            else\n            {\n                Console.WriteLine(\"Cool day: \" + temperatures[i]);\n            }\n        }\n    }\n}",
+      "validationProfile": "collections_looping_through_solve",
+      "executionMode": "FullProgram",
+      "expectedOutput": "Cool day: 18\nWarm day: 25\nCool day: 12\nWarm day: 30"
+    },
+    {
+      "type": "Tip",
+      "content": "Important:\n\nLoops and collections are often used together.\n\nThe loop controls repetition.\n\nThe index tells the program which element to access.\n\nFor arrays, use `Length`.\n\nFor lists, use `Count`."
+    }
+  ]
+}

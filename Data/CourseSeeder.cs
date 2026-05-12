@@ -156,7 +156,6 @@ namespace DevPath.Data
                 ("Creating and accessing collections", "csharp_basic/07_arrays_lists/collections_creating_and_accessing.json"),
                 ("Looping through collections", "csharp_basic/07_arrays_lists/collections_looping_through.json"),
                 ("Working with lists", "csharp_basic/07_arrays_lists/lists_working_with_lists.json"),
-                ("Collections mini program", "csharp_basic/07_arrays_lists/collections_mini_program.json")
             };
         }
 

@@ -32,7 +32,6 @@
 	  <Folder Include="Content\csharp_basic\03_conditions\" />
 	  <Folder Include="Content\csharp_basic\05_loops\" />
 	  <Folder Include="Content\csharp_basic\06_methods\" />
-	  <Folder Include="Content\csharp_basic\07_arrays_lists\" />
 	  <Folder Include="Content\csharp_basic\08_classes\" />
 	  <Folder Include="Content\csharp_basic\09_final_project\" />
 	</ItemGroup>

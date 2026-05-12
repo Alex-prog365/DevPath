@@ -1,0 +1,68 @@
+{
+  "blocks": [
+    {
+      "type": "Title",
+      "content": "Working with lists"
+    },
+    {
+      "type": "Text",
+      "content": "In previous topics, we created lists and looped through their elements.\n\nNow we will see how a program can change a list while it is running."
+    },
+    {
+      "type": "Text",
+      "content": "A list is different from an array because its size can change.\n\nA program can:\n\n- add new elements\n- remove elements\n- update existing values"
+    },
+    {
+      "type": "Text",
+      "content": "Let’s imagine a simple shopping list program.\n\nThe program stores products in a list.\n\nFirst, it prints the original list.\n\nThen it updates the list:\n\n- adds a new product\n- removes one product\n- changes one existing value\n\nAfter that, it prints the updated list."
+    },
+    {
+      "type": "Code",
+      "content": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        List<string> shoppingList = new List<string>();\n\n        shoppingList.Add(\"Milk\");\n        shoppingList.Add(\"Bread\");\n        shoppingList.Add(\"Apple\");\n\n        Console.WriteLine(\"Original list:\");\n        ShowShoppingList(shoppingList);\n\n        shoppingList.Add(\"Cheese\");\n\n        shoppingList.Remove(\"Bread\");\n\n        shoppingList[0] = \"Chocolate Milk\";\n\n        Console.WriteLine(\"Updated list:\");\n        ShowShoppingList(shoppingList);\n\n        Console.WriteLine(\"Total products: \" + shoppingList.Count);\n    }\n\n    static void ShowShoppingList(List<string> shoppingList)\n    {\n        for (int i = 0; i < shoppingList.Count; i++)\n        {\n            Console.WriteLine(shoppingList[i]);\n        }\n    }\n}"
+    },
+    {
+      "type": "Text",
+      "content": "The program starts by creating a list called `shoppingList`.\n\nThen it adds three products using `Add()`:\n\n`Milk`\n`Bread`\n`Apple`"
+    },
+    {
+      "type": "Text",
+      "content": "Before changing the list, the program prints the original version.\n\nThis helps us see what the list looked like at the beginning."
+    },
+    {
+      "type": "Text",
+      "content": "This line adds a new product to the end of the list:\n\n`shoppingList.Add(\"Cheese\");`"
+    },
+    {
+      "type": "Text",
+      "content": "This line removes a product from the list:\n\n`shoppingList.Remove(\"Bread\");`\n\nThe program searches for `Bread` and removes it from the list."
+    },
+    {
+      "type": "Text",
+      "content": "This line changes an existing element:\n\n`shoppingList[0] = \"Chocolate Milk\";`\n\nThe program replaces the value at index 0.\n\nIt does not create a new element."
+    },
+    {
+      "type": "Text",
+      "content": "After the changes, the program prints the updated list.\n\nNow we can clearly see what changed."
+    },
+    {
+      "type": "Text",
+      "content": "The `ShowShoppingList` method receives the list as a parameter.\n\nInside the method, a `for` loop goes through all elements and prints them one by one."
+    },
+    {
+      "type": "Text",
+      "content": "`shoppingList.Count` shows how many elements are currently stored in the list.\n\nWhen elements are added or removed, `Count` changes automatically."
+    },
+    {
+      "type": "TaskRetype",
+      "content": "Retype the full program and run it.\n\nThen modify the list:\n\n- add two more products\n- remove one product\n- change one existing element\n\nRun the program again and observe:\n\n- how the original list is printed\n- how the updated list is printed\n- how the loop prints the current values\n- how `Count` changes automatically",
+      "code": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        List<string> shoppingList = new List<string>();\n\n        shoppingList.Add(\"Milk\");\n        shoppingList.Add(\"Bread\");\n        shoppingList.Add(\"Apple\");\n\n        Console.WriteLine(\"Original list:\");\n        ShowShoppingList(shoppingList);\n\n        shoppingList.Add(\"Cheese\");\n\n        shoppingList.Remove(\"Bread\");\n\n        shoppingList[0] = \"Chocolate Milk\";\n\n        Console.WriteLine(\"Updated list:\");\n        ShowShoppingList(shoppingList);\n\n        Console.WriteLine(\"Total products: \" + shoppingList.Count);\n    }\n\n    static void ShowShoppingList(List<string> shoppingList)\n    {\n        for (int i = 0; i < shoppingList.Count; i++)\n        {\n            Console.WriteLine(shoppingList[i]);\n        }\n    }\n}",
+      "validationProfile": "working_with_lists_retype",
+      "executionMode": "FullProgram",
+      "expectedOutput": "Original list:\nMilk\nBread\nApple\nUpdated list:\nChocolate Milk\nApple\nCheese\nTotal products: 3"
+    },
+    {
+      "type": "Tip",
+      "content": "Important:\n\nLists can change during program execution.\n\n`Add()` adds a new element.\n\n`Remove()` removes an element.\n\n`list[index] = value` changes an existing element.\n\n`Count` updates automatically when the list changes."
+    }
+  ]
+}
